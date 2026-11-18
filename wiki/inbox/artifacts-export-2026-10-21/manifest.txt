@@ -1,0 +1,4 @@
+Audit: read 172 record(s) from dev295743, 4 more only in the last build
+Audit: 8 record(s) had no version history and were read from their own export
+Audit: + 21 shared record(s) (privileges, build metadata, columns added to existing tables)
+Audit -> x_kpm10_aco: 24 record(s) from 3 artifact(s)
