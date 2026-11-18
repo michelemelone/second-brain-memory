@@ -25,3 +25,17 @@ One place for everything Michele's applications remember. Folders are read by ev
 - Symlink for backwards compatibility: `personal-assistant/data/memory` links into `memory/bigmike/`. The old `personal-assistant/data/lab-memory` symlink is removed (MIC-303).
 - Lab history (MIC-303, supersedes the lab placement of MIC-196): each application keeps its own Lab task files and `INDEX.md` in `memory/<app>/lab/` (`bigmike`, `health`, `finance`, `second-brain`, `gantry`, `beedme-server`); tasks with no project are in `memory/bigmike/lab/no-project/`. One global index of every task, with the path of its file, is `memory/lab-index.md`: read it first. Written automatically by bigMike, no AI.
 - Gantry must never read this folder; the other applications may read all of it.
+
+## Application briefs (MIC-304)
+Each application has one short, injectable brief: `memory/<app>/BRIEF.md`. The always-injectable index is `memory/README.md` (max 2,000 characters, one line per application).
+
+**Contract**
+- English; hard cap 4,000 characters (target 2,500-3,500); no secrets, no raw personal data (no measurements, transactions, credentials).
+- Header: `Updated: YYYY-MM-DD` and `Sources:` (everything it was built from).
+- Sections, in this order: What it is; Stack and where the code lives; Where the data lives; Current state; Decisions that constrain changes; Recent work (last 3-5 items with task keys); Known pitfalls; How to verify and restart. End with a one-line Refresh note.
+- Evidence rule: every claim comes from the Second Brain (Lab history, wiki, project documents, monthly summaries, chats) or from the application's own README/docs, and cites the task key or path. Say "unknown" instead of guessing.
+- Over the cap: condense the least important parts first; never drop a decision or a pitfall, never truncate silently.
+
+**Who refreshes it, and when:** the agent that finishes a Lab task of that application (Sirius, or the developer in the same task) updates the brief, or an explicit refresh run does. The existing brief is the input and is compressed and updated, not rewritten from zero. The inputs are the Second Brain only (`memory/<app>/lab/`, `memory/lab-index.md`, the wiki, the app's documents); the bigMike database is never read, and bigMike keeps no copy: it reads `memory/<app>/BRIEF.md` (injection is MIC-305).
+
+**Gantry** has no brief: MIC-13 keeps Gantry's memory out of the Second Brain, and MIC-303 allows only its Lab history in `memory/gantry/lab/`. A summary of Gantry would be new Gantry memory, so it is not written.
