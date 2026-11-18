@@ -21,6 +21,7 @@ One place for everything Michele's applications remember. Folders are read by ev
 ## Rules
 - Raw data (transactions, measurements, video, audio) stays in its application database; this folder holds Markdown views of it, never the source.
 - Never here: credentials, `.env`, `master.key`, databases, run logs.
-- Gantry is excluded from the Second Brain per architectural decision MIC-13 (`wiki/gantry-memory-excluded.md`). Never create or move anything under `memory/gantry`.
-- Symlinks for backwards compatibility: `personal-assistant/data/memory` and `personal-assistant/data/lab-memory` link into `memory/bigmike/`.
+- Gantry's own application memory is excluded from the Second Brain per architectural decision MIC-13 (`wiki/gantry-memory-excluded.md`), narrowed by MIC-303: the ONLY thing allowed under `memory/gantry` is `memory/gantry/lab/`, the Lab development history of Gantry (what was asked of the agents, what they reported). Never put anything else of Gantry there.
+- Symlink for backwards compatibility: `personal-assistant/data/memory` links into `memory/bigmike/`. The old `personal-assistant/data/lab-memory` symlink is removed (MIC-303).
+- Lab history (MIC-303, supersedes the lab placement of MIC-196): each application keeps its own Lab task files and `INDEX.md` in `memory/<app>/lab/` (`bigmike`, `health`, `finance`, `second-brain`, `gantry`, `beedme-server`); tasks with no project are in `memory/bigmike/lab/no-project/`. One global index of every task, with the path of its file, is `memory/lab-index.md`: read it first. Written automatically by bigMike, no AI.
 - Gantry must never read this folder; the other applications may read all of it.
