@@ -1,0 +1,1648 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<unload unload_date="2026-10-21 12:11:03">
+<sys_remote_update_set action="INSERT_OR_UPDATE">
+<application display_value="ACO">d1dff651875465102caa63990cbb355f</application>
+<application_name>ACO</application_name>
+<application_scope>x_kpm10_aco</application_scope>
+<application_version/>
+<collisions/>
+<commit_date/>
+<deleted>0</deleted>
+<description>Exported by ServiceNow Builder Tower: ACBO Services, ACBO Workspace, ACBO News.</description>
+<inserted/>
+<name>Acbo portal change</name>
+<origin_sys_id>f1eec08ca9110d7aa1a1abb0435c7179</origin_sys_id>
+<parent/>
+<release_date/>
+<remote_base_update_set/>
+<remote_parent_id/>
+<remote_sys_id>ba837d71011285b37287bd1838f9899f</remote_sys_id>
+<state>loaded</state>
+<summary>0</summary>
+<sys_class_name>sys_remote_update_set</sys_class_name>
+<sys_created_by>servicenow-builder-tower</sys_created_by>
+<sys_created_on>2026-10-21 12:11:03</sys_created_on>
+<sys_id>ba837d71011285b37287bd1838f9899f</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>servicenow-builder-tower</sys_updated_by>
+<sys_updated_on>2026-10-21 12:11:03</sys_updated_on>
+<update_set/>
+<update_source/>
+<updated/>
+</sys_remote_update_set>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="ACO">d1dff651875465102caa63990cbb355f</application>
+<category>customer</category>
+<comments/>
+<name>sp_widget_5a117873b1f8448085ddca1281d86664</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sp_widget">
+  <sp_widget action="INSERT_OR_UPDATE" apply_defaults="true">
+    <sys_id>5a117873b1f8448085ddca1281d86664</sys_id>
+    <sys_scope display_value="x_kpm10_aco">d1dff651875465102caa63990cbb355f</sys_scope>
+    <sys_update_name>sp_widget_5a117873b1f8448085ddca1281d86664</sys_update_name>
+    <category>custom</category>
+    <client_script><![CDATA[api.controller = function ($scope, $rootScope, $timeout, $window) {
+    var c = this;
+    c.selectedId = null;
+
+    c.select = function (service, $event) {
+        if ($event) $event.stopPropagation();
+        c.selectedId = service.sys_id;
+        $rootScope.$broadcast('acbo.service.selected', angular.copy(service));
+    };
+
+    // The row opens the ticket (request form); a service that cannot be requested online falls back to its details.
+    c.open = function (service, $event) {
+        if (!service.request_url) {
+            c.select(service, $event);
+            return;
+        }
+        if ($event) $event.stopPropagation();
+        $window.location.href = service.request_url;
+    };
+
+    c.onKey = function (service, $event) {
+        if ($event.target !== $event.currentTarget) return;
+        if ($event.keyCode === 13 || $event.keyCode === 32) {
+            $event.preventDefault();
+            c.open(service, $event);
+        }
+    };
+
+    $scope.$on('acbo.service.closed', function () {
+        c.selectedId = null;
+    });
+
+    if (c.data.showInSideMenu) {
+        $rootScope.acboSideMenu = $rootScope.acboSideMenu || [];
+        $rootScope.acboSideMenu.push({ id: c.data.anchorId, label: c.data.sideMenuLabel, icon: 'th-large', order: 10 });
+        $timeout(function () {
+            $rootScope.$broadcast('acbo.sidemenu.changed');
+        });
+    }
+};
+]]]]><![CDATA[></client_script>
+    <controller_as>c</controller_as>
+    <css><![CDATA[$acbo-ink: #1b1f3b;
+$acbo-muted: #5b6078;
+$acbo-line: #e3e6f0;
+$acbo-blue: #1e49e2;
+$acbo-green: #1f7a3a;
+$acbo-select: #eef0ff;
+
+.acbo-card {
+  background: #fff;
+  border: 1px solid $acbo-line;
+  border-radius: 10px;
+  padding: 16px 18px;
+  margin-bottom: 18px;
+  box-shadow: 0 1px 2px rgba(20, 27, 70, .04);
+  animation: acbo-fade-in .35s ease both;
+}
+.acbo-card-title { font-size: 17px; font-weight: 600; color: $acbo-ink; margin: 0 0 14px; }
+
+.acbo-pillars { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.acbo-pillars.is-single { grid-template-columns: minmax(0, 1fr); }
+.acbo-pillar { border: 1px solid $acbo-line; border-radius: 8px; padding: 12px 10px 8px; }
+.acbo-pillar-head { display: flex; gap: 10px; align-items: flex-start; margin-bottom: 10px; min-height: 52px; }
+.acbo-pillar-icon { font-size: 22px; line-height: 1; padding-top: 2px; }
+.acbo-pillar-title { font-size: 15px; font-weight: 600; margin: 0 0 4px; }
+.acbo-pillar-desc { font-size: 12px; color: $acbo-muted; margin: 0; }
+.acbo-accent-blue, .acbo-text-blue { color: $acbo-blue; }
+.acbo-accent-green, .acbo-text-green { color: $acbo-green; }
+
+.acbo-service-list { list-style: none; margin: 0; padding: 0; }
+.acbo-service-list li + li { margin-top: 6px; }
+.acbo-service-row {
+  display: flex; align-items: center; gap: 10px;
+  padding: 9px 10px; border: 1px solid $acbo-line; border-radius: 6px;
+  cursor: pointer; color: $acbo-ink; font-size: 13px;
+  transition: background-color .15s ease, border-color .15s ease, box-shadow .15s ease, transform .15s ease;
+  &:hover { background: #f7f8fc; border-color: #c9cee3; transform: translateX(2px); }
+  &:focus-visible { outline: 2px solid $acbo-blue; outline-offset: 2px; }
+  &.is-selected, &.is-selected:focus { background: $acbo-select; border-color: #b8c0f5; box-shadow: inset 3px 0 0 $acbo-blue; }
+}
+.acbo-service-icon { width: 20px; text-align: center; color: #4a4f6a; }
+.acbo-service-label { flex: 1; min-width: 0; }
+.acbo-info {
+  width: 20px; height: 20px; border-radius: 50%; border: 1px solid #8a8fa8; background: transparent;
+  color: #4a4f6a; font-size: 10px; line-height: 18px; padding: 0; text-align: center;
+  transition: background-color .15s ease, color .15s ease;
+  &:hover, &:focus-visible { background: $acbo-blue; border-color: $acbo-blue; color: #fff; outline: none; }
+}
+.acbo-chevron { color: #8a8fa8; transition: transform .15s ease; }
+.acbo-service-row:hover .acbo-chevron { transform: translateX(2px); }
+.acbo-empty { font-size: 12px; color: $acbo-muted; padding: 8px 4px; }
+
+@media (max-width: 1024px) { .acbo-pillars, .acbo-pillars.is-single { grid-template-columns: 1fr; } }
+
+@keyframes acbo-fade-in { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .acbo-card { animation: none; }
+  .acbo-service-row, .acbo-info, .acbo-chevron { transition: none; }
+  .acbo-service-row:hover, .acbo-service-row:hover .acbo-chevron { transform: none; }
+}
+]]]]><![CDATA[></css>
+    <data_table>sp_instance</data_table>
+    <demo_data/>
+    <description>The ACBO services in three pillars. A click on a service opens its details in the ACBO Details Panel. One pillar per instance, or all three.</description>
+    <docs/>
+    <field_list/>
+    <has_preview>true</has_preview>
+    <id>acbo-services</id>
+    <internal>false</internal>
+    <link>function link(scope, element, attrs, controller) {
+}</link>
+    <name>ACBO Services</name>
+    <option_schema>[{"name":"title","label":"Title","section":"Presentation","type":"string","default_value":"ACBO Services"},{"name":"audit_administration_description","label":"Audit Administration description","section":"Presentation","type":"string"},{"name":"data_maintenance_description","label":"Data &amp; Maintenance description","section":"Presentation","type":"string"},{"name":"access_support_description","label":"Access &amp; Support description","section":"Presentation","type":"string"},{"name":"show_in_side_menu","label":"Show in side menu","section":"Behavior","type":"boolean","default_value":false},{"name":"side_menu_label","label":"Side menu label","section":"Behavior","type":"string"},{"name":"pillar","label":"Pillar","section":"Behavior","type":"string","default_value":"all","hint":"all, audit_administration, data_maintenance or access_support"}]</option_schema>
+    <public>false</public>
+    <roles/>
+    <script><![CDATA[(function () {
+    var PILLARS = [
+        { id: 'audit_administration', title: 'Audit Administration', icon: 'users', accent: 'blue',
+            descriptionOption: 'audit_administration_description' },
+        { id: 'data_maintenance', title: 'Data & Maintenance', icon: 'database', accent: 'green',
+            descriptionOption: 'data_maintenance_description' },
+        { id: 'access_support', title: 'Access & Support', icon: 'headphones', accent: 'blue',
+            descriptionOption: 'access_support_description' }
+    ];
+
+    data.title = options.title || 'ACBO Services';
+    var pillarOption = options.pillar || 'all';
+    var validPillar = PILLARS.some(function (p) { return p.id === pillarOption; });
+    data.pillar = validPillar ? pillarOption : 'all';
+    data.anchorId = data.pillar === 'all' ? 'acbo-services' : 'acbo-services-' + data.pillar;
+    data.showInSideMenu = options.show_in_side_menu === true || options.show_in_side_menu === 'true';
+    data.sideMenuLabel = options.side_menu_label || data.title;
+
+    function resolveUrl(rawUrl, targetVal, newWindowVal) {
+        var raw = (rawUrl || '').trim();
+        if (!raw) {
+            return { url: '', target: '_self', is_external: false, new_window: false };
+        }
+
+        var isExternal = false;
+        var finalUrl = raw;
+
+        if (/^https?:\/\//i.test(raw) || /^\/\//.test(raw)) {
+            isExternal = true;
+        } else if (/^(mailto:|tel:|javascript:)/i.test(raw)) {
+            isExternal = false;
+        } else if (raw.charAt(0) === '/' || raw.charAt(0) === '?' || raw.charAt(0) === '#') {
+            isExternal = false;
+        } else if (/^(sp|esc|nav_to\.do|kb_view\.do|sc_cat_item\.do|\w+\.do)(\?|$|\/)/i.test(raw)) {
+            isExternal = false;
+        } else if (/^www\./i.test(raw)) {
+            isExternal = true;
+            finalUrl = 'https://' + raw;
+        } else {
+            var firstSlash = raw.indexOf('/');
+            var hostPart = firstSlash === -1 ? raw : raw.substring(0, firstSlash);
+            if (hostPart.indexOf('.') !== -1 && !/\.do$/i.test(hostPart)) {
+                isExternal = true;
+                finalUrl = 'https://' + raw;
+            } else {
+                isExternal = false;
+            }
+        }
+
+        var newWindow = (newWindowVal === true || newWindowVal === 'true' || newWindowVal === '1' || newWindowVal === 1);
+        var finalTarget = targetVal;
+        if (!finalTarget) {
+            if (newWindow) {
+                finalTarget = '_blank';
+            } else {
+                finalTarget = '_self';
+            }
+        } else if (newWindow && finalTarget !== '_blank') {
+            finalTarget = '_blank';
+        }
+
+        return {
+            url: finalUrl,
+            target: finalTarget,
+            is_external: isExternal,
+            new_window: newWindow
+        };
+    }
+
+    // A service may be ordered when its catalog item is active and the user passes its User Criteria.
+    function requestUrl(catItemId) {
+        if (!catItemId) return '';
+        var item = new GlideRecordSecure('sc_cat_item');
+        if (!item.get(catItemId) || item.getValue('active') != '1') return '';
+        try {
+            if (!new sn_sc.CatItem(catItemId).canView()) return '';
+        } catch (e) {
+            // canView() is not available on every release: fall back to the table ACLs already applied above.
+        }
+        return '?id=sc_cat_item&sys_id=' + catItemId;
+    }
+
+    var services = {};
+    var serviceIds = [];
+    var gr = new GlideRecordSecure('x_kpm10_aco_acbo_service');
+    gr.addActiveQuery();
+    gr.orderBy('order');
+    gr.orderBy('label');
+    gr.query();
+    while (gr.next()) {
+        var id = gr.getUniqueValue();
+        serviceIds.push(id);
+        services[id] = {
+            sys_id: id,
+            pillar: gr.getValue('pillar'),
+            label: gr.getValue('label'),
+            icon: gr.getValue('icon') || 'cube',
+            short_description: gr.getValue('short_description') || '',
+            summary: gr.getValue('summary') || '',
+            requirements: gr.getValue('requirements') || '',
+            sla: gr.getValue('sla') || '',
+            catalog_item: gr.getValue('catalog_item') || '',
+            request_url: requestUrl(gr.getValue('catalog_item')),
+            links: []
+        };
+    }
+
+    if (serviceIds.length) {
+        var link = new GlideRecordSecure('x_kpm10_aco_acbo_link');
+        link.addActiveQuery();
+        link.addQuery('type', 'service_link');
+        link.addQuery('service', 'IN', serviceIds.join(','));
+        link.orderBy('order');
+        link.orderBy('label');
+        link.query();
+        while (link.next()) {
+            var parent = services[link.getValue('service')];
+            if (!parent) continue;
+            var rawUrl = link.getValue('url') || '';
+            var targetVal = link.getValue('target');
+            var newWindow = link.getValue('new_window') == '1' || link.getValue('new_window') == 'true';
+            var resolved = resolveUrl(rawUrl, targetVal, newWindow);
+            parent.links.push({
+                label: link.getValue('label'),
+                url: resolved.url,
+                target: resolved.target,
+                new_window: resolved.new_window,
+                is_external: resolved.is_external
+            });
+        }
+    }
+
+    data.pillars = PILLARS.filter(function (p) {
+        return data.pillar === 'all' || p.id === data.pillar;
+    }).map(function (p) {
+        return {
+            id: p.id,
+            title: p.title,
+            icon: p.icon,
+            accent: p.accent,
+            description: options[p.descriptionOption] || '',
+            services: serviceIds.filter(function (id) {
+                return services[id].pillar === p.id;
+            }).map(function (id) {
+                return services[id];
+            })
+        };
+    });
+})();
+]]]]><![CDATA[></script>
+    <servicenow>false</servicenow>
+    <template><![CDATA[<section id="{{::c.data.anchorId}}" class="acbo-card acbo-services" ng-attr-aria-labelledby="{{c.data.pillar === 'all' ? c.data.anchorId + '-title' : undefined}}" ng-attr-aria-label="{{c.data.pillar !== 'all' ? c.data.title : undefined}}">
+  <h2 id="{{::c.data.anchorId}}-title" class="acbo-card-title" ng-if="c.data.pillar === 'all'">{{::c.data.title}}</h2>
+  <div class="acbo-pillars" ng-class="{'is-single': c.data.pillar !== 'all'}">
+    <div class="acbo-pillar" ng-repeat="pillar in c.data.pillars track by pillar.id">
+      <header class="acbo-pillar-head">
+        <span class="acbo-pillar-icon acbo-accent-{{::pillar.accent}}" aria-hidden="true"><i class="fa fa-{{::pillar.icon}}"></i></span>
+        <div>
+          <h3 class="acbo-pillar-title acbo-text-{{::pillar.accent}}">{{::pillar.title}}</h3>
+          <p class="acbo-pillar-desc" ng-if="::pillar.description">{{::pillar.description}}</p>
+        </div>
+      </header>
+      <ul class="acbo-service-list" role="list">
+        <li ng-repeat="service in pillar.services track by service.sys_id">
+          <div class="acbo-service-row" role="link" tabindex="0"
+               ng-class="{'is-selected': c.selectedId === service.sys_id}"
+               ng-click="c.open(service, $event)"
+               ng-keydown="c.onKey(service, $event)"
+               aria-label="{{service.request_url ? service.label + ': open the request form' : service.label + ': show details'}}">
+            <span class="acbo-service-icon" aria-hidden="true"><i class="fa fa-{{service.icon}}"></i></span>
+            <span class="acbo-service-label">{{service.label}}</span>
+            <button type="button" class="acbo-info" ng-click="c.select(service, $event)"
+                    aria-label="Details of {{service.label}}" title="Details">
+              <i class="fa fa-info" aria-hidden="true"></i>
+            </button>
+            <i class="fa fa-angle-right acbo-chevron" aria-hidden="true"></i>
+          </div>
+        </li>
+        <li class="acbo-empty" ng-if="!pillar.services.length">No services configured yet.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+]]]]><![CDATA[></template>
+  </sp_widget>
+</record_update>]]></payload>
+<remote_update_set>ba837d71011285b37287bd1838f9899f</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<source_table/>
+<sys_class_name>sys_update_xml</sys_class_name>
+<sys_created_by>servicenow-builder-tower</sys_created_by>
+<sys_created_on>2026-10-21 12:11:03</sys_created_on>
+<sys_id>8ea338d5b116eefc2e1b7d6557558160</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>servicenow-builder-tower</sys_updated_by>
+<sys_updated_on>2026-10-21 12:11:03</sys_updated_on>
+<table>sp_widget</table>
+<target_name>ACBO Services</target_name>
+<type>sp_widget</type>
+<update_domain/>
+<update_set/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="ACO">d1dff651875465102caa63990cbb355f</application>
+<category>customer</category>
+<comments/>
+<name>sp_widget_63fd70c1b91049528ff1b0d195fbae2c</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sp_widget">
+  <sp_widget action="INSERT_OR_UPDATE" apply_defaults="true">
+    <sys_id>63fd70c1b91049528ff1b0d195fbae2c</sys_id>
+    <sys_scope display_value="x_kpm10_aco">d1dff651875465102caa63990cbb355f</sys_scope>
+    <sys_update_name>sp_widget_63fd70c1b91049528ff1b0d195fbae2c</sys_update_name>
+    <category>custom</category>
+    <client_script><![CDATA[api.controller = function ($rootScope, $timeout) {
+    var c = this;
+
+    if (c.data.showInSideMenu) {
+        $rootScope.acboSideMenu = $rootScope.acboSideMenu || [];
+        $rootScope.acboSideMenu.push({ id: 'acbo-workspace', label: c.data.sideMenuLabel, icon: 'briefcase', order: 20 });
+        $timeout(function () {
+            $rootScope.$broadcast('acbo.sidemenu.changed');
+        });
+    }
+};
+]]]]><![CDATA[></client_script>
+    <controller_as>c</controller_as>
+    <css><![CDATA[.acbo-card {
+  background: #fff; border: 1px solid #e3e6f0; border-radius: 10px; padding: 16px 18px; margin-bottom: 18px;
+  box-shadow: 0 1px 2px rgba(20, 27, 70, .04);
+  animation: acbo-fade-in .35s ease both;
+}
+.acbo-card-title { font-size: 17px; font-weight: 600; color: #1b1f3b; margin: 0 0 14px; }
+.acbo-empty { font-size: 12px; color: #5b6078; margin: 0; }
+
+.acbo-ws-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+.acbo-ws-card {
+  display: flex; flex-direction: column; gap: 8px;
+  border: 1px solid #e3e6f0; border-radius: 8px; padding: 12px;
+  color: #1b1f3b; text-decoration: none;
+  transition: box-shadow .15s ease, transform .15s ease, border-color .15s ease;
+  &:hover, &:focus-visible { text-decoration: none; border-color: #c9cee3; box-shadow: 0 6px 16px rgba(20, 27, 70, .08); transform: translateY(-2px); }
+  &:focus-visible { outline: 2px solid #1e49e2; outline-offset: 2px; }
+  &.is-static { cursor: default; }
+  &.is-static:hover { transform: none; box-shadow: none; }
+}
+.acbo-ws-icon {
+  flex: 0 0 40px; width: 40px; height: 40px; border-radius: 50%;
+  display: inline-flex; align-items: center; justify-content: center; color: #fff; font-size: 17px;
+}
+.acbo-ws-main { display: flex; gap: 12px; align-items: center; color: inherit; text-decoration: none; min-width: 0; }
+.acbo-ws-main:hover, .acbo-ws-main:focus { text-decoration: none; color: inherit; }
+.acbo-ws-label { font-weight: 600; font-size: 13px; }
+.acbo-ws-desc { font-size: 12px; color: #5b6078; line-height: 1.4; word-break: break-word; }
+.acbo-ws-desc a { color: #1e49e2; text-decoration: underline; }
+.acbo-ws-desc p { margin: 0 0 4px; }
+
+.acbo-bg-blue { background: #1e49e2; } .acbo-fg-blue { color: #1e49e2; }
+.acbo-bg-green { background: #1f7a3a; } .acbo-fg-green { color: #1f7a3a; }
+.acbo-bg-purple { background: #5a2fc2; } .acbo-fg-purple { color: #5a2fc2; }
+.acbo-bg-orange { background: #f0a020; } .acbo-fg-orange { color: #c77a00; }
+
+@media (max-width: 1024px) { .acbo-ws-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 575px) { .acbo-ws-grid { grid-template-columns: 1fr; } }
+
+@keyframes acbo-fade-in { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) {
+  .acbo-card { animation: none; }
+  .acbo-ws-card { transition: none; }
+  .acbo-ws-card:hover, .acbo-ws-card:focus-visible { transform: none; }
+}
+]]]]><![CDATA[></css>
+    <data_table>sp_instance</data_table>
+    <demo_data/>
+    <description>My ACBO Workspace: the quick navigation cards entered in ACBO Portal &gt; Workspace Cards.</description>
+    <docs/>
+    <field_list/>
+    <has_preview>true</has_preview>
+    <id>acbo-workspace</id>
+    <internal>false</internal>
+    <link>function link(scope, element, attrs, controller) {
+}</link>
+    <name>ACBO Workspace</name>
+    <option_schema>[{"name":"title","label":"Title","section":"Presentation","type":"string","default_value":"My ACBO Workspace"},{"name":"show_in_side_menu","label":"Show in side menu","section":"Behavior","type":"boolean","default_value":false},{"name":"side_menu_label","label":"Side menu label","section":"Behavior","type":"string"}]</option_schema>
+    <public>false</public>
+    <roles/>
+    <script><![CDATA[(function () {
+    data.title = options.title || 'My ACBO Workspace';
+    data.showInSideMenu = options.show_in_side_menu === true || options.show_in_side_menu === 'true';
+    data.sideMenuLabel = options.side_menu_label || data.title;
+
+    function resolveUrl(rawUrl, targetVal, newWindowVal) {
+        var raw = (rawUrl || '').trim();
+        if (!raw) {
+            return { url: '', target: '_self', is_external: false, new_window: false };
+        }
+
+        var isExternal = false;
+        var finalUrl = raw;
+
+        if (/^https?:\/\//i.test(raw) || /^\/\//.test(raw)) {
+            isExternal = true;
+        } else if (/^(mailto:|tel:|javascript:)/i.test(raw)) {
+            isExternal = false;
+        } else if (raw.charAt(0) === '/' || raw.charAt(0) === '?' || raw.charAt(0) === '#') {
+            isExternal = false;
+        } else if (/^(sp|esc|nav_to\.do|kb_view\.do|sc_cat_item\.do|\w+\.do)(\?|$|\/)/i.test(raw)) {
+            isExternal = false;
+        } else if (/^www\./i.test(raw)) {
+            isExternal = true;
+            finalUrl = 'https://' + raw;
+        } else {
+            var firstSlash = raw.indexOf('/');
+            var hostPart = firstSlash === -1 ? raw : raw.substring(0, firstSlash);
+            if (hostPart.indexOf('.') !== -1 && !/\.do$/i.test(hostPart)) {
+                isExternal = true;
+                finalUrl = 'https://' + raw;
+            } else {
+                isExternal = false;
+            }
+        }
+
+        var newWindow = (newWindowVal === true || newWindowVal === 'true' || newWindowVal === '1' || newWindowVal === 1);
+        var finalTarget = targetVal;
+        if (!finalTarget) {
+            if (newWindow) {
+                finalTarget = '_blank';
+            } else {
+                finalTarget = '_self';
+            }
+        } else if (newWindow && finalTarget !== '_blank') {
+            finalTarget = '_blank';
+        }
+
+        return {
+            url: finalUrl,
+            target: finalTarget,
+            is_external: isExternal,
+            new_window: newWindow
+        };
+    }
+
+    data.cards = [];
+    var gr = new GlideRecordSecure('x_kpm10_aco_acbo_link');
+    gr.addActiveQuery();
+    gr.addQuery('type', 'workspace_card');
+    gr.orderBy('order');
+    gr.orderBy('label');
+    gr.query();
+    while (gr.next()) {
+        var rawUrl = gr.getValue('url') || '';
+        var targetVal = gr.getValue('target');
+        var newWindow = gr.getValue('new_window') == '1' || gr.getValue('new_window') == 'true';
+        var resolved = resolveUrl(rawUrl, targetVal, newWindow);
+
+        data.cards.push({
+            sys_id: gr.getUniqueValue(),
+            label: gr.getValue('label'),
+            description: gr.getValue('description') || '',
+            url: resolved.url,
+            target: resolved.target,
+            new_window: resolved.new_window,
+            is_external: resolved.is_external,
+            icon: gr.getValue('icon') || 'link',
+            accent: gr.getValue('accent') || 'blue'
+        });
+    }
+})();
+]]]]><![CDATA[></script>
+    <servicenow>false</servicenow>
+    <template><![CDATA[<section id="acbo-workspace" class="acbo-card acbo-workspace" aria-labelledby="acbo-workspace-title">
+  <h2 id="acbo-workspace-title" class="acbo-card-title">{{::c.data.title}}</h2>
+  <div class="acbo-ws-grid" ng-if="c.data.cards.length">
+    <div ng-repeat="card in c.data.cards track by card.sys_id" class="acbo-ws-card" ng-class="{'is-static': !card.url}">
+      <a class="acbo-ws-main" ng-attr-href="{{card.url || undefined}}"
+         target="{{card.target}}" rel="{{card.target === '_blank' ? 'noopener noreferrer' : undefined}}">
+        <span class="acbo-ws-icon acbo-bg-{{card.accent}}" aria-hidden="true"><i class="fa fa-{{card.icon}}"></i></span>
+        <span class="acbo-ws-label acbo-fg-{{card.accent}}">{{card.label}}</span>
+      </a>
+      <div class="acbo-ws-desc acbo-html" ng-if="card.description" ng-bind-html="card.description"></div>
+    </div>
+  </div>
+  <p class="acbo-empty" ng-if="!c.data.cards.length">No workspace cards configured yet.</p>
+</section>
+]]]]><![CDATA[></template>
+  </sp_widget>
+</record_update>]]></payload>
+<remote_update_set>ba837d71011285b37287bd1838f9899f</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<source_table/>
+<sys_class_name>sys_update_xml</sys_class_name>
+<sys_created_by>servicenow-builder-tower</sys_created_by>
+<sys_created_on>2026-10-21 12:11:03</sys_created_on>
+<sys_id>ae7620bd372256f0f639aada318e37a1</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>servicenow-builder-tower</sys_updated_by>
+<sys_updated_on>2026-10-21 12:11:03</sys_updated_on>
+<table>sp_widget</table>
+<target_name>ACBO Workspace</target_name>
+<type>sp_widget</type>
+<update_domain/>
+<update_set/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="ACO">d1dff651875465102caa63990cbb355f</application>
+<category>customer</category>
+<comments/>
+<name>sp_widget_ec5a203d9daf43ce88a9662030183537</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sp_widget">
+  <sp_widget action="INSERT_OR_UPDATE" apply_defaults="true">
+    <sys_id>ec5a203d9daf43ce88a9662030183537</sys_id>
+    <sys_scope display_value="x_kpm10_aco">d1dff651875465102caa63990cbb355f</sys_scope>
+    <sys_update_name>sp_widget_ec5a203d9daf43ce88a9662030183537</sys_update_name>
+    <category>custom</category>
+    <client_script><![CDATA[api.controller = function () {
+    var c = this;
+};
+]]]]><![CDATA[></client_script>
+    <controller_as>c</controller_as>
+    <css><![CDATA[$acbo-ink: #1b1f3b;
+$acbo-muted: #5b6078;
+$acbo-line: #e3e6f0;
+$acbo-blue: #1e49e2;
+
+.acbo-card {
+  background: #fff; border: 1px solid $acbo-line; border-radius: 10px; padding: 16px 18px; margin-bottom: 18px;
+  box-shadow: 0 1px 2px rgba(20, 27, 70, .04);
+}
+.acbo-card-title { font-size: 16px; font-weight: 600; color: $acbo-ink; margin: 0 0 12px; .fa { margin-right: 6px; } }
+.acbo-empty { font-size: 12.5px; color: $acbo-muted; margin: 0; }
+
+.acbo-news-head { display: flex; justify-content: space-between; align-items: baseline; }
+.acbo-news-item {
+  display: flex; gap: 12px; padding: 10px 0; border-top: 1px solid #f0f2f8; color: $acbo-ink;
+  transition: background-color .15s ease;
+  &:hover, &:focus-visible { text-decoration: none; background: #f7f8fc; }
+}
+.acbo-news-thumb {
+  flex: 0 0 96px; width: 96px; height: 64px; border-radius: 6px; overflow: hidden;
+  background: linear-gradient(135deg, #1a2a9c, #6a3df0);
+  display: flex; align-items: center; justify-content: center; color: rgba(255, 255, 255, .8); font-size: 20px;
+  img { width: 100%; height: 100%; object-fit: cover; }
+}
+.acbo-news-body { display: flex; flex-direction: column; min-width: 0; }
+.acbo-news-title { font-size: 13px; font-weight: 600; color: $acbo-blue; margin: 2px 0; }
+.acbo-news-summary { font-size: 12px; color: $acbo-muted; line-height: 1.4; }
+
+@media (prefers-reduced-motion: reduce) {
+  .acbo-news-item { transition: none; }
+}
+]]]]><![CDATA[></css>
+    <data_table>sp_instance</data_table>
+    <demo_data/>
+    <description>ACBO News section of the ACBO Service Portal page, reading active acbo_news records from ACBO Link.</description>
+    <docs/>
+    <field_list/>
+    <has_preview>true</has_preview>
+    <id>acbo-news</id>
+    <internal>false</internal>
+    <link>function link(scope, element, attrs, controller) {
+}</link>
+    <name>ACBO News</name>
+    <option_schema>[{"name":"news_title","label":"News title","section":"Presentation","type":"string","default_value":"ACBO News"},{"name":"news_count","label":"News items shown","section":"Data","type":"integer","default_value":5}]</option_schema>
+    <public>false</public>
+    <roles/>
+    <script><![CDATA[(function () {
+    data.newsTitle = options.news_title || 'ACBO News';
+    var newsCount = parseInt(options.news_count, 10);
+    if (isNaN(newsCount) || newsCount < 1) newsCount = 5;
+
+    function resolveUrl(rawUrl, targetVal, newWindowVal) {
+        var raw = (rawUrl || '').trim();
+        if (!raw) {
+            return { url: '', target: '_self', is_external: false, new_window: false };
+        }
+
+        var isExternal = false;
+        var finalUrl = raw;
+
+        if (/^https?:\/\//i.test(raw) || /^\/\//.test(raw)) {
+            isExternal = true;
+        } else if (/^(mailto:|tel:|javascript:)/i.test(raw)) {
+            isExternal = false;
+        } else if (raw.charAt(0) === '/' || raw.charAt(0) === '?' || raw.charAt(0) === '#') {
+            isExternal = false;
+        } else if (/^(sp|esc|nav_to\.do|kb_view\.do|sc_cat_item\.do|\w+\.do)(\?|$|\/)/i.test(raw)) {
+            isExternal = false;
+        } else if (/^www\./i.test(raw)) {
+            isExternal = true;
+            finalUrl = 'https://' + raw;
+        } else {
+            var firstSlash = raw.indexOf('/');
+            var hostPart = firstSlash === -1 ? raw : raw.substring(0, firstSlash);
+            if (hostPart.indexOf('.') !== -1 && !/\.do$/i.test(hostPart)) {
+                isExternal = true;
+                finalUrl = 'https://' + raw;
+            } else {
+                isExternal = false;
+            }
+        }
+
+        var newWindow = (newWindowVal === true || newWindowVal === 'true' || newWindowVal === '1' || newWindowVal === 1);
+        var finalTarget = targetVal;
+        if (!finalTarget) {
+            if (newWindow) {
+                finalTarget = '_blank';
+            } else {
+                finalTarget = '_self';
+            }
+        } else if (newWindow && finalTarget !== '_blank') {
+            finalTarget = '_blank';
+        }
+
+        return {
+            url: finalUrl,
+            target: finalTarget,
+            is_external: isExternal,
+            new_window: newWindow
+        };
+    }
+
+    data.news = [];
+    var link = new GlideRecordSecure('x_kpm10_aco_acbo_link');
+    link.addActiveQuery();
+    link.addQuery('type', 'acbo_news');
+    link.orderBy('order');
+    link.orderByDesc('sys_created_on');
+    link.setLimit(newsCount);
+    link.query();
+    while (link.next()) {
+        var img = link.getValue('image');
+        var imageSrc = '';
+        if (img) {
+            if (img.indexOf('http://') === 0 || img.indexOf('https://') === 0 || img.indexOf('/') === 0) {
+                imageSrc = img;
+            } else {
+                imageSrc = '/' + img;
+            }
+        } else {
+            var att = new GlideRecord('sys_attachment');
+            att.addQuery('table_name', 'x_kpm10_aco_acbo_link');
+            att.addQuery('table_sys_id', link.getUniqueValue());
+            att.orderBy('order');
+            att.setLimit(1);
+            att.query();
+            if (att.next()) {
+                imageSrc = '/sys_attachment.do?sys_id=' + att.getUniqueValue();
+            }
+        }
+
+        var rawUrl = link.getValue('url') || '';
+        var targetVal = link.getValue('target');
+        var newWindow = link.getValue('new_window') == '1' || link.getValue('new_window') == 'true';
+        var resolved = resolveUrl(rawUrl, targetVal, newWindow);
+
+        data.news.push({
+            sys_id: link.getUniqueValue(),
+            title: link.getValue('label') || '',
+            summary: (link.getValue('description') || '').replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim(),
+            image: imageSrc,
+            url: resolved.url,
+            target: resolved.target,
+            new_window: resolved.new_window,
+            is_external: resolved.is_external
+        });
+    }
+})();
+]]]]><![CDATA[></script>
+    <servicenow>false</servicenow>
+    <template><![CDATA[<div class="acbo-news-widget">
+  <section class="acbo-card acbo-news" aria-labelledby="acbo-news-title">
+    <div class="acbo-news-head">
+      <h2 id="acbo-news-title" class="acbo-card-title"><i class="fa fa-newspaper-o" aria-hidden="true"></i> {{::c.data.newsTitle}}</h2>
+    </div>
+    <a class="acbo-news-item" ng-repeat="n in c.data.news track by n.sys_id" ng-attr-href="{{n.url || undefined}}" target="{{n.target}}" rel="{{n.target === '_blank' ? 'noopener noreferrer' : undefined}}">
+      <span class="acbo-news-thumb" ng-class="{'is-placeholder': !n.image}" aria-hidden="true">
+        <img ng-if="n.image" ng-src="{{n.image}}" alt="" loading="lazy">
+        <i ng-if="!n.image" class="fa fa-newspaper-o"></i>
+      </span>
+      <span class="acbo-news-body">
+        <span class="acbo-news-title">{{n.title}}</span>
+        <span class="acbo-news-summary" ng-if="n.summary">{{n.summary}}</span>
+      </span>
+    </a>
+    <p class="acbo-empty" ng-if="!c.data.news.length">No news yet.</p>
+  </section>
+</div>
+]]]]><![CDATA[></template>
+  </sp_widget>
+</record_update>]]></payload>
+<remote_update_set>ba837d71011285b37287bd1838f9899f</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<source_table/>
+<sys_class_name>sys_update_xml</sys_class_name>
+<sys_created_by>servicenow-builder-tower</sys_created_by>
+<sys_created_on>2026-10-21 12:11:03</sys_created_on>
+<sys_id>3c485b129b983693af37a6dbf7b40a3d</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>servicenow-builder-tower</sys_updated_by>
+<sys_updated_on>2026-10-21 12:11:03</sys_updated_on>
+<table>sp_widget</table>
+<target_name>ACBO News</target_name>
+<type>sp_widget</type>
+<update_domain/>
+<update_set/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="ACO">d1dff651875465102caa63990cbb355f</application>
+<category>customer</category>
+<comments/>
+<name>sys_scope_privilege_053ab817c3738310147bd71d050131f9</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_scope_privilege">
+  <sys_scope_privilege action="INSERT_OR_UPDATE" apply_defaults="true">
+    <sys_id>053ab817c3738310147bd71d050131f9</sys_id>
+    <sys_scope display_value="x_kpm10_aco">d1dff651875465102caa63990cbb355f</sys_scope>
+    <sys_update_name>sys_scope_privilege_053ab817c3738310147bd71d050131f9</sys_update_name>
+    <operation>read</operation>
+    <source_scope>d1dff651875465102caa63990cbb355f</source_scope>
+    <status>allowed</status>
+    <target_name>sc_cat_item</target_name>
+    <target_scope>global</target_scope>
+    <target_type>sys_db_object</target_type>
+  </sys_scope_privilege>
+</record_update>]]></payload>
+<remote_update_set>ba837d71011285b37287bd1838f9899f</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<source_table/>
+<sys_class_name>sys_update_xml</sys_class_name>
+<sys_created_by>servicenow-builder-tower</sys_created_by>
+<sys_created_on>2026-10-21 12:11:03</sys_created_on>
+<sys_id>69ff0363ee94526c191abc91549fd715</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>servicenow-builder-tower</sys_updated_by>
+<sys_updated_on>2026-10-21 12:11:03</sys_updated_on>
+<table>sys_scope_privilege</table>
+<target_name></target_name>
+<type>sys_scope_privilege</type>
+<update_domain/>
+<update_set/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="ACO">d1dff651875465102caa63990cbb355f</application>
+<category>customer</category>
+<comments/>
+<name>sys_scope_privilege_14a61f17c3f7c310147bd71d050131c9</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_scope_privilege">
+  <sys_scope_privilege action="INSERT_OR_UPDATE" apply_defaults="true">
+    <sys_id>14a61f17c3f7c310147bd71d050131c9</sys_id>
+    <sys_scope display_value="x_kpm10_aco">d1dff651875465102caa63990cbb355f</sys_scope>
+    <sys_update_name>sys_scope_privilege_14a61f17c3f7c310147bd71d050131c9</sys_update_name>
+    <operation>execute</operation>
+    <source_scope>d1dff651875465102caa63990cbb355f</source_scope>
+    <status>allowed</status>
+    <target_name>ServiceSubscriptionUtils</target_name>
+    <target_scope>global</target_scope>
+    <target_type>sys_script_include</target_type>
+  </sys_scope_privilege>
+</record_update>]]></payload>
+<remote_update_set>ba837d71011285b37287bd1838f9899f</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<source_table/>
+<sys_class_name>sys_update_xml</sys_class_name>
+<sys_created_by>servicenow-builder-tower</sys_created_by>
+<sys_created_on>2026-10-21 12:11:03</sys_created_on>
+<sys_id>27813f8e5fd303169bae13f2b290af35</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>servicenow-builder-tower</sys_updated_by>
+<sys_updated_on>2026-10-21 12:11:03</sys_updated_on>
+<table>sys_scope_privilege</table>
+<target_name></target_name>
+<type>sys_scope_privilege</type>
+<update_domain/>
+<update_set/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="ACO">d1dff651875465102caa63990cbb355f</application>
+<category>customer</category>
+<comments/>
+<name>sys_scope_privilege_17aa7c57c3738310147bd71d05013160</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_scope_privilege">
+  <sys_scope_privilege action="INSERT_OR_UPDATE" apply_defaults="true">
+    <sys_id>17aa7c57c3738310147bd71d05013160</sys_id>
+    <sys_scope display_value="x_kpm10_aco">d1dff651875465102caa63990cbb355f</sys_scope>
+    <sys_update_name>sys_scope_privilege_17aa7c57c3738310147bd71d05013160</sys_update_name>
+    <operation>read</operation>
+    <source_scope>d1dff651875465102caa63990cbb355f</source_scope>
+    <status>allowed</status>
+    <target_name>sc_req_item</target_name>
+    <target_scope>global</target_scope>
+    <target_type>sys_db_object</target_type>
+  </sys_scope_privilege>
+</record_update>]]></payload>
+<remote_update_set>ba837d71011285b37287bd1838f9899f</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<source_table/>
+<sys_class_name>sys_update_xml</sys_class_name>
+<sys_created_by>servicenow-builder-tower</sys_created_by>
+<sys_created_on>2026-10-21 12:11:03</sys_created_on>
+<sys_id>f7f04e4d5fc58caae0a3c16d9add1dd0</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>servicenow-builder-tower</sys_updated_by>
+<sys_updated_on>2026-10-21 12:11:03</sys_updated_on>
+<table>sys_scope_privilege</table>
+<target_name></target_name>
+<type>sys_scope_privilege</type>
+<update_domain/>
+<update_set/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="ACO">d1dff651875465102caa63990cbb355f</application>
+<category>customer</category>
+<comments/>
+<name>sys_module_25613352b2a44059846a14a056ba53fb</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_module"><sys_module action="INSERT_OR_UPDATE">
+<content><![CDATA[{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "version": 1,
+  "serialNumber": "urn:uuid:866157a5-0229-4b71-8973-96ef025130f6",
+  "metadata": {
+    "timestamp": "2026-10-21T11:53:03.498Z",
+    "tools": {
+      "components": [
+        {
+          "type": "library",
+          "name": "sdk-build-plugins",
+          "group": "@servicenow",
+          "version": "0.0.1",
+          "author": "ServiceNow"
+        }
+      ]
+    },
+    "component": {
+      "type": "application",
+      "name": "audit",
+      "version": "0.0.1",
+      "bom-ref": "pkg:servicenow/audit@0.0.1?sys_scope_id=d1dff651875465102caa63990cbb355f",
+      "licenses": [
+        {
+          "license": {
+            "name": "UNLICENSED"
+          }
+        }
+      ],
+      "purl": "pkg:servicenow/audit@0.0.1?sys_scope_id=d1dff651875465102caa63990cbb355f"
+    }
+  },
+  "components": [],
+  "dependencies": [
+    {
+      "ref": "pkg:servicenow/audit@0.0.1?sys_scope_id=d1dff651875465102caa63990cbb355f"
+    }
+  ]
+}]]]]><![CDATA[></content>
+<external_source>false</external_source>
+<path>x_kpm10_aco/audit/0.0.1/bom.json</path>
+<sys_class_name>sys_module</sys_class_name>
+<sys_created_by>agent_integration</sys_created_by>
+<sys_created_on>2026-10-12 12:29:51</sys_created_on>
+<sys_id>25613352b2a44059846a14a056ba53fb</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_name>x_kpm10_aco/audit/0.0.1/bom.json</sys_name>
+<sys_package>d1dff651875465102caa63990cbb355f</sys_package>
+<sys_policy/>
+<sys_scope>d1dff651875465102caa63990cbb355f</sys_scope>
+<sys_update_name>sys_module_25613352b2a44059846a14a056ba53fb</sys_update_name>
+<sys_updated_by>agent_integration</sys_updated_by>
+<sys_updated_on>2026-10-12 12:29:51</sys_updated_on>
+</sys_module></record_update>]]></payload>
+<remote_update_set>ba837d71011285b37287bd1838f9899f</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<source_table/>
+<sys_class_name>sys_update_xml</sys_class_name>
+<sys_created_by>servicenow-builder-tower</sys_created_by>
+<sys_created_on>2026-10-21 12:11:03</sys_created_on>
+<sys_id>5d48a6a647f2d5d76dcc42828e5625d0</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>servicenow-builder-tower</sys_updated_by>
+<sys_updated_on>2026-10-21 12:11:03</sys_updated_on>
+<table>sys_module</table>
+<target_name></target_name>
+<type>sys_module</type>
+<update_domain/>
+<update_set/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="ACO">d1dff651875465102caa63990cbb355f</application>
+<category>customer</category>
+<comments/>
+<name>sys_scope_privilege_2cc9a472628643b0b9f468dab0862a30</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_scope_privilege">
+  <sys_scope_privilege action="INSERT_OR_UPDATE" apply_defaults="true">
+    <sys_id>2cc9a472628643b0b9f468dab0862a30</sys_id>
+    <sys_scope display_value="x_kpm10_aco">d1dff651875465102caa63990cbb355f</sys_scope>
+    <sys_update_name>sys_scope_privilege_2cc9a472628643b0b9f468dab0862a30</sys_update_name>
+    <operation>create</operation>
+    <source_scope>d1dff651875465102caa63990cbb355f</source_scope>
+    <status>allowed</status>
+    <target_name>sp_favorite</target_name>
+    <target_scope>global</target_scope>
+    <target_type>sys_db_object</target_type>
+  </sys_scope_privilege>
+</record_update>]]></payload>
+<remote_update_set>ba837d71011285b37287bd1838f9899f</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<source_table/>
+<sys_class_name>sys_update_xml</sys_class_name>
+<sys_created_by>servicenow-builder-tower</sys_created_by>
+<sys_created_on>2026-10-21 12:11:03</sys_created_on>
+<sys_id>4648912be21db2039d7501551a6fa8d0</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>servicenow-builder-tower</sys_updated_by>
+<sys_updated_on>2026-10-21 12:11:03</sys_updated_on>
+<table>sys_scope_privilege</table>
+<target_name></target_name>
+<type>sys_scope_privilege</type>
+<update_domain/>
+<update_set/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="ACO">d1dff651875465102caa63990cbb355f</application>
+<category>customer</category>
+<comments/>
+<name>sys_ui_list_33718a19c3ccd350147bd71d0501317c</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ui_list"><sys_ui_list action="INSERT_OR_UPDATE">
+<average_value>false</average_value>
+<element/>
+<max_value>false</max_value>
+<min_value>false</min_value>
+<name>sys_hub_action_type_definition</name>
+<parent/>
+<position/>
+<relationship/>
+<sum>false</sum>
+<sys_class_name>sys_ui_list</sys_class_name>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2026-10-19 16:01:38</sys_created_on>
+<sys_domain>global</sys_domain>
+<sys_domain_path>/</sys_domain_path>
+<sys_id>33718a19c3ccd350147bd71d0501317c</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_name/>
+<sys_package/>
+<sys_policy/>
+<sys_scope>d1dff651875465102caa63990cbb355f</sys_scope>
+<sys_update_name/>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2026-10-19 16:01:38</sys_updated_on>
+<sys_user>6816f79cc0a8016401c5a33be04be441</sys_user>
+<view>Default view</view>
+<view_name/>
+</sys_ui_list></record_update>]]></payload>
+<remote_update_set>ba837d71011285b37287bd1838f9899f</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<source_table/>
+<sys_class_name>sys_update_xml</sys_class_name>
+<sys_created_by>servicenow-builder-tower</sys_created_by>
+<sys_created_on>2026-10-21 12:11:03</sys_created_on>
+<sys_id>5904fb0b2d3f498b6b9c1c4b4ec828a0</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>servicenow-builder-tower</sys_updated_by>
+<sys_updated_on>2026-10-21 12:11:03</sys_updated_on>
+<table>sys_ui_list</table>
+<target_name>sys_hub_action_type_definition</target_name>
+<type>sys_ui_list</type>
+<update_domain/>
+<update_set/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="ACO">d1dff651875465102caa63990cbb355f</application>
+<category>customer</category>
+<comments/>
+<name>sys_scope_privilege_431ff591c3ccd350147bd71d05013164</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_scope_privilege">
+  <sys_scope_privilege action="INSERT_OR_UPDATE" apply_defaults="true">
+    <sys_id>431ff591c3ccd350147bd71d05013164</sys_id>
+    <sys_scope display_value="x_kpm10_aco">d1dff651875465102caa63990cbb355f</sys_scope>
+    <sys_update_name>sys_scope_privilege_431ff591c3ccd350147bd71d05013164</sys_update_name>
+    <operation>execute</operation>
+    <source_scope>d1dff651875465102caa63990cbb355f</source_scope>
+    <status>allowed</status>
+    <target_name>GlideRecord.setValue</target_name>
+    <target_scope>global</target_scope>
+    <target_type>scriptable</target_type>
+  </sys_scope_privilege>
+</record_update>]]></payload>
+<remote_update_set>ba837d71011285b37287bd1838f9899f</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<source_table/>
+<sys_class_name>sys_update_xml</sys_class_name>
+<sys_created_by>servicenow-builder-tower</sys_created_by>
+<sys_created_on>2026-10-21 12:11:03</sys_created_on>
+<sys_id>6ac3a9e66bdd55f98258a091eabf4710</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>servicenow-builder-tower</sys_updated_by>
+<sys_updated_on>2026-10-21 12:11:03</sys_updated_on>
+<table>sys_scope_privilege</table>
+<target_name></target_name>
+<type>sys_scope_privilege</type>
+<update_domain/>
+<update_set/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="ACO">d1dff651875465102caa63990cbb355f</application>
+<category>customer</category>
+<comments/>
+<name>sys_ui_list_4449bf73c3f30b10147bd71d05013117</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ui_list"><sys_ui_list action="INSERT_OR_UPDATE">
+<average_value>false</average_value>
+<element/>
+<max_value>false</max_value>
+<min_value>false</min_value>
+<name>sp_page</name>
+<parent/>
+<position/>
+<relationship/>
+<sum>false</sum>
+<sys_class_name>sys_ui_list</sys_class_name>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2026-10-15 08:53:57</sys_created_on>
+<sys_domain>global</sys_domain>
+<sys_domain_path>/</sys_domain_path>
+<sys_id>4449bf73c3f30b10147bd71d05013117</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_name/>
+<sys_package/>
+<sys_policy/>
+<sys_scope>d1dff651875465102caa63990cbb355f</sys_scope>
+<sys_update_name/>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2026-10-15 08:53:57</sys_updated_on>
+<sys_user>6816f79cc0a8016401c5a33be04be441</sys_user>
+<view>Default view</view>
+<view_name/>
+</sys_ui_list></record_update>]]></payload>
+<remote_update_set>ba837d71011285b37287bd1838f9899f</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<source_table/>
+<sys_class_name>sys_update_xml</sys_class_name>
+<sys_created_by>servicenow-builder-tower</sys_created_by>
+<sys_created_on>2026-10-21 12:11:03</sys_created_on>
+<sys_id>6c52c2cb4d07c4e77ae40b20bc38f59a</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>servicenow-builder-tower</sys_updated_by>
+<sys_updated_on>2026-10-21 12:11:03</sys_updated_on>
+<table>sys_ui_list</table>
+<target_name>sp_page</target_name>
+<type>sys_ui_list</type>
+<update_domain/>
+<update_set/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="ACO">d1dff651875465102caa63990cbb355f</application>
+<category>customer</category>
+<comments/>
+<name>sys_scope_privilege_531ff591c3ccd350147bd71d050131ca</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_scope_privilege">
+  <sys_scope_privilege action="INSERT_OR_UPDATE" apply_defaults="true">
+    <sys_id>531ff591c3ccd350147bd71d050131ca</sys_id>
+    <sys_scope display_value="x_kpm10_aco">d1dff651875465102caa63990cbb355f</sys_scope>
+    <sys_update_name>sys_scope_privilege_531ff591c3ccd350147bd71d050131ca</sys_update_name>
+    <operation>execute</operation>
+    <source_scope>d1dff651875465102caa63990cbb355f</source_scope>
+    <status>allowed</status>
+    <target_name>Glide API: scripting</target_name>
+    <target_scope>global</target_scope>
+    <target_type>scriptable</target_type>
+  </sys_scope_privilege>
+</record_update>]]></payload>
+<remote_update_set>ba837d71011285b37287bd1838f9899f</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<source_table/>
+<sys_class_name>sys_update_xml</sys_class_name>
+<sys_created_by>servicenow-builder-tower</sys_created_by>
+<sys_created_on>2026-10-21 12:11:03</sys_created_on>
+<sys_id>255e80c1f03fc5ddb6bac38c97ecccbb</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>servicenow-builder-tower</sys_updated_by>
+<sys_updated_on>2026-10-21 12:11:03</sys_updated_on>
+<table>sys_scope_privilege</table>
+<target_name></target_name>
+<type>sys_scope_privilege</type>
+<update_domain/>
+<update_set/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="ACO">d1dff651875465102caa63990cbb355f</application>
+<category>customer</category>
+<comments/>
+<name>sys_scope_privilege_5ca1cba9a1dd47c08f620660088287c3</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_scope_privilege">
+  <sys_scope_privilege action="INSERT_OR_UPDATE" apply_defaults="true">
+    <sys_id>5ca1cba9a1dd47c08f620660088287c3</sys_id>
+    <sys_scope display_value="x_kpm10_aco">d1dff651875465102caa63990cbb355f</sys_scope>
+    <sys_update_name>sys_scope_privilege_5ca1cba9a1dd47c08f620660088287c3</sys_update_name>
+    <operation>read</operation>
+    <source_scope>d1dff651875465102caa63990cbb355f</source_scope>
+    <status>allowed</status>
+    <target_name>sp_favorite</target_name>
+    <target_scope>global</target_scope>
+    <target_type>sys_db_object</target_type>
+  </sys_scope_privilege>
+</record_update>]]></payload>
+<remote_update_set>ba837d71011285b37287bd1838f9899f</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<source_table/>
+<sys_class_name>sys_update_xml</sys_class_name>
+<sys_created_by>servicenow-builder-tower</sys_created_by>
+<sys_created_on>2026-10-21 12:11:03</sys_created_on>
+<sys_id>2c58b87a531647dc619f74f0474f883d</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>servicenow-builder-tower</sys_updated_by>
+<sys_updated_on>2026-10-21 12:11:03</sys_updated_on>
+<table>sys_scope_privilege</table>
+<target_name></target_name>
+<type>sys_scope_privilege</type>
+<update_domain/>
+<update_set/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="ACO">d1dff651875465102caa63990cbb355f</application>
+<category>customer</category>
+<comments/>
+<name>sys_scope_privilege_5f1ff591c3ccd350147bd71d05013190</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_scope_privilege">
+  <sys_scope_privilege action="INSERT_OR_UPDATE" apply_defaults="true">
+    <sys_id>5f1ff591c3ccd350147bd71d05013190</sys_id>
+    <sys_scope display_value="x_kpm10_aco">d1dff651875465102caa63990cbb355f</sys_scope>
+    <sys_update_name>sys_scope_privilege_5f1ff591c3ccd350147bd71d05013190</sys_update_name>
+    <operation>execute</operation>
+    <source_scope>d1dff651875465102caa63990cbb355f</source_scope>
+    <status>allowed</status>
+    <target_name>GlideRecord.insert</target_name>
+    <target_scope>global</target_scope>
+    <target_type>scriptable</target_type>
+  </sys_scope_privilege>
+</record_update>]]></payload>
+<remote_update_set>ba837d71011285b37287bd1838f9899f</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<source_table/>
+<sys_class_name>sys_update_xml</sys_class_name>
+<sys_created_by>servicenow-builder-tower</sys_created_by>
+<sys_created_on>2026-10-21 12:11:03</sys_created_on>
+<sys_id>7deaec546c561456035e777788e3b57f</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>servicenow-builder-tower</sys_updated_by>
+<sys_updated_on>2026-10-21 12:11:03</sys_updated_on>
+<table>sys_scope_privilege</table>
+<target_name></target_name>
+<type>sys_scope_privilege</type>
+<update_domain/>
+<update_set/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="ACO">d1dff651875465102caa63990cbb355f</application>
+<category>customer</category>
+<comments/>
+<name>sys_scope_privilege_5f1ff591c3ccd350147bd71d050131bc</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_scope_privilege">
+  <sys_scope_privilege action="INSERT_OR_UPDATE" apply_defaults="true">
+    <sys_id>5f1ff591c3ccd350147bd71d050131bc</sys_id>
+    <sys_scope display_value="x_kpm10_aco">d1dff651875465102caa63990cbb355f</sys_scope>
+    <sys_update_name>sys_scope_privilege_5f1ff591c3ccd350147bd71d050131bc</sys_update_name>
+    <operation>execute</operation>
+    <source_scope>d1dff651875465102caa63990cbb355f</source_scope>
+    <status>allowed</status>
+    <target_name>GlideRecord.deleteRecord</target_name>
+    <target_scope>global</target_scope>
+    <target_type>scriptable</target_type>
+  </sys_scope_privilege>
+</record_update>]]></payload>
+<remote_update_set>ba837d71011285b37287bd1838f9899f</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<source_table/>
+<sys_class_name>sys_update_xml</sys_class_name>
+<sys_created_by>servicenow-builder-tower</sys_created_by>
+<sys_created_on>2026-10-21 12:11:03</sys_created_on>
+<sys_id>7b9eb3c550566bb99b5d026a729287b9</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>servicenow-builder-tower</sys_updated_by>
+<sys_updated_on>2026-10-21 12:11:03</sys_updated_on>
+<table>sys_scope_privilege</table>
+<target_name></target_name>
+<type>sys_scope_privilege</type>
+<update_domain/>
+<update_set/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="ACO">d1dff651875465102caa63990cbb355f</application>
+<category>customer</category>
+<comments/>
+<name>sys_scope_privilege_8d3ab817c3738310147bd71d050131f3</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_scope_privilege">
+  <sys_scope_privilege action="INSERT_OR_UPDATE" apply_defaults="true">
+    <sys_id>8d3ab817c3738310147bd71d050131f3</sys_id>
+    <sys_scope display_value="x_kpm10_aco">d1dff651875465102caa63990cbb355f</sys_scope>
+    <sys_update_name>sys_scope_privilege_8d3ab817c3738310147bd71d050131f3</sys_update_name>
+    <operation>execute</operation>
+    <source_scope>d1dff651875465102caa63990cbb355f</source_scope>
+    <status>allowed</status>
+    <target_name>GlideRecordSecure.getValue</target_name>
+    <target_scope>global</target_scope>
+    <target_type>scriptable</target_type>
+  </sys_scope_privilege>
+</record_update>]]></payload>
+<remote_update_set>ba837d71011285b37287bd1838f9899f</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<source_table/>
+<sys_class_name>sys_update_xml</sys_class_name>
+<sys_created_by>servicenow-builder-tower</sys_created_by>
+<sys_created_on>2026-10-21 12:11:03</sys_created_on>
+<sys_id>9e8670310d7e69a7ac950ed58d9e2d4c</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>servicenow-builder-tower</sys_updated_by>
+<sys_updated_on>2026-10-21 12:11:03</sys_updated_on>
+<table>sys_scope_privilege</table>
+<target_name></target_name>
+<type>sys_scope_privilege</type>
+<update_domain/>
+<update_set/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="ACO">d1dff651875465102caa63990cbb355f</application>
+<category>customer</category>
+<comments/>
+<name>sys_scope_privilege_a1cbf05bc3738310147bd71d0501316e</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_scope_privilege">
+  <sys_scope_privilege action="INSERT_OR_UPDATE" apply_defaults="true">
+    <sys_id>a1cbf05bc3738310147bd71d0501316e</sys_id>
+    <sys_scope display_value="x_kpm10_aco">d1dff651875465102caa63990cbb355f</sys_scope>
+    <sys_update_name>sys_scope_privilege_a1cbf05bc3738310147bd71d0501316e</sys_update_name>
+    <operation>read</operation>
+    <source_scope>d1dff651875465102caa63990cbb355f</source_scope>
+    <status>allowed</status>
+    <target_name>kb_knowledge_base</target_name>
+    <target_scope>global</target_scope>
+    <target_type>sys_db_object</target_type>
+  </sys_scope_privilege>
+</record_update>]]></payload>
+<remote_update_set>ba837d71011285b37287bd1838f9899f</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<source_table/>
+<sys_class_name>sys_update_xml</sys_class_name>
+<sys_created_by>servicenow-builder-tower</sys_created_by>
+<sys_created_on>2026-10-21 12:11:03</sys_created_on>
+<sys_id>340faae5355165f6d5d928e5a302dd47</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>servicenow-builder-tower</sys_updated_by>
+<sys_updated_on>2026-10-21 12:11:03</sys_updated_on>
+<table>sys_scope_privilege</table>
+<target_name></target_name>
+<type>sys_scope_privilege</type>
+<update_domain/>
+<update_set/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="ACO">d1dff651875465102caa63990cbb355f</application>
+<category>customer</category>
+<comments/>
+<name>sys_scope_privilege_a364728c0c7b436f91e1fd0c53c17e98</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_scope_privilege">
+  <sys_scope_privilege action="INSERT_OR_UPDATE" apply_defaults="true">
+    <sys_id>a364728c0c7b436f91e1fd0c53c17e98</sys_id>
+    <sys_scope display_value="x_kpm10_aco">d1dff651875465102caa63990cbb355f</sys_scope>
+    <sys_update_name>sys_scope_privilege_a364728c0c7b436f91e1fd0c53c17e98</sys_update_name>
+    <operation>delete</operation>
+    <source_scope>d1dff651875465102caa63990cbb355f</source_scope>
+    <status>allowed</status>
+    <target_name>sp_favorite</target_name>
+    <target_scope>global</target_scope>
+    <target_type>sys_db_object</target_type>
+  </sys_scope_privilege>
+</record_update>]]></payload>
+<remote_update_set>ba837d71011285b37287bd1838f9899f</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<source_table/>
+<sys_class_name>sys_update_xml</sys_class_name>
+<sys_created_by>servicenow-builder-tower</sys_created_by>
+<sys_created_on>2026-10-21 12:11:03</sys_created_on>
+<sys_id>40a4efd0d9aa87cfc995a0b5fadf7ed1</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>servicenow-builder-tower</sys_updated_by>
+<sys_updated_on>2026-10-21 12:11:03</sys_updated_on>
+<table>sys_scope_privilege</table>
+<target_name></target_name>
+<type>sys_scope_privilege</type>
+<update_domain/>
+<update_set/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="ACO">d1dff651875465102caa63990cbb355f</application>
+<category>customer</category>
+<comments/>
+<name>sys_scope_privilege_ab1ff591c3ccd350147bd71d050131cd</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_scope_privilege">
+  <sys_scope_privilege action="INSERT_OR_UPDATE" apply_defaults="true">
+    <sys_id>ab1ff591c3ccd350147bd71d050131cd</sys_id>
+    <sys_scope display_value="x_kpm10_aco">d1dff651875465102caa63990cbb355f</sys_scope>
+    <sys_update_name>sys_scope_privilege_ab1ff591c3ccd350147bd71d050131cd</sys_update_name>
+    <operation>execute</operation>
+    <source_scope>d1dff651875465102caa63990cbb355f</source_scope>
+    <status>allowed</status>
+    <target_name>ResourceSupport</target_name>
+    <target_scope>global</target_scope>
+    <target_type>sys_script_include</target_type>
+  </sys_scope_privilege>
+</record_update>]]></payload>
+<remote_update_set>ba837d71011285b37287bd1838f9899f</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<source_table/>
+<sys_class_name>sys_update_xml</sys_class_name>
+<sys_created_by>servicenow-builder-tower</sys_created_by>
+<sys_created_on>2026-10-21 12:11:03</sys_created_on>
+<sys_id>b4363f2991c1f1e999fab6c7432fa0e7</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>servicenow-builder-tower</sys_updated_by>
+<sys_updated_on>2026-10-21 12:11:03</sys_updated_on>
+<table>sys_scope_privilege</table>
+<target_name></target_name>
+<type>sys_scope_privilege</type>
+<update_domain/>
+<update_set/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="ACO">d1dff651875465102caa63990cbb355f</application>
+<category>customer</category>
+<comments/>
+<name>sys_scope_privilege_cd3ab817c3738310147bd71d050131fc</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_scope_privilege">
+  <sys_scope_privilege action="INSERT_OR_UPDATE" apply_defaults="true">
+    <sys_id>cd3ab817c3738310147bd71d050131fc</sys_id>
+    <sys_scope display_value="x_kpm10_aco">d1dff651875465102caa63990cbb355f</sys_scope>
+    <sys_update_name>sys_scope_privilege_cd3ab817c3738310147bd71d050131fc</sys_update_name>
+    <operation>execute</operation>
+    <source_scope>d1dff651875465102caa63990cbb355f</source_scope>
+    <status>allowed</status>
+    <target_name>CatalogItemJS.canView</target_name>
+    <target_scope>global</target_scope>
+    <target_type>scriptable</target_type>
+  </sys_scope_privilege>
+</record_update>]]></payload>
+<remote_update_set>ba837d71011285b37287bd1838f9899f</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<source_table/>
+<sys_class_name>sys_update_xml</sys_class_name>
+<sys_created_by>servicenow-builder-tower</sys_created_by>
+<sys_created_on>2026-10-21 12:11:03</sys_created_on>
+<sys_id>836223dd4cb2a63665a8600c4a228de4</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>servicenow-builder-tower</sys_updated_by>
+<sys_updated_on>2026-10-21 12:11:03</sys_updated_on>
+<table>sys_scope_privilege</table>
+<target_name></target_name>
+<type>sys_scope_privilege</type>
+<update_domain/>
+<update_set/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="ACO">d1dff651875465102caa63990cbb355f</application>
+<category>customer</category>
+<comments/>
+<name>sys_scope_privilege_d1bb705bc3738310147bd71d05013133</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_scope_privilege">
+  <sys_scope_privilege action="INSERT_OR_UPDATE" apply_defaults="true">
+    <sys_id>d1bb705bc3738310147bd71d05013133</sys_id>
+    <sys_scope display_value="x_kpm10_aco">d1dff651875465102caa63990cbb355f</sys_scope>
+    <sys_update_name>sys_scope_privilege_d1bb705bc3738310147bd71d05013133</sys_update_name>
+    <operation>execute</operation>
+    <source_scope>d1dff651875465102caa63990cbb355f</source_scope>
+    <status>allowed</status>
+    <target_name>ScopedGlideElement</target_name>
+    <target_scope>global</target_scope>
+    <target_type>scriptable</target_type>
+  </sys_scope_privilege>
+</record_update>]]></payload>
+<remote_update_set>ba837d71011285b37287bd1838f9899f</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<source_table/>
+<sys_class_name>sys_update_xml</sys_class_name>
+<sys_created_by>servicenow-builder-tower</sys_created_by>
+<sys_created_on>2026-10-21 12:11:03</sys_created_on>
+<sys_id>8e8d9e8aab7c9e628ec4fdd8c83672e2</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>servicenow-builder-tower</sys_updated_by>
+<sys_updated_on>2026-10-21 12:11:03</sys_updated_on>
+<table>sys_scope_privilege</table>
+<target_name></target_name>
+<type>sys_scope_privilege</type>
+<update_domain/>
+<update_set/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="ACO">d1dff651875465102caa63990cbb355f</application>
+<category>customer</category>
+<comments/>
+<name>sys_scope_privilege_d5bb705bc3738310147bd71d05013122</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_scope_privilege">
+  <sys_scope_privilege action="INSERT_OR_UPDATE" apply_defaults="true">
+    <sys_id>d5bb705bc3738310147bd71d05013122</sys_id>
+    <sys_scope display_value="x_kpm10_aco">d1dff651875465102caa63990cbb355f</sys_scope>
+    <sys_update_name>sys_scope_privilege_d5bb705bc3738310147bd71d05013122</sys_update_name>
+    <operation>read</operation>
+    <source_scope>d1dff651875465102caa63990cbb355f</source_scope>
+    <status>allowed</status>
+    <target_name>kb_knowledge</target_name>
+    <target_scope>global</target_scope>
+    <target_type>sys_db_object</target_type>
+  </sys_scope_privilege>
+</record_update>]]></payload>
+<remote_update_set>ba837d71011285b37287bd1838f9899f</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<source_table/>
+<sys_class_name>sys_update_xml</sys_class_name>
+<sys_created_by>servicenow-builder-tower</sys_created_by>
+<sys_created_on>2026-10-21 12:11:03</sys_created_on>
+<sys_id>f05af78fee255337a85bcd3c9810346b</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>servicenow-builder-tower</sys_updated_by>
+<sys_updated_on>2026-10-21 12:11:03</sys_updated_on>
+<table>sys_scope_privilege</table>
+<target_name></target_name>
+<type>sys_scope_privilege</type>
+<update_domain/>
+<update_set/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="ACO">d1dff651875465102caa63990cbb355f</application>
+<category>customer</category>
+<comments/>
+<name>sys_module_d746c877e0414cf7ba1eca29218f2fea</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_module"><sys_module action="INSERT_OR_UPDATE">
+<content><![CDATA[{
+  "name": "audit",
+  "version": "0.0.1",
+  "description": "",
+  "license": "UNLICENSED",
+  "imports": {
+    "#now:*": "./@types/servicenow/fluent/*/index.js"
+  },
+  "scripts": {
+    "build": "now-sdk build",
+    "deploy": "now-sdk install",
+    "transform": "now-sdk transform",
+    "types": "now-sdk dependencies"
+  },
+  "devDependencies": {
+    "@servicenow/sdk": "4.12.2",
+    "@servicenow/glide": "27.0.5"
+  }
+}]]]]><![CDATA[></content>
+<external_source>false</external_source>
+<path>x_kpm10_aco/audit/0.0.1/package.json</path>
+<sys_class_name>sys_module</sys_class_name>
+<sys_created_by>agent_integration</sys_created_by>
+<sys_created_on>2026-10-12 12:29:51</sys_created_on>
+<sys_id>d746c877e0414cf7ba1eca29218f2fea</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_name>x_kpm10_aco/audit/0.0.1/package.json</sys_name>
+<sys_package>d1dff651875465102caa63990cbb355f</sys_package>
+<sys_policy/>
+<sys_scope>d1dff651875465102caa63990cbb355f</sys_scope>
+<sys_update_name>sys_module_d746c877e0414cf7ba1eca29218f2fea</sys_update_name>
+<sys_updated_by>agent_integration</sys_updated_by>
+<sys_updated_on>2026-10-12 12:29:51</sys_updated_on>
+</sys_module></record_update>]]></payload>
+<remote_update_set>ba837d71011285b37287bd1838f9899f</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<source_table/>
+<sys_class_name>sys_update_xml</sys_class_name>
+<sys_created_by>servicenow-builder-tower</sys_created_by>
+<sys_created_on>2026-10-21 12:11:03</sys_created_on>
+<sys_id>75b648499618a8a81b24c54fa1c372bb</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>servicenow-builder-tower</sys_updated_by>
+<sys_updated_on>2026-10-21 12:11:03</sys_updated_on>
+<table>sys_module</table>
+<target_name></target_name>
+<type>sys_module</type>
+<update_domain/>
+<update_set/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="ACO">d1dff651875465102caa63990cbb355f</application>
+<category>customer</category>
+<comments/>
+<name>sys_scope_privilege_e4c2bc89c3405350147bd71d050131b5</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_scope_privilege">
+  <sys_scope_privilege action="INSERT_OR_UPDATE" apply_defaults="true">
+    <sys_id>e4c2bc89c3405350147bd71d050131b5</sys_id>
+    <sys_scope display_value="x_kpm10_aco">d1dff651875465102caa63990cbb355f</sys_scope>
+    <sys_update_name>sys_scope_privilege_e4c2bc89c3405350147bd71d050131b5</sys_update_name>
+    <operation>read</operation>
+    <source_scope>d1dff651875465102caa63990cbb355f</source_scope>
+    <status>allowed</status>
+    <target_name>sys_attachment</target_name>
+    <target_scope>global</target_scope>
+    <target_type>sys_db_object</target_type>
+  </sys_scope_privilege>
+</record_update>]]></payload>
+<remote_update_set>ba837d71011285b37287bd1838f9899f</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<source_table/>
+<sys_class_name>sys_update_xml</sys_class_name>
+<sys_created_by>servicenow-builder-tower</sys_created_by>
+<sys_created_on>2026-10-21 12:11:03</sys_created_on>
+<sys_id>21efe69c74b35dde59c8d1299e87a2a3</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>servicenow-builder-tower</sys_updated_by>
+<sys_updated_on>2026-10-21 12:11:03</sys_updated_on>
+<table>sys_scope_privilege</table>
+<target_name></target_name>
+<type>sys_scope_privilege</type>
+<update_domain/>
+<update_set/>
+<view/>
+</sys_update_xml>
+</unload>
