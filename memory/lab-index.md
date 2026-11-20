@@ -14,12 +14,12 @@ Every task of the Lab across applications, with the path of its file (relative t
 | MIC-414 | Gantry | done | 2026-11-20 | Gantry Sprint Backlog: the row Actions column keeps only the Action button; open/ask/delete move to… | gantry/lab/MIC-414.md |
 | MIC-413 | Second Brain | todo | 2026-11-20 | Use MarkItDown in the Second Brain import for Office, HTML, CSV and JSON documents | second-brain/lab/MIC-413.md |
 | MIC-412 | bigMike | done | 2026-11-20 | Lab agents use every enabled skill by default, with Select all / Select none | bigmike/lab/MIC-412.md |
-| MIC-411 | Gantry | todo | 2026-11-20 | Add MarkItDown as a Gantry-owned skill, switchable from Settings → Skills | gantry/lab/MIC-411.md |
+| MIC-411 | Gantry | done | 2026-11-20 | Add MarkItDown as a Gantry-owned skill, switchable from Settings → Skills | gantry/lab/MIC-411.md |
 | MIC-410 | bigMike | done | 2026-11-20 | Add the central markitdown skill (Microsoft MarkItDown) to agent-skills for all agents | bigmike/lab/MIC-410.md |
-| MIC-409 | Gantry | todo | 2026-11-20 | Gantry Sprint Backlog: add engine seats and active agent status banner above the table | gantry/lab/MIC-409.md |
+| MIC-409 | Gantry | done | 2026-11-20 | Gantry Sprint Backlog: add engine seats and active agent status banner above the table | gantry/lab/MIC-409.md |
 | MIC-408 | Gantry | done | 2026-11-20 | Gantry Sprint Backlog: align table styling, column search, Engine column, live dot, and hierarchy wi… | gantry/lab/MIC-408.md |
 | MIC-407 | Gantry | done | 2026-11-20 | Gantry Delivery Pipeline: remove list view and keep it exclusively in Sprint Backlog | gantry/lab/MIC-407.md |
-| MIC-406 | Gantry | todo | 2026-11-20 | Gantry: align Sprint Backlog table and engine seats with Big Mike, and restrict list view to Sprint… | gantry/lab/MIC-406.md |
+| MIC-406 | Gantry | done | 2026-11-20 | Gantry: align Sprint Backlog table and engine seats with Big Mike, and restrict list view to Sprint… | gantry/lab/MIC-406.md |
 | MIC-405 | bigMike | done | 2026-11-20 | Lab seats: the '0 of 3 agents working' line never leaves the owner guessing — it shows the intake in… | bigmike/lab/MIC-405.md |
 | MIC-404 | bigMike | done | 2026-11-20 | Lab intake: a request with a screenshot is split in seconds — no repository, no shell, and a missing… | bigmike/lab/MIC-404.md |
 | MIC-403 | Gantry | done | 2026-11-20 | Gantry requirement page: add the Lab's previous/next requirement control with the position counter a… | gantry/lab/MIC-403.md |

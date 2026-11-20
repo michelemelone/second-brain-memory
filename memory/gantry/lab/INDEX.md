@@ -7,11 +7,11 @@ One file per task of the Lab for this application. Search it with Grep before yo
 | MIC-416 | Gantry | done | 2026-11-20 | Gantry: changing a released requirement is a guided flow, validation is mandatory before the run, an… | MIC-416.md |
 | MIC-415 | Gantry | done | 2026-11-20 | Gantry: the Action button is enabled only when there is something to release | MIC-415.md |
 | MIC-414 | Gantry | done | 2026-11-20 | Gantry Sprint Backlog: the row Actions column keeps only the Action button; open/ask/delete move to… | MIC-414.md |
-| MIC-411 | Gantry | todo | 2026-11-20 | Add MarkItDown as a Gantry-owned skill, switchable from Settings → Skills | MIC-411.md |
-| MIC-409 | Gantry | todo | 2026-11-20 | Gantry Sprint Backlog: add engine seats and active agent status banner above the table | MIC-409.md |
+| MIC-411 | Gantry | done | 2026-11-20 | Add MarkItDown as a Gantry-owned skill, switchable from Settings → Skills | MIC-411.md |
+| MIC-409 | Gantry | done | 2026-11-20 | Gantry Sprint Backlog: add engine seats and active agent status banner above the table | MIC-409.md |
 | MIC-408 | Gantry | done | 2026-11-20 | Gantry Sprint Backlog: align table styling, column search, Engine column, live dot, and hierarchy wi… | MIC-408.md |
 | MIC-407 | Gantry | done | 2026-11-20 | Gantry Delivery Pipeline: remove list view and keep it exclusively in Sprint Backlog | MIC-407.md |
-| MIC-406 | Gantry | todo | 2026-11-20 | Gantry: align Sprint Backlog table and engine seats with Big Mike, and restrict list view to Sprint… | MIC-406.md |
+| MIC-406 | Gantry | done | 2026-11-20 | Gantry: align Sprint Backlog table and engine seats with Big Mike, and restrict list view to Sprint… | MIC-406.md |
 | MIC-403 | Gantry | done | 2026-11-20 | Gantry requirement page: add the Lab's previous/next requirement control with the position counter a… | MIC-403.md |
 | MIC-400 | Gantry | done | 2026-11-20 | Gantry requirement page: remove the yellow last-run strip next to the Start run button | MIC-400.md |
 | MIC-399 | Gantry | done | 2026-11-20 | Gantry requirement page Live tab: stage timestamps and durations must match the run that produced th… | MIC-399.md |
