@@ -4,24 +4,32 @@ Every task of the Lab across applications, with the path of its file (relative t
 
 | Key | Project | Status | Updated | Title | File |
 |---|---|---|---|---|---|
-| MIC-392 | bigMike | done | 2026-11-20 | Lab: let the owner choose how many agents work at once (concurrent runs per app, restart ordering pr… | bigmike/lab/MIC-392.md |
-| MIC-391 | bigMike | todo | 2026-11-20 | Lab sidebar: responsive widths instead of fixed pixel values, re-clamped when the window is resized | bigmike/lab/MIC-391.md |
-| MIC-387 | Gantry | todo | 2026-11-20 | Gantry sidebar resizer: double-click shrinks to fit content, width clamps on page resize, and the ha… | gantry/lab/MIC-387.md |
-| MIC-383 | bigMike | todo | 2026-11-20 | Lab task detail: make conversation composer responsive and full-width with balanced margins like Gan… | bigmike/lab/MIC-383.md |
+| MIC-400 | Gantry | done | 2026-11-20 | Gantry requirement page: remove the yellow last-run strip next to the Start run button | gantry/lab/MIC-400.md |
+| MIC-399 | Gantry | done | 2026-11-20 | Gantry requirement page Live tab: stage timestamps and durations must match the run that produced th… | gantry/lab/MIC-399.md |
+| MIC-398 | Gantry | done | 2026-11-20 | Gantry requirement page: Live tab data is consistent and the stray last-run strip next to the button… | gantry/lab/MIC-398.md |
+| MIC-397 | Gantry | done | 2026-11-20 | Gantry requirement modal: transform inline field helper texts into label tooltips | gantry/lab/MIC-397.md |
+| MIC-396 | bigMike | todo | 2026-11-20 | Lab Tasks table: add Engine column with engine logo only and remove inline engine text tag from Key… | bigmike/lab/MIC-396.md |
+| MIC-395 | bigMike | done | 2026-11-20 | Lab: a queued bigMike restart freezes every seat and its 10-minute valve kills a live run of another… | bigmike/lab/MIC-395.md |
+| MIC-394 | bigMike | done | 2026-11-20 | Lab: a task without acceptance criteria is never a dead end — one clear action instead of the same r… | bigmike/lab/MIC-394.md |
+| MIC-393 | bigMike | done | 2026-11-20 | Lab: no task can enter without its numbered acceptance criteria — every creation path refuses a desc… | bigmike/lab/MIC-393.md |
+| MIC-392 | bigMike | done | 2026-11-20 | Lab: the owner chooses how many runs work at once, and concurrent runs use the different available e… | bigmike/lab/MIC-392.md |
+| MIC-391 | bigMike | done | 2026-11-20 | Lab sidebar: responsive widths instead of fixed pixel values, re-clamped when the window is resized | bigmike/lab/MIC-391.md |
+| MIC-387 | Gantry | done | 2026-11-20 | Gantry sidebar resizer: double-click shrinks to fit content, width clamps on page resize, and the ha… | gantry/lab/MIC-387.md |
+| MIC-383 | bigMike | done | 2026-11-20 | Lab task detail: make conversation composer responsive and full-width with balanced margins like Gan… | bigmike/lab/MIC-383.md |
 | MIC-382 | bigMike | todo | 2026-11-20 | Lab task detail: add movable column separators to resize description and conversation columns like G… | bigmike/lab/MIC-382.md |
 | MIC-381 | bigMike | todo | 2026-11-20 | Lab task detail: resizable column separators and responsive full-width composer matching Gantry | bigmike/lab/MIC-381.md |
-| MIC-380 | bigMike | todo | 2026-11-20 | Lab intake: the same request started twice never creates two sets of tasks - the second call attache… | bigmike/lab/MIC-380.md |
+| MIC-380 | bigMike | done | 2026-11-20 | Lab intake: the same request started twice never creates two sets of tasks - the second call attache… | bigmike/lab/MIC-380.md |
 | MIC-379 | bigMike | done | 2026-11-20 | Lab intake: the request runs in the background and the panel polls it, so a slow model can never tur… | bigmike/lab/MIC-379.md |
-| MIC-378 | bigMike | todo | 2026-11-20 | Lab Tasks: make the existing top-right "New task" button pulse — do not add a second button | bigmike/lab/MIC-378.md |
-| MIC-377 | Gantry | todo | 2026-11-20 | Gantry requirement page: move the Start run button into the top-right button group next to Close, Sa… | gantry/lab/MIC-377.md |
+| MIC-378 | bigMike | done | 2026-11-20 | Lab Tasks: make the existing top-right "New task" button pulse — do not add a second button | bigmike/lab/MIC-378.md |
+| MIC-377 | Gantry | done | 2026-11-20 | Gantry requirement page: move the Start run button into the top-right button group next to Close, Sa… | gantry/lab/MIC-377.md |
 | MIC-376 | bigMike | todo | 2026-11-20 | Lab task detail: move the live command panel from the chat column into the right runs panel, under t… | bigmike/lab/MIC-376.md |
-| MIC-375 | Gantry | todo | 2026-11-20 | Gantry requirement page: columns fill the width, the first column keeps the space, chat capped at 25… | gantry/lab/MIC-375.md |
+| MIC-375 | Gantry | done | 2026-11-20 | Gantry requirement page: columns fill the width, the first column keeps the space, chat capped at 25… | gantry/lab/MIC-375.md |
 | MIC-374 | Gantry | done | 2026-11-20 | Gantry sidebar: restore the original logo next to the 'Gantry' name | gantry/lab/MIC-374.md |
-| MIC-373 | Gantry | in_progress | 2026-11-20 | Gantry requirement page: restore the logo next to the name and rebalance the column sizing so the ch… | gantry/lab/MIC-373.md |
-| MIC-372 | beedme-Server | todo | 2026-11-20 | Services: a crash loop can never run silently for hours — systemd limits plus a visible alert | beedme-server/lab/MIC-372.md |
-| MIC-371 | Gantry | todo | 2026-11-20 | Gantry: a startup condition can never crash-loop the service — log it, keep serving, retry the migra… | gantry/lab/MIC-371.md |
+| MIC-373 | Gantry | done | 2026-11-20 | Gantry requirement page: restore the logo next to the name and rebalance the column sizing so the ch… | gantry/lab/MIC-373.md |
+| MIC-372 | beedme-Server | done | 2026-11-20 | Services: a crash loop can never run silently for hours — systemd limits plus a visible alert | beedme-server/lab/MIC-372.md |
+| MIC-371 | Gantry | done | 2026-11-20 | Gantry: a startup condition can never crash-loop the service — log it, keep serving, retry the migra… | gantry/lab/MIC-371.md |
 | MIC-370 | bigMike | todo | 2026-11-20 | Lab memory: the files the Lab writes are committed and pushed, never left dirty for hours | bigmike/lab/MIC-370.md |
-| MIC-369 | bigMike | in_progress | 2026-11-20 | Lab runs: repository gate before and after the run (behind at start, unpushed at end, any conflict s… | bigmike/lab/MIC-369.md |
+| MIC-369 | bigMike | done | 2026-11-20 | Lab runs: repository gate before and after the run (behind at start, unpushed at end, any conflict s… | bigmike/lab/MIC-369.md |
 | MIC-368 | bigMike | done | 2026-11-20 | Lab: ship first, then start the next task — no run starts while a restart of its app is queued or in… | bigmike/lab/MIC-368.md |
 | MIC-367 | bigMike | done | 2026-11-20 | Lab restart: one request = one restart, never two mechanisms for the same ask | bigmike/lab/MIC-367.md |
 | MIC-366 | bigMike | done | 2026-11-19 | Lab run list: move the engine errors inside each run's Steps panel and make the failed label red | bigmike/lab/MIC-366.md |
@@ -53,7 +61,7 @@ Every task of the Lab across applications, with the path of its file (relative t
 | MIC-340 | bigMike | done | 2026-11-19 | bigMike: add GitHub Copilot engine support matching Gantry implementation | bigmike/lab/MIC-340.md |
 | MIC-339 | bigMike | done | 2026-11-19 | bigMike: project chats never create Lab tasks - only Agents-tab chats do | bigmike/lab/MIC-339.md |
 | MIC-338 | bigMike | done | 2026-11-19 | bigMike: bring back the Projects section in the sidebar above Spaces, only for selected projects | bigmike/lab/MIC-338.md |
-| MIC-337 | Gantry | todo | 2026-11-20 | MIC-289 is only partly done: the requirements (PBI) list now uses a separate copy of the Lab Tasks t | gantry/lab/MIC-337.md |
+| MIC-337 | Gantry | done | 2026-11-20 | Gantry: convert the remaining DataTable screens to the Lab table copy (MIC-289 follow-up) | gantry/lab/MIC-337.md |
 | MIC-335 | Gantry | done | 2026-11-19 | Gantry: move Change password and Log out into a menu opened by clicking the username | gantry/lab/MIC-335.md |
 | MIC-334 | Gantry | done | 2026-11-19 | Gantry requirement page: remove the empty white bands marked in the screenshot (Lab spacing, proven… | gantry/lab/MIC-334.md |
 | MIC-333 | bigMike | done | 2026-11-19 | Lab Dashboard: warning when apps are waiting for a restart, so done tasks that are not live yet are… | bigmike/lab/MIC-333.md |

@@ -4,12 +4,16 @@ One file per task of the Lab for this application. Search it with Grep before yo
 
 | Key | Project | Status | Updated | Title | File |
 |---|---|---|---|---|---|
-| MIC-387 | Gantry | todo | 2026-11-20 | Gantry sidebar resizer: double-click shrinks to fit content, width clamps on page resize, and the ha… | MIC-387.md |
-| MIC-377 | Gantry | todo | 2026-11-20 | Gantry requirement page: move the Start run button into the top-right button group next to Close, Sa… | MIC-377.md |
-| MIC-375 | Gantry | todo | 2026-11-20 | Gantry requirement page: columns fill the width, the first column keeps the space, chat capped at 25… | MIC-375.md |
+| MIC-400 | Gantry | done | 2026-11-20 | Gantry requirement page: remove the yellow last-run strip next to the Start run button | MIC-400.md |
+| MIC-399 | Gantry | done | 2026-11-20 | Gantry requirement page Live tab: stage timestamps and durations must match the run that produced th… | MIC-399.md |
+| MIC-398 | Gantry | done | 2026-11-20 | Gantry requirement page: Live tab data is consistent and the stray last-run strip next to the button… | MIC-398.md |
+| MIC-397 | Gantry | done | 2026-11-20 | Gantry requirement modal: transform inline field helper texts into label tooltips | MIC-397.md |
+| MIC-387 | Gantry | done | 2026-11-20 | Gantry sidebar resizer: double-click shrinks to fit content, width clamps on page resize, and the ha… | MIC-387.md |
+| MIC-377 | Gantry | done | 2026-11-20 | Gantry requirement page: move the Start run button into the top-right button group next to Close, Sa… | MIC-377.md |
+| MIC-375 | Gantry | done | 2026-11-20 | Gantry requirement page: columns fill the width, the first column keeps the space, chat capped at 25… | MIC-375.md |
 | MIC-374 | Gantry | done | 2026-11-20 | Gantry sidebar: restore the original logo next to the 'Gantry' name | MIC-374.md |
-| MIC-373 | Gantry | in_progress | 2026-11-20 | Gantry requirement page: restore the logo next to the name and rebalance the column sizing so the ch… | MIC-373.md |
-| MIC-371 | Gantry | todo | 2026-11-20 | Gantry: a startup condition can never crash-loop the service — log it, keep serving, retry the migra… | MIC-371.md |
+| MIC-373 | Gantry | done | 2026-11-20 | Gantry requirement page: restore the logo next to the name and rebalance the column sizing so the ch… | MIC-373.md |
+| MIC-371 | Gantry | done | 2026-11-20 | Gantry: a startup condition can never crash-loop the service — log it, keep serving, retry the migra… | MIC-371.md |
 | MIC-363 | Gantry | done | 2026-11-20 | Gantry: numbered delivery runs on the same PBI (no 409), sub-task starts at parent release, edits lo… | MIC-363.md |
 | MIC-362 | Gantry | done | 2026-11-19 | Gantry: the requirement chat as the single entry point (update in place or one sub-task) | MIC-362.md |
 | MIC-361 | Gantry | done | 2026-11-19 | Gantry: numbered runs on the same PBI, Change log for every change, edits blocked during a run | MIC-361.md |
@@ -20,7 +24,7 @@ One file per task of the Lab for this application. Search it with Grep before yo
 | MIC-356 | Gantry | done | 2026-11-19 | Gantry: one single PBI.md per requirement instead of 8 documents in 6 folders | MIC-356.md |
 | MIC-355 | Gantry | done | 2026-11-19 | Gantry: cap the requirement hierarchy at two levels below the Feature (Feature = project container) | MIC-355.md |
 | MIC-351 | Gantry | done | 2026-11-20 | Gantry requirement page: the Validate with AI column is never wider than the other columns and alway… | MIC-351.md |
-| MIC-337 | Gantry | todo | 2026-11-20 | MIC-289 is only partly done: the requirements (PBI) list now uses a separate copy of the Lab Tasks t | MIC-337.md |
+| MIC-337 | Gantry | done | 2026-11-20 | Gantry: convert the remaining DataTable screens to the Lab table copy (MIC-289 follow-up) | MIC-337.md |
 | MIC-335 | Gantry | done | 2026-11-19 | Gantry: move Change password and Log out into a menu opened by clicking the username | MIC-335.md |
 | MIC-334 | Gantry | done | 2026-11-19 | Gantry requirement page: remove the empty white bands marked in the screenshot (Lab spacing, proven… | MIC-334.md |
 | MIC-329 | Gantry | done | 2026-11-20 | Gantry: side-by-side comparison with the Lab on every screen, with real screenshots; fix every diffe… | MIC-329.md |
