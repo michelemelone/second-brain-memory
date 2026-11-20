@@ -1,6 +1,6 @@
 # Second Brain: brief
-Updated: 2026-11-19 · Refresh: see end · Contract: `memory/README.md`
-Sources: `second-brain-app/README.md`, `second-brain-app/deploy/README.md`, `second-brain/README.md`, wiki `projects/second-brain-app`, `topics/memory-wiki`, `decisions/all-application-memory-under-second-brain`, `wiki/gantry-memory-excluded.md`, Lab MIC-269, 272, 283, 303, 304, 320, 324.
+Updated: 2026-11-20 · Refresh: see end · Contract: `memory/README.md`
+Sources: `second-brain-app/README.md`, `second-brain-app/deploy/README.md`, `second-brain/README.md`, wiki `projects/second-brain-app`, `topics/memory-wiki`, `decisions/all-application-memory-under-second-brain`, `wiki/gantry-memory-excluded.md`, Lab MIC-269, 272, 283, 303, 304, 320, 324, 341, 413; `agent-skills/doc-ocr/SKILL.md`.
 
 ## What it is
 Two things: the vault `/home/beedme/data/workspace/second-brain` (Markdown memory of every application) and the web app "Memory / Second Brain" that browses, edits and searches it, with a chat on the graph view and an Import History tab.
@@ -22,12 +22,13 @@ Per-app Lab history in `memory/<app>/lab/` with global `memory/lab-index.md` (MI
 - English only; Markdown views only.
 
 ## Recent work
-MIC-324 drag-and-drop file/folder explorer moves on all devices; MIC-320 chat composer redesign; MIC-304 application briefs; MIC-303 layout; MIC-283 folder-delete progress.
+MIC-413 the import path runs Office/HTML/CSV/JSON through the `markitdown` skill (doc-ocr/ocr.sh), not raw text; MIC-341 multi-select in the explorer; MIC-324 drag-and-drop moves; MIC-320 chat composer redesign; MIC-304 application briefs.
 
 ## Known pitfalls
 - Service needs `Environment=PATH` or engines show "NOT INSTALLED" (MIC-195).
 - Proxy URL `/api` + `/api/memory/repo` returned 401 (fixed 2026-11-17).
 - MIC-283 and MIC-272 were not checked in a browser.
+- Document import (MIC-413): only one converter decides per format, `agent-skills/doc-ocr/SKILL.md` — PDF/EPUB/images keep PyMuPDF/Tesseract, DOCX/XLSX/PPTX/HTML/CSV/JSON go to `markitdown/scripts/convert.sh` (venv `~/.venvs/agent-skills`, pinned `markitdown==0.1.9`). `.doc`, `.odt`, `.rtf` are not convertible: no converter supports them.
 
 ## How to verify and restart
 `cd second-brain-app && npm test && npm run build`; check `curl -s -o /dev/null -w "%{http_code}" http://127.0.0.1:3739/api/tree` (401 behind Access). Restart: `bigmike-restart "Second Brain" --task <KEY>`.
