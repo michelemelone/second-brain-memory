@@ -4,10 +4,17 @@ Every task of the Lab across applications, with the path of its file (relative t
 
 | Key | Project | Status | Updated | Title | File |
 |---|---|---|---|---|---|
+| MIC-416 | Gantry | todo | 2026-11-20 | Gantry: changing a released requirement is a guided flow, validation is mandatory before the run, an… | gantry/lab/MIC-416.md |
+| MIC-415 | Gantry | todo | 2026-11-20 | Gantry: the Action button is enabled only when there is something to release | gantry/lab/MIC-415.md |
+| MIC-414 | Gantry | todo | 2026-11-20 | Gantry Sprint Backlog: the row Actions column keeps only the Action button; open/ask/delete move to… | gantry/lab/MIC-414.md |
+| MIC-413 | Second Brain | todo | 2026-11-20 | Use MarkItDown in the Second Brain import for Office, HTML, CSV and JSON documents | second-brain/lab/MIC-413.md |
+| MIC-412 | bigMike | todo | 2026-11-20 | Lab agents use every enabled skill by default, with Select all / Select none | bigmike/lab/MIC-412.md |
+| MIC-411 | Gantry | todo | 2026-11-20 | Add MarkItDown as a Gantry-owned skill, switchable from Settings → Skills | gantry/lab/MIC-411.md |
+| MIC-410 | bigMike | todo | 2026-11-20 | Add the central markitdown skill (Microsoft MarkItDown) to agent-skills for all agents | bigmike/lab/MIC-410.md |
 | MIC-409 | Gantry | todo | 2026-11-20 | Gantry Sprint Backlog: add engine seats and active agent status banner above the table | gantry/lab/MIC-409.md |
 | MIC-408 | Gantry | todo | 2026-11-20 | Gantry Sprint Backlog: align table styling, column search, Engine column, live dot, and hierarchy wi… | gantry/lab/MIC-408.md |
 | MIC-407 | Gantry | done | 2026-11-20 | Gantry Delivery Pipeline: remove list view and keep it exclusively in Sprint Backlog | gantry/lab/MIC-407.md |
-| MIC-406 | Gantry | in_progress | 2026-11-20 | Gantry: align Sprint Backlog table and engine seats with Big Mike, and restrict list view to Sprint… | gantry/lab/MIC-406.md |
+| MIC-406 | Gantry | todo | 2026-11-20 | Gantry: align Sprint Backlog table and engine seats with Big Mike, and restrict list view to Sprint… | gantry/lab/MIC-406.md |
 | MIC-405 | bigMike | todo | 2026-11-20 | Lab seats: the '0 of 3 agents working' line never leaves the owner guessing — it shows the intake in… | bigmike/lab/MIC-405.md |
 | MIC-404 | bigMike | todo | 2026-11-20 | Lab intake: a request with a screenshot is split in seconds — no repository, no shell, and a missing… | bigmike/lab/MIC-404.md |
 | MIC-403 | Gantry | done | 2026-11-20 | Gantry requirement page: add the Lab's previous/next requirement control with the position counter a… | gantry/lab/MIC-403.md |
@@ -210,9 +217,9 @@ Every task of the Lab across applications, with the path of its file (relative t
 | MIC-185 | bigMike | done | 2026-11-17 | Verify against acceptance criteria | bigmike/lab/MIC-185.md |
 | MIC-184 | bigMike | done | 2026-11-17 | Review the changes | bigmike/lab/MIC-184.md |
 | MIC-183 | bigMike | done | 2026-11-17 | Add collapse/expand all button to task list | bigmike/lab/MIC-183.md |
-| MIC-182 | bigMike | todo | 2026-11-20 | Implement derived status for parent tasks | bigmike/lab/MIC-182.md |
+| MIC-182 | bigMike | done | 2026-11-20 | Implement derived status for parent tasks | bigmike/lab/MIC-182.md |
 | MIC-181 | bigMike | done | 2026-11-17 | Define derived parent status rules | bigmike/lab/MIC-181.md |
-| MIC-180 | bigMike | done | 2026-11-17 | Task list: collapse/expand control and derived status on parent tasks | bigmike/lab/MIC-180.md |
+| MIC-180 | bigMike | done | 2026-11-20 | Task list: collapse/expand control and derived status on parent tasks | bigmike/lab/MIC-180.md |
 | MIC-179 | Second Brain | done | 2026-11-17 | Record the standing rule in the Second Brain | second-brain/lab/MIC-179.md |
 | MIC-178 | bigMike | done | 2026-11-17 | Verify auto-ship and ask-on-doubt behaviour for real | bigmike/lab/MIC-178.md |
 | MIC-177 | bigMike | cancelled | 2026-11-17 | Independent review of the auto-ship change | bigmike/lab/MIC-177.md |
