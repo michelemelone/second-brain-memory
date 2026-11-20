@@ -4,7 +4,7 @@ One file per task of the Lab for this application. Search it with Grep before yo
 
 | Key | Project | Status | Updated | Title | File |
 |---|---|---|---|---|---|
-| MIC-416 | Gantry | todo | 2026-11-20 | Gantry: changing a released requirement is a guided flow, validation is mandatory before the run, an… | MIC-416.md |
+| MIC-416 | Gantry | in_review | 2026-11-20 | Gantry: changing a released requirement is a guided flow, validation is mandatory before the run, an… | MIC-416.md |
 | MIC-415 | Gantry | done | 2026-11-20 | Gantry: the Action button is enabled only when there is something to release | MIC-415.md |
 | MIC-414 | Gantry | done | 2026-11-20 | Gantry Sprint Backlog: the row Actions column keeps only the Action button; open/ask/delete move to… | MIC-414.md |
 | MIC-411 | Gantry | todo | 2026-11-20 | Add MarkItDown as a Gantry-owned skill, switchable from Settings → Skills | MIC-411.md |
