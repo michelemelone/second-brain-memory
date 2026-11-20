@@ -7,8 +7,8 @@ One file per task of the Lab for this application. Search it with Grep before yo
 | MIC-387 | Gantry | todo | 2026-11-20 | Gantry sidebar resizer: double-click shrinks to fit content, width clamps on page resize, and the ha… | MIC-387.md |
 | MIC-377 | Gantry | todo | 2026-11-20 | Gantry requirement page: move the Start run button into the top-right button group next to Close, Sa… | MIC-377.md |
 | MIC-375 | Gantry | todo | 2026-11-20 | Gantry requirement page: columns fill the width, the first column keeps the space, chat capped at 25… | MIC-375.md |
-| MIC-374 | Gantry | todo | 2026-11-20 | Gantry sidebar: restore the original logo next to the 'Gantry' name | MIC-374.md |
-| MIC-373 | Gantry | todo | 2026-11-20 | Gantry requirement page: restore the logo next to the name and rebalance the column sizing so the ch… | MIC-373.md |
+| MIC-374 | Gantry | done | 2026-11-20 | Gantry sidebar: restore the original logo next to the 'Gantry' name | MIC-374.md |
+| MIC-373 | Gantry | in_progress | 2026-11-20 | Gantry requirement page: restore the logo next to the name and rebalance the column sizing so the ch… | MIC-373.md |
 | MIC-371 | Gantry | todo | 2026-11-20 | Gantry: a startup condition can never crash-loop the service — log it, keep serving, retry the migra… | MIC-371.md |
 | MIC-363 | Gantry | done | 2026-11-20 | Gantry: numbered delivery runs on the same PBI (no 409), sub-task starts at parent release, edits lo… | MIC-363.md |
 | MIC-362 | Gantry | done | 2026-11-19 | Gantry: the requirement chat as the single entry point (update in place or one sub-task) | MIC-362.md |

@@ -16,12 +16,12 @@ Every task of the Lab across applications, with the path of its file (relative t
 | MIC-377 | Gantry | todo | 2026-11-20 | Gantry requirement page: move the Start run button into the top-right button group next to Close, Sa… | gantry/lab/MIC-377.md |
 | MIC-376 | bigMike | todo | 2026-11-20 | Lab task detail: move the live command panel from the chat column into the right runs panel, under t… | bigmike/lab/MIC-376.md |
 | MIC-375 | Gantry | todo | 2026-11-20 | Gantry requirement page: columns fill the width, the first column keeps the space, chat capped at 25… | gantry/lab/MIC-375.md |
-| MIC-374 | Gantry | todo | 2026-11-20 | Gantry sidebar: restore the original logo next to the 'Gantry' name | gantry/lab/MIC-374.md |
-| MIC-373 | Gantry | todo | 2026-11-20 | Gantry requirement page: restore the logo next to the name and rebalance the column sizing so the ch… | gantry/lab/MIC-373.md |
+| MIC-374 | Gantry | done | 2026-11-20 | Gantry sidebar: restore the original logo next to the 'Gantry' name | gantry/lab/MIC-374.md |
+| MIC-373 | Gantry | in_progress | 2026-11-20 | Gantry requirement page: restore the logo next to the name and rebalance the column sizing so the ch… | gantry/lab/MIC-373.md |
 | MIC-372 | beedme-Server | todo | 2026-11-20 | Services: a crash loop can never run silently for hours — systemd limits plus a visible alert | beedme-server/lab/MIC-372.md |
 | MIC-371 | Gantry | todo | 2026-11-20 | Gantry: a startup condition can never crash-loop the service — log it, keep serving, retry the migra… | gantry/lab/MIC-371.md |
 | MIC-370 | bigMike | todo | 2026-11-20 | Lab memory: the files the Lab writes are committed and pushed, never left dirty for hours | bigmike/lab/MIC-370.md |
-| MIC-369 | bigMike | todo | 2026-11-20 | Lab runs: repository gate before and after the run (behind at start, unpushed at end, any conflict s… | bigmike/lab/MIC-369.md |
+| MIC-369 | bigMike | in_progress | 2026-11-20 | Lab runs: repository gate before and after the run (behind at start, unpushed at end, any conflict s… | bigmike/lab/MIC-369.md |
 | MIC-368 | bigMike | done | 2026-11-20 | Lab: ship first, then start the next task — no run starts while a restart of its app is queued or in… | bigmike/lab/MIC-368.md |
 | MIC-367 | bigMike | done | 2026-11-20 | Lab restart: one request = one restart, never two mechanisms for the same ask | bigmike/lab/MIC-367.md |
 | MIC-366 | bigMike | done | 2026-11-19 | Lab run list: move the engine errors inside each run's Steps panel and make the failed label red | bigmike/lab/MIC-366.md |
