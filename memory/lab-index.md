@@ -4,7 +4,7 @@ Every task of the Lab across applications, with the path of its file (relative t
 
 | Key | Project | Status | Updated | Title | File |
 |---|---|---|---|---|---|
-| MIC-416 | Gantry | todo | 2026-11-20 | Gantry: changing a released requirement is a guided flow, validation is mandatory before the run, an… | gantry/lab/MIC-416.md |
+| MIC-416 | Gantry | done | 2026-11-20 | Gantry: changing a released requirement is a guided flow, validation is mandatory before the run, an… | gantry/lab/MIC-416.md |
 | MIC-415 | Gantry | done | 2026-11-20 | Gantry: the Action button is enabled only when there is something to release | gantry/lab/MIC-415.md |
 | MIC-414 | Gantry | done | 2026-11-20 | Gantry Sprint Backlog: the row Actions column keeps only the Action button; open/ask/delete move to… | gantry/lab/MIC-414.md |
 | MIC-413 | Second Brain | todo | 2026-11-20 | Use MarkItDown in the Second Brain import for Office, HTML, CSV and JSON documents | second-brain/lab/MIC-413.md |
