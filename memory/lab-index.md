@@ -4,13 +4,21 @@ Every task of the Lab across applications, with the path of its file (relative t
 
 | Key | Project | Status | Updated | Title | File |
 |---|---|---|---|---|---|
-| MIC-424 | bigMike | todo | 2026-11-21 | Allow immediate task assignment without blocking on busy agents in Describe What You Want and Lab ch… | bigmike/lab/MIC-424.md |
+| MIC-432 | Gantry | todo | 2026-11-21 | Gantry: update Process.md, the agent prompts and the Gantry brief for the batch-release process | gantry/lab/MIC-432.md |
+| MIC-431 | Gantry | todo | 2026-11-21 | Gantry: the chat advises 'update this PBI' or 'sub-task' and a bug after installation re-enters the… | gantry/lab/MIC-431.md |
+| MIC-430 | Gantry | todo | 2026-11-21 | Gantry: prove that the agents consult the memory (wiki, lessons, best practices, knowledge base, pas… | gantry/lab/MIC-430.md |
+| MIC-429 | Gantry | todo | 2026-11-21 | Gantry: validation with AI is mandatory before the first run and after every change | gantry/lab/MIC-429.md |
+| MIC-428 | Gantry | todo | 2026-11-21 | Gantry: 'N requirements ready to release' notice in the Backlog and on the application page | gantry/lab/MIC-428.md |
+| MIC-427 | Gantry | todo | 2026-11-21 | Gantry: Release batch, one build and one install for every requirement that is ready, in dependency… | gantry/lab/MIC-427.md |
+| MIC-426 | Gantry | done | 2026-11-21 | Gantry: a run stops at 'Ready to release' after build and static check, with no deploy and no live t… | gantry/lab/MIC-426.md |
+| MIC-425 | bigMike | done | 2026-11-21 | Describe What You Want panel: allow shrinking much smaller, with smooth resize and snap only at the… | bigmike/lab/MIC-425.md |
+| MIC-424 | bigMike | done | 2026-11-21 | Allow immediate task assignment without blocking on busy agents in Describe What You Want and Lab ch… | bigmike/lab/MIC-424.md |
 | MIC-423 | bigMike | done | 2026-11-21 | Never open a browser window automatically in bigMike or any app (Health included) | bigmike/lab/MIC-423.md |
 | MIC-421 | bigMike | done | 2026-11-20 | Intake tasks land with no project, no agent and no reviewer, so they are invisible in the board and… | bigmike/lab/MIC-421.md |
 | MIC-420 | bigMike | done | 2026-11-20 | Attachments lost: an image sent in a chat is uploaded on disk but the stored message keeps zero atta… | bigmike/lab/MIC-420.md |
 | MIC-419 | bigMike | done | 2026-11-20 | Restore the Projects screen in Settings: the checkbox list of workspace projects, where the owner de… | bigmike/lab/MIC-419.md |
 | MIC-418 | bigMike | done | 2026-11-20 | Remove the file-mode selector from the chat header and context menu: every space, project and All pr… | bigmike/lab/MIC-418.md |
-| MIC-417 | bigMike | todo | 2026-11-21 | Lab task panel: drop the caption texts and the Run now/Delete row, keep the model, and give the live… | bigmike/lab/MIC-417.md |
+| MIC-417 | bigMike | done | 2026-11-21 | Lab task panel: drop the caption texts and the Run now/Delete row, keep the model, and give the live… | bigmike/lab/MIC-417.md |
 | MIC-416 | Gantry | done | 2026-11-20 | Gantry: changing a released requirement is a guided flow, validation is mandatory before the run, an… | gantry/lab/MIC-416.md |
 | MIC-415 | Gantry | done | 2026-11-20 | Gantry: the Action button is enabled only when there is something to release | gantry/lab/MIC-415.md |
 | MIC-414 | Gantry | done | 2026-11-20 | Gantry Sprint Backlog: the row Actions column keeps only the Action button; open/ask/delete move to… | gantry/lab/MIC-414.md |
