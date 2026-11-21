@@ -1,9 +1,10 @@
 # Memory: global index (always injectable)
-Updated: 2026-11-18. One line per application: what it is, and the brief to read first. Task history of all apps: `memory/lab-index.md`. Gantry is not here (MIC-13).
+Updated: 2026-11-18. One line per application: what it is, and the brief to read first. Task history of all apps: `memory/lab-index.md`. Gantry: brief and Lab history only (MIC-13, MIC-432).
 
 | App | What it is | Read first |
 |---|---|---|
 | bigMike | Personal assistant chat + Lab (task backoffice) | `bigmike/BRIEF.md` |
+| Gantry | ServiceNow delivery portal: batch-release process | `gantry/BRIEF.md` |
 | Second Brain | This vault and its web app (Memory) | `second-brain/BRIEF.md` |
 | Health | Weight, Jab, meals, Garmin portal | `health/BRIEF.md` |
 | Finance | Ledger web app: bank/card transactions | `finance/BRIEF.md` |
