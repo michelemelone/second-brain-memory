@@ -4,7 +4,7 @@ One file per task of the Lab for this application. Search it with Grep before yo
 
 | Key | Project | Status | Updated | Title | File |
 |---|---|---|---|---|---|
-| MIC-413 | Second Brain | todo | 2026-11-20 | Use MarkItDown in the Second Brain import for Office, HTML, CSV and JSON documents | MIC-413.md |
+| MIC-413 | Second Brain | done | 2026-11-20 | Use MarkItDown in the Second Brain import for Office, HTML, CSV and JSON documents | MIC-413.md |
 | MIC-341 | Second Brain | done | 2026-11-19 | Second Brain: multi-select files and folders with Ctrl/Cmd+click and act on all of them from one rig… | MIC-341.md |
 | MIC-324 | Second Brain | done | 2026-11-19 | Second Brain: drag and drop to move files and folders in the file explorer on all devices | MIC-324.md |
 | MIC-320 | Second Brain | done | 2026-11-19 | Second Brain: redesign the chat composer (graph view side panel) as a full-width text box with butto… | MIC-320.md |

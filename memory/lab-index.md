@@ -4,15 +4,17 @@ Every task of the Lab across applications, with the path of its file (relative t
 
 | Key | Project | Status | Updated | Title | File |
 |---|---|---|---|---|---|
+| MIC-424 | bigMike | todo | 2026-11-21 | Allow immediate task assignment without blocking on busy agents in Describe What You Want and Lab ch… | bigmike/lab/MIC-424.md |
+| MIC-423 | bigMike | done | 2026-11-21 | Never open a browser window automatically in bigMike or any app (Health included) | bigmike/lab/MIC-423.md |
 | MIC-421 | bigMike | done | 2026-11-20 | Intake tasks land with no project, no agent and no reviewer, so they are invisible in the board and… | bigmike/lab/MIC-421.md |
 | MIC-420 | bigMike | done | 2026-11-20 | Attachments lost: an image sent in a chat is uploaded on disk but the stored message keeps zero atta… | bigmike/lab/MIC-420.md |
 | MIC-419 | bigMike | done | 2026-11-20 | Restore the Projects screen in Settings: the checkbox list of workspace projects, where the owner de… | bigmike/lab/MIC-419.md |
 | MIC-418 | bigMike | done | 2026-11-20 | Remove the file-mode selector from the chat header and context menu: every space, project and All pr… | bigmike/lab/MIC-418.md |
-| MIC-417 | bigMike | todo | 2026-11-20 | Lab task panel: drop the caption texts and the Run now/Delete row, keep the model, and give the live… | bigmike/lab/MIC-417.md |
+| MIC-417 | bigMike | todo | 2026-11-21 | Lab task panel: drop the caption texts and the Run now/Delete row, keep the model, and give the live… | bigmike/lab/MIC-417.md |
 | MIC-416 | Gantry | done | 2026-11-20 | Gantry: changing a released requirement is a guided flow, validation is mandatory before the run, an… | gantry/lab/MIC-416.md |
 | MIC-415 | Gantry | done | 2026-11-20 | Gantry: the Action button is enabled only when there is something to release | gantry/lab/MIC-415.md |
 | MIC-414 | Gantry | done | 2026-11-20 | Gantry Sprint Backlog: the row Actions column keeps only the Action button; open/ask/delete move to… | gantry/lab/MIC-414.md |
-| MIC-413 | Second Brain | todo | 2026-11-20 | Use MarkItDown in the Second Brain import for Office, HTML, CSV and JSON documents | second-brain/lab/MIC-413.md |
+| MIC-413 | Second Brain | done | 2026-11-20 | Use MarkItDown in the Second Brain import for Office, HTML, CSV and JSON documents | second-brain/lab/MIC-413.md |
 | MIC-412 | bigMike | done | 2026-11-20 | Lab agents use every enabled skill by default, with Select all / Select none | bigmike/lab/MIC-412.md |
 | MIC-411 | Gantry | done | 2026-11-20 | Add MarkItDown as a Gantry-owned skill, switchable from Settings → Skills | gantry/lab/MIC-411.md |
 | MIC-410 | bigMike | done | 2026-11-20 | Add the central markitdown skill (Microsoft MarkItDown) to agent-skills for all agents | bigmike/lab/MIC-410.md |
