@@ -6,7 +6,7 @@ Every task of the Lab across applications, with the path of its file (relative t
 |---|---|---|---|---|---|
 | MIC-432 | Gantry | todo | 2026-11-21 | Gantry: update Process.md, the agent prompts and the Gantry brief for the batch-release process | gantry/lab/MIC-432.md |
 | MIC-431 | Gantry | todo | 2026-11-21 | Gantry: the chat advises 'update this PBI' or 'sub-task' and a bug after installation re-enters the… | gantry/lab/MIC-431.md |
-| MIC-430 | Gantry | todo | 2026-11-21 | Gantry: prove that the agents consult the memory (wiki, lessons, best practices, knowledge base, pas… | gantry/lab/MIC-430.md |
+| MIC-430 | Gantry | done | 2026-11-21 | Gantry: prove that the agents consult the memory (wiki, lessons, best practices, knowledge base, pas… | gantry/lab/MIC-430.md |
 | MIC-429 | Gantry | done | 2026-11-21 | Gantry: validation with AI is mandatory before the first run and after every change | gantry/lab/MIC-429.md |
 | MIC-428 | Gantry | done | 2026-11-21 | Gantry: 'N requirements ready to release' notice in the Backlog and on the application page | gantry/lab/MIC-428.md |
 | MIC-427 | Gantry | done | 2026-11-21 | Gantry: Release batch, one build and one install for every requirement that is ready, in dependency… | gantry/lab/MIC-427.md |
