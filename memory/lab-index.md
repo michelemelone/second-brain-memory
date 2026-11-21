@@ -8,7 +8,7 @@ Every task of the Lab across applications, with the path of its file (relative t
 | MIC-431 | Gantry | todo | 2026-11-21 | Gantry: the chat advises 'update this PBI' or 'sub-task' and a bug after installation re-enters the… | gantry/lab/MIC-431.md |
 | MIC-430 | Gantry | todo | 2026-11-21 | Gantry: prove that the agents consult the memory (wiki, lessons, best practices, knowledge base, pas… | gantry/lab/MIC-430.md |
 | MIC-429 | Gantry | done | 2026-11-21 | Gantry: validation with AI is mandatory before the first run and after every change | gantry/lab/MIC-429.md |
-| MIC-428 | Gantry | todo | 2026-11-21 | Gantry: 'N requirements ready to release' notice in the Backlog and on the application page | gantry/lab/MIC-428.md |
+| MIC-428 | Gantry | done | 2026-11-21 | Gantry: 'N requirements ready to release' notice in the Backlog and on the application page | gantry/lab/MIC-428.md |
 | MIC-427 | Gantry | done | 2026-11-21 | Gantry: Release batch, one build and one install for every requirement that is ready, in dependency… | gantry/lab/MIC-427.md |
 | MIC-426 | Gantry | done | 2026-11-21 | Gantry: a run stops at 'Ready to release' after build and static check, with no deploy and no live t… | gantry/lab/MIC-426.md |
 | MIC-425 | bigMike | done | 2026-11-21 | Describe What You Want panel: allow shrinking much smaller, with smooth resize and snap only at the… | bigmike/lab/MIC-425.md |
