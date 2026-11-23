@@ -4,6 +4,7 @@ Every task of the Lab across applications, with the path of its file (relative t
 
 | Key | Project | Status | Updated | Title | File |
 |---|---|---|---|---|---|
+| MIC-438 | Gantry | done | 2026-11-23 | Gantry: the requirement page updates live when a run starts, progresses and ends (no manual refresh) | gantry/lab/MIC-438.md |
 | MIC-437 | Gantry | done | 2026-11-23 | Gantry: applying the changes proposed by the validation unlocks the delivery (no second validation r… | gantry/lab/MIC-437.md |
 | MIC-436 | bigMike | done | 2026-11-21 | Lab Tasks list: task row on two lines (key + engine/model on line 1, title on line 2) | bigmike/lab/MIC-436.md |
 | MIC-435 | bigMike | done | 2026-11-21 | Settings → Projects: remove only the per-project agent (engine) checkboxes | bigmike/lab/MIC-435.md |
