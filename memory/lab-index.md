@@ -4,6 +4,7 @@ Every task of the Lab across applications, with the path of its file (relative t
 
 | Key | Project | Status | Updated | Title | File |
 |---|---|---|---|---|---|
+| MIC-445 | bigMike | done | 2026-11-23 | Lab intake: 'Describe what you want' always starts at once in parallel, follows the engine order, an… | bigmike/lab/MIC-445.md |
 | MIC-444 | Gantry | done | 2026-11-23 | Gantry: enable pasting and uploading attachments in requirement chat | gantry/lab/MIC-444.md |
 | MIC-443 | Gantry | done | 2026-11-23 | Gantry: open blank requirement page directly instead of popup for new requirement, bug, and API task | gantry/lab/MIC-443.md |
 | MIC-442 | Gantry | done | 2026-11-23 | Gantry: the cross-scope check runs already in the build run, so a forbidden operation is found befor… | gantry/lab/MIC-442.md |
