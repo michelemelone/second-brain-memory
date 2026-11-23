@@ -4,7 +4,7 @@ One file per task of the Lab for this application. Search it with Grep before yo
 
 | Key | Project | Status | Updated | Title | File |
 |---|---|---|---|---|---|
-| MIC-444 | Gantry | todo | 2026-11-23 | Gantry: enable pasting and uploading attachments in requirement chat | MIC-444.md |
+| MIC-444 | Gantry | done | 2026-11-23 | Gantry: enable pasting and uploading attachments in requirement chat | MIC-444.md |
 | MIC-443 | Gantry | done | 2026-11-23 | Gantry: open blank requirement page directly instead of popup for new requirement, bug, and API task | MIC-443.md |
 | MIC-442 | Gantry | done | 2026-11-23 | Gantry: the cross-scope check runs already in the build run, so a forbidden operation is found befor… | MIC-442.md |
 | MIC-441 | Gantry | done | 2026-11-23 | Gantry: the Release banner shows Installing, Failed or Installed live instead of staying on 'ready t… | MIC-441.md |
