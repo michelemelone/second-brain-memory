@@ -4,6 +4,10 @@ Every task of the Lab across applications, with the path of its file (relative t
 
 | Key | Project | Status | Updated | Title | File |
 |---|---|---|---|---|---|
+| MIC-443 | Gantry | todo | 2026-11-23 | Gantry: open blank requirement page directly instead of popup for new requirement, bug, and API task | gantry/lab/MIC-443.md |
+| MIC-442 | Gantry | todo | 2026-11-23 | Gantry: the cross-scope check runs already in the build run, so a forbidden operation is found befor… | gantry/lab/MIC-442.md |
+| MIC-441 | Gantry | todo | 2026-11-23 | Gantry: the Release banner shows Installing, Failed or Installed live instead of staying on 'ready t… | gantry/lab/MIC-441.md |
+| MIC-440 | Gantry | done | 2026-11-23 | Gantry: the Release read-back waits for the background flow activation and never marks a good instal… | gantry/lab/MIC-440.md |
 | MIC-439 | Gantry | done | 2026-11-23 | Gantry: every requirement is built in its own worktree, created automatically, and Release repairs o… | gantry/lab/MIC-439.md |
 | MIC-438 | Gantry | done | 2026-11-23 | Gantry: the requirement page updates live when a run starts, progresses and ends (no manual refresh) | gantry/lab/MIC-438.md |
 | MIC-437 | Gantry | done | 2026-11-23 | Gantry: applying the changes proposed by the validation unlocks the delivery (no second validation r… | gantry/lab/MIC-437.md |
