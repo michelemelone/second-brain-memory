@@ -4,6 +4,7 @@ One file per task of the Lab for this application. Search it with Grep before yo
 
 | Key | Project | Status | Updated | Title | File |
 |---|---|---|---|---|---|
+| MIC-437 | Gantry | done | 2026-11-23 | Gantry: applying the changes proposed by the validation unlocks the delivery (no second validation r… | MIC-437.md |
 | MIC-432 | Gantry | done | 2026-11-21 | Gantry: update Process.md, the agent prompts and the Gantry brief for the batch-release process | MIC-432.md |
 | MIC-431 | Gantry | done | 2026-11-21 | Gantry: the chat advises 'update this PBI' or 'sub-task' and a bug after installation re-enters the… | MIC-431.md |
 | MIC-430 | Gantry | done | 2026-11-21 | Gantry: prove that the agents consult the memory (wiki, lessons, best practices, knowledge base, pas… | MIC-430.md |

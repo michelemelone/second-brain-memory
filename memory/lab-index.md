@@ -4,7 +4,8 @@ Every task of the Lab across applications, with the path of its file (relative t
 
 | Key | Project | Status | Updated | Title | File |
 |---|---|---|---|---|---|
-| MIC-436 | bigMike | todo | 2026-11-21 | Lab Tasks list: task row on two lines (key + engine/model on line 1, title on line 2) | bigmike/lab/MIC-436.md |
+| MIC-437 | Gantry | done | 2026-11-23 | Gantry: applying the changes proposed by the validation unlocks the delivery (no second validation r… | gantry/lab/MIC-437.md |
+| MIC-436 | bigMike | done | 2026-11-21 | Lab Tasks list: task row on two lines (key + engine/model on line 1, title on line 2) | bigmike/lab/MIC-436.md |
 | MIC-435 | bigMike | done | 2026-11-21 | Settings → Projects: remove only the per-project agent (engine) checkboxes | bigmike/lab/MIC-435.md |
 | MIC-434 | bigMike | done | 2026-11-21 | Lab Settings: choose which workspace folders appear as projects in the Lab (like Settings → Projects… | bigmike/lab/MIC-434.md |
 | MIC-433 | bigMike | done | 2026-11-21 | Lab: remove the empty duplicate 'bigMike' project and refuse two projects with the same name | bigmike/lab/MIC-433.md |
