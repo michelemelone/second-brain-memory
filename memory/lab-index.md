@@ -4,6 +4,7 @@ Every task of the Lab across applications, with the path of its file (relative t
 
 | Key | Project | Status | Updated | Title | File |
 |---|---|---|---|---|---|
+| MIC-449 | Gantry | done | 2026-11-24 | Gantry: requirement list rows on one line, no 'sub task' text, Run and Release columns never wrap | gantry/lab/MIC-449.md |
 | MIC-448 | bigMike | done | 2026-11-23 | Antigravity stays connected after sign-in: the credential reaches every chat and its models become u… | bigmike/lab/MIC-448.md |
 | MIC-447 | bigMike | done | 2026-11-23 | Antigravity sign-in works from the Accounts panel on a headless server (CLI 1.5.15) | bigmike/lab/MIC-447.md |
 | MIC-446 | Gantry | done | 2026-11-23 | Gantry: a released requirement can be iterated many times — resolve the validation points and Start… | gantry/lab/MIC-446.md |

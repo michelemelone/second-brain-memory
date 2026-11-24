@@ -4,6 +4,7 @@ One file per task of the Lab for this application. Search it with Grep before yo
 
 | Key | Project | Status | Updated | Title | File |
 |---|---|---|---|---|---|
+| MIC-449 | Gantry | done | 2026-11-24 | Gantry: requirement list rows on one line, no 'sub task' text, Run and Release columns never wrap | MIC-449.md |
 | MIC-446 | Gantry | done | 2026-11-23 | Gantry: a released requirement can be iterated many times — resolve the validation points and Start… | MIC-446.md |
 | MIC-444 | Gantry | done | 2026-11-23 | Gantry: enable pasting and uploading attachments in requirement chat | MIC-444.md |
 | MIC-443 | Gantry | done | 2026-11-23 | Gantry: open blank requirement page directly instead of popup for new requirement, bug, and API task | MIC-443.md |
