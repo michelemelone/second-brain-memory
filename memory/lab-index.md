@@ -6,7 +6,7 @@ Every task of the Lab across applications, with the path of its file (relative t
 |---|---|---|---|---|---|
 | MIC-454 | Gantry | todo | 2026-11-25 | Gantry: end-to-end check of deleting a PBI on the dev instance | gantry/lab/MIC-454.md |
 | MIC-453 | Gantry | todo | 2026-11-25 | Gantry: Delete button in every state with a preview of what will be removed | gantry/lab/MIC-453.md |
-| MIC-452 | Gantry | todo | 2026-11-25 | Gantry: delete a PBI in any state with a cleanup release | gantry/lab/MIC-452.md |
+| MIC-452 | Gantry | done | 2026-11-25 | Gantry: delete a PBI in any state with a cleanup release | gantry/lab/MIC-452.md |
 | MIC-451 | Gantry | done | 2026-11-25 | Gantry: footprint scan of a PBI (where its code and records are) | gantry/lab/MIC-451.md |
 | MIC-450 | bigMike | done | 2026-11-24 | bigMike Health app: pinned chats and recent chats missing from the left column | bigmike/lab/MIC-450.md |
 | MIC-449 | Gantry | done | 2026-11-24 | Gantry: requirement list rows on one line, no 'sub task' text, Run and Release columns never wrap | gantry/lab/MIC-449.md |
