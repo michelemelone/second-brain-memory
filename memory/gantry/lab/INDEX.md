@@ -4,7 +4,7 @@ One file per task of the Lab for this application. Search it with Grep before yo
 
 | Key | Project | Status | Updated | Title | File |
 |---|---|---|---|---|---|
-| MIC-469 | Gantry | todo | 2026-11-25 | Gantry: a Global-scope requirement produces its Update Set and shows it in Artifacts | MIC-469.md |
+| MIC-469 | Gantry | done | 2026-11-25 | Gantry: a Global-scope requirement produces its Update Set and shows it in Artifacts | MIC-469.md |
 | MIC-468 | Gantry | done | 2026-11-25 | Gantry: the validation gate stays on after the owner applied the chat's update (Start run stays disa… | MIC-468.md |
 | MIC-467 | Gantry | done | 2026-11-25 | Gantry: a Global-scope requirement finishes its run without an SDK install (no 'no project to releas… | MIC-467.md |
 | MIC-466 | Gantry | done | 2026-11-25 | Gantry Artifacts page: Check on instance (exists / missing), and the delete hands over what is left… | MIC-466.md |
