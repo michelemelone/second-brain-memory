@@ -4,6 +4,8 @@ Every task of the Lab across applications, with the path of its file (relative t
 
 | Key | Project | Status | Updated | Title | File |
 |---|---|---|---|---|---|
+| MIC-460 | Gantry | todo | 2026-11-25 | Gantry Sprint Backlog table: same as the bigMike Lab task table (columns fit and autosize, Delivery… | gantry/lab/MIC-460.md |
+| MIC-459 | Gantry | done | 2026-11-25 | Gantry PBI chat: answer box you can resize with Send and Edit, better point buttons, icons for Valid… | gantry/lab/MIC-459.md |
 | MIC-458 | Gantry | done | 2026-11-25 | Gantry: clean up the leftovers of MIC-454 and unblock releases (record drift) | gantry/lab/MIC-458.md |
 | MIC-457 | bigMike | done | 2026-11-25 | bigMike: bigmike-gantry helper and agent instructions to use the Gantry service token | bigmike/lab/MIC-457.md |
 | MIC-456 | Gantry | done | 2026-11-25 | Gantry: Settings → Users shows service accounts and tokens; history marks service actions | gantry/lab/MIC-456.md |
