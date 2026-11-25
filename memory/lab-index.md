@@ -4,6 +4,9 @@ Every task of the Lab across applications, with the path of its file (relative t
 
 | Key | Project | Status | Updated | Title | File |
 |---|---|---|---|---|---|
+| MIC-469 | Gantry | todo | 2026-11-25 | Gantry: a Global-scope requirement produces its Update Set and shows it in Artifacts | gantry/lab/MIC-469.md |
+| MIC-468 | Gantry | todo | 2026-11-25 | Gantry: the validation gate stays on after the owner applied the chat's update (Start run stays disa… | gantry/lab/MIC-468.md |
+| MIC-467 | Gantry | done | 2026-11-25 | Gantry: a Global-scope requirement finishes its run without an SDK install (no 'no project to releas… | gantry/lab/MIC-467.md |
 | MIC-466 | Gantry | done | 2026-11-25 | Gantry Artifacts page: Check on instance (exists / missing), and the delete hands over what is left… | gantry/lab/MIC-466.md |
 | MIC-465 | Gantry | done | 2026-11-25 | Gantry: update Process.md, agent prompts, help and the Gantry brief for the end-to-end release | gantry/lab/MIC-465.md |
 | MIC-464 | Gantry | done | 2026-11-25 | Gantry: end-to-end proof of the automatic release on the dev instance | gantry/lab/MIC-464.md |
