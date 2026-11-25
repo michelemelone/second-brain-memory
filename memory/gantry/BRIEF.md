@@ -20,6 +20,7 @@ Every requirement goes end to end through its own worktree to **Released**, with
 5. The owner does the live check by hand after the release, with the run's "Check by hand" list.
 6. Later changes: same PBI chat, "Update this PBI" or "Add sub-task (1 level)"; a released requirement can be iterated many times (MIC-446) and goes through the same steps.
 Board columns (MIC-463): Development = build, Test = install and read-back, Release = landed. Backlog "Runs & release" column: Not built, Installed, Change pending. A Global-scope requirement has no SDK project (its Update Set is installed by hand), so the release step stops on it with that reason (seen on #162, MIC-462).
+Global-scope deletion (MIC-471): the footprint of a Global requirement reads its exported `Global/<id>_*.xml` and the delivery log `global-update-set.mjs` keeps (`.gantry/global/<id>.json`) into `platform.global.records`; a record is "created" when its own `sys_created_on` is not before the delivery started. DELETE runs `scripts/global-cleanup.mjs` (audited, dev instance only) with what it created, children first; a table and the parts of a table it created are left to check by hand (MIC-466 leftovers), and a record only modified is never touched.
 Agents write a `Memory consulted` / `Memory applied` block (MIC-430).
 
 ## Decisions that constrain changes
