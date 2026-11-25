@@ -8,7 +8,7 @@ One file per task of the Lab for this application. Search it with Grep before yo
 | MIC-473 | Gantry | blocked | 2026-11-25 | Gantry: admin route that runs allowed SDK commands on the dev instance with its login, masked, for t… | MIC-473.md |
 | MIC-472 | Gantry | todo | 2026-11-25 | Gantry: end-to-end proof of a Global-scope requirement (create, release, Artifacts, delete) | MIC-472.md |
 | MIC-471 | Gantry | todo | 2026-11-25 | Gantry: deleting a Global-scope requirement also removes what it created on the instance | MIC-471.md |
-| MIC-470 | Gantry | todo | 2026-11-25 | Gantry spike: can Fluent install into the Global scope from a worktree (current and latest now-sdk)? | MIC-470.md |
+| MIC-470 | Gantry | done | 2026-11-25 | Gantry spike: can Fluent install into the Global scope from a worktree (current and latest now-sdk)? | MIC-470.md |
 | MIC-469 | Gantry | done | 2026-11-25 | Gantry: a Global-scope requirement produces its Update Set and shows it in Artifacts | MIC-469.md |
 | MIC-468 | Gantry | done | 2026-11-25 | Gantry: the validation gate stays on after the owner applied the chat's update (Start run stays disa… | MIC-468.md |
 | MIC-467 | Gantry | done | 2026-11-25 | Gantry: a Global-scope requirement finishes its run without an SDK install (no 'no project to releas… | MIC-467.md |
