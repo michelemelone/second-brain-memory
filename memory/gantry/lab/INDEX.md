@@ -4,6 +4,7 @@ One file per task of the Lab for this application. Search it with Grep before yo
 
 | Key | Project | Status | Updated | Title | File |
 |---|---|---|---|---|---|
+| MIC-458 | Gantry | done | 2026-11-25 | Gantry: clean up the leftovers of MIC-454 and unblock releases (record drift) | MIC-458.md |
 | MIC-456 | Gantry | done | 2026-11-25 | Gantry: Settings → Users shows service accounts and tokens; history marks service actions | MIC-456.md |
 | MIC-455 | Gantry | done | 2026-11-25 | Gantry: service-account token (Bearer) for agents, admin power, hashed, revocable | MIC-455.md |
 | MIC-454 | Gantry | done | 2026-11-25 | Gantry: end-to-end check of deleting a PBI on the dev instance | MIC-454.md |

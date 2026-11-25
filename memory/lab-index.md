@@ -4,6 +4,7 @@ Every task of the Lab across applications, with the path of its file (relative t
 
 | Key | Project | Status | Updated | Title | File |
 |---|---|---|---|---|---|
+| MIC-458 | Gantry | done | 2026-11-25 | Gantry: clean up the leftovers of MIC-454 and unblock releases (record drift) | gantry/lab/MIC-458.md |
 | MIC-457 | bigMike | done | 2026-11-25 | bigMike: bigmike-gantry helper and agent instructions to use the Gantry service token | bigmike/lab/MIC-457.md |
 | MIC-456 | Gantry | done | 2026-11-25 | Gantry: Settings → Users shows service accounts and tokens; history marks service actions | gantry/lab/MIC-456.md |
 | MIC-455 | Gantry | done | 2026-11-25 | Gantry: service-account token (Bearer) for agents, admin power, hashed, revocable | gantry/lab/MIC-455.md |

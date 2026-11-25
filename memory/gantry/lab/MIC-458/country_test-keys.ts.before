@@ -1,0 +1,1665 @@
+import '@servicenow/sdk/global'
+
+declare global {
+    namespace Now {
+        namespace Internal {
+            interface Keys extends KeysRegistry {
+                explicit: {
+                    A1F62F70C3B0D310147BD71D050131B5: {
+                        table: 'sys_scope_privilege'
+                        id: 'A1F62F70C3B0D310147BD71D050131B5'
+                    }
+                    E9F62F70C3B0D310147BD71D050131AF: {
+                        table: 'sys_scope_privilege'
+                        id: 'E9F62F70C3B0D310147BD71D050131AF'
+                    }
+                    asset_compliance_list_mail_script: {
+                        table: 'sys_script_email'
+                        id: '613040f833ab4c1b8bc44e163252a28d'
+                    }
+                    asset_compliance_notification: {
+                        table: 'sysevent_email_action'
+                        id: 'd0aa99cbba384270809410a7e3c9453c'
+                    }
+                    asset_compliance_overdue_event: {
+                        table: 'sysevent_register'
+                        id: 'eb5d3924f6cc4d05b861e93b1de68ea0'
+                    }
+                    asset_util_script_include: {
+                        table: 'sys_script_include'
+                        id: 'ea5f00d574fb4bbcaabcc98ebb7ac560'
+                    }
+                    atf_asset_dept: {
+                        table: 'sys_atf_step'
+                        id: 'db305cb6e1dd4ff1b3f3e4f9839500a8'
+                    }
+                    atf_asset_impersonate: {
+                        table: 'sys_atf_step'
+                        id: '18215ad88bb34451b267052d10d2d346'
+                    }
+                    atf_asset_user: {
+                        table: 'sys_atf_step'
+                        id: 'f0d33407fb36422086baf38fc5493efc'
+                    }
+                    atf_impersonate_country_access_appr: {
+                        table: 'sys_atf_step'
+                        id: '5572c2e1442647cbb6303bded3ac4494'
+                    }
+                    atf_impersonate_country_access_rej: {
+                        table: 'sys_atf_step'
+                        id: '605bc18eee7047678ed058faf8f71199'
+                    }
+                    atf_script_country_access_appr: {
+                        table: 'sys_atf_step'
+                        id: 'e4f70477ae4c4199a92b4988bc7664c5'
+                    }
+                    atf_script_country_access_rej: {
+                        table: 'sys_atf_step'
+                        id: '2ce893265590466b8d93ed81d094da2c'
+                    }
+                    atf_test_country_access_approved: {
+                        table: 'sys_atf_test'
+                        id: 'a8439761d4ac43d586cc56d57d304e46'
+                    }
+                    atf_test_country_access_rejected: {
+                        table: 'sys_atf_test'
+                        id: '39058b77e3a34d77bc761b01f5907f47'
+                    }
+                    atf_user_country_access_appr_mgr: {
+                        table: 'sys_atf_step'
+                        id: '960a176fbab540d6b8d1ac1351528a41'
+                    }
+                    atf_user_country_access_appr_req: {
+                        table: 'sys_atf_step'
+                        id: 'bcf55b3387f343f19cb870d7efeaa7e7'
+                    }
+                    atf_user_country_access_rej_mgr: {
+                        table: 'sys_atf_step'
+                        id: '1074fe517a094ec886207d64a73c8e73'
+                    }
+                    atf_user_country_access_rej_req: {
+                        table: 'sys_atf_step'
+                        id: '12504445aa1441ee92769d8f3d857f3d'
+                    }
+                    bom_json: {
+                        table: 'sys_module'
+                        id: 'cebaaf7a9fc846a3b2706696aee46a6e'
+                    }
+                    compliance_fire_overdue_event: {
+                        table: 'sys_hub_action_instance_v2'
+                        id: 'b22876e3a1e84aceb5f4c1203b743b5f'
+                    }
+                    compliance_if_assets_found: {
+                        table: 'sys_hub_flow_logic_instance_v2'
+                        id: '668e9ebff06e43198974af3d3f8f01f5'
+                    }
+                    compliance_lookup_first_asset: {
+                        table: 'sys_hub_action_instance_v2'
+                        id: '0176947e72294f769f5673e8b8304852'
+                    }
+                    compliance_lookup_overdue_assets: {
+                        table: 'sys_hub_action_instance_v2'
+                        id: 'd1ffc3975460476389f4212aba02e963'
+                    }
+                    country_access_approved_event: {
+                        table: 'sysevent_register'
+                        id: 'b9837d41c5d54fe7a254801de0b1f2e8'
+                    }
+                    country_access_approved_notification: {
+                        table: 'sysevent_email_action'
+                        id: '0402bed2fce1445cb5119bb53a77c864'
+                    }
+                    country_access_client_validation: {
+                        table: 'catalog_script_client'
+                        id: 'f6e6e3113ba94b57b106710f00367372'
+                    }
+                    country_access_close_request: {
+                        table: 'sys_hub_action_instance_v2'
+                        id: '6af63916ff404b1cb50d6ae93a1dff86'
+                    }
+                    country_access_close_request_rej: {
+                        table: 'sys_hub_action_instance_v2'
+                        id: '0f9d2f6ab23e4210a4b35e174ec603ed'
+                    }
+                    country_access_close_ritm_complete: {
+                        table: 'sys_hub_action_instance_v2'
+                        id: '1396529d060a43849c8f804bb0345a2c'
+                    }
+                    country_access_close_ritm_rejected: {
+                        table: 'sys_hub_action_instance_v2'
+                        id: '484d9f6d626849e1a90976629c5511d0'
+                    }
+                    country_access_create_task: {
+                        table: 'sys_hub_action_instance_v2'
+                        id: '5b85a045d120427cba8e2cfd9c39573e'
+                    }
+                    country_access_fire_approval_event: {
+                        table: 'sys_hub_action_instance_v2'
+                        id: 'f9de5e672db044c08c71abaf7c377873'
+                    }
+                    country_access_fulfillment_flow: {
+                        table: 'sys_hub_flow'
+                        id: 'e9271da5fccd49f19e07c67ba2589b81'
+                    }
+                    country_access_get_catalog_vars: {
+                        table: 'sys_hub_action_instance_v2'
+                        id: 'e776a01a9c874fa0a358a109f656f7fc'
+                    }
+                    country_access_if_approved: {
+                        table: 'sys_hub_flow_logic_instance_v2'
+                        id: '1de622aeb4de4bbdbca27489250c4788'
+                    }
+                    country_access_if_no_siblings_open: {
+                        table: 'sys_hub_flow_logic_instance_v2'
+                        id: '0bf87424f4214c218df28016c9f81a3a'
+                    }
+                    country_access_if_no_siblings_open_rej: {
+                        table: 'sys_hub_flow_logic_instance_v2'
+                        id: 'c881f4316e064da1a2b229c424ccc654'
+                    }
+                    country_access_if_rejected: {
+                        table: 'sys_hub_flow_logic_instance_v2'
+                        id: 'f4cca1b3018e4ecebb1b4125e6f0aa8a'
+                    }
+                    country_access_lookup_group: {
+                        table: 'sys_hub_action_instance_v2'
+                        id: 'df67513b41614dd5b0d0548b5a3ab944'
+                    }
+                    country_access_manager_approval: {
+                        table: 'sys_hub_action_instance_v2'
+                        id: '423bce24c0e349d7b3fd882271ee338b'
+                    }
+                    country_access_open_siblings: {
+                        table: 'sys_hub_action_instance_v2'
+                        id: 'd10d3df647894820919309059b46e476'
+                    }
+                    country_access_open_siblings_rej: {
+                        table: 'sys_hub_action_instance_v2'
+                        id: '574fdd704e1a4d789f83747b4bd44f25'
+                    }
+                    country_access_open_tasks: {
+                        table: 'sys_hub_action_instance_v2'
+                        id: '8c6cac15098d4ddda14cec3b4d4ea544'
+                    }
+                    country_access_remaining_tasks: {
+                        table: 'sys_hub_action_instance_v2'
+                        id: '17c607058f4b41f989ae70997a72d1ba'
+                    }
+                    country_access_request_catalog_item: {
+                        table: 'sc_cat_item'
+                        id: 'd8d82fa368024dcf98fd0ebf7978c3f9'
+                    }
+                    country_access_server_validation_rule: {
+                        table: 'sys_script'
+                        id: '9667954743b348b2be32d9a367d70997'
+                    }
+                    country_access_test_suite: {
+                        table: 'sys_atf_test_suite'
+                        id: '47727aa66c1e42bf864c72a33b215f0f'
+                    }
+                    country_access_trigger: {
+                        table: 'sys_hub_trigger_instance_v2'
+                        id: '51fbcb672d2a423c9a3a347b14802f21'
+                    }
+                    country_access_wait_all_tasks: {
+                        table: 'sys_hub_flow_logic_instance_v2'
+                        id: 'ce653ca468db4bdfb51421b2338af756'
+                    }
+                    country_access_wait_each_task: {
+                        table: 'sys_hub_flow_logic_instance_v2'
+                        id: '4589ed2a211b42fb93260def17f63158'
+                    }
+                    country_access_wait_task_closed: {
+                        table: 'sys_hub_action_instance_v2'
+                        id: '9d81a3449f2648d38db73187833e54bf'
+                    }
+                    country_assets_api: {
+                        table: 'sys_ws_definition'
+                        id: 'f64a658b69d740c8aabb6fdb34be2d9d'
+                    }
+                    country_assets_api_acl: {
+                        table: 'sys_security_acl'
+                        id: '3676f81564974a54b97f1e16854a428a'
+                    }
+                    country_assets_api_v1: {
+                        table: 'sys_ws_version'
+                        id: 'ee76c85e48e848199587bdcf5c9fda9c'
+                    }
+                    country_assets_ui_page_acl: {
+                        table: 'sys_security_acl'
+                        id: '2259348d50e74e7f9d7b63b814c1e027'
+                    }
+                    country_test_app_menu: {
+                        table: 'sys_app_application'
+                        id: '45d304c89bf44284bd9363b82bf2441f'
+                    }
+                    country_test_asset_logic_suite: {
+                        table: 'sys_atf_test_suite'
+                        id: '4c177c396fba441fa26a63048e662f93'
+                    }
+                    country_test_fulfillment_group: {
+                        table: 'sys_user_group'
+                        id: '8ef81775ce3445b99486c6daa83c97fd'
+                    }
+                    country_test_module_country_assets_page: {
+                        table: 'sys_app_module'
+                        id: 'f0d5462c8de2414f89f2c60f07637097'
+                    }
+                    country_test_module_test_assets: {
+                        table: 'sys_app_module'
+                        id: '9e6914002e464de7ab404da2fff5533e'
+                    }
+                    daily_asset_compliance_check_flow: {
+                        table: 'sys_hub_flow'
+                        id: '8d38b0a0434142cd89131add39b0cc6b'
+                    }
+                    daily_asset_compliance_trigger: {
+                        table: 'sys_hub_trigger_instance_v2'
+                        id: 'c7a5147c897548c68bdca1dd53ff07e0'
+                    }
+                    package_json: {
+                        table: 'sys_module'
+                        id: '81b914e91c7d45b28cdbdb1fe4a1b638'
+                    }
+                    param_limit: {
+                        table: 'sys_ws_query_parameter'
+                        id: 'cba4c74354e44b858a31e9cd5068c250'
+                    }
+                    param_status: {
+                        table: 'sys_ws_query_parameter'
+                        id: '4e01f4395f194d3fa010893aa46f1acf'
+                    }
+                    priv_cartjs_addtocart_execute: {
+                        table: 'sys_scope_privilege'
+                        id: '74d3c7c83ec34dcc9e6d1049d0aba63d'
+                    }
+                    priv_cartjs_empty_execute: {
+                        table: 'sys_scope_privilege'
+                        id: 'd00c97e9bd954d35846538863c67ac23'
+                    }
+                    priv_cartjs_submitorder_execute: {
+                        table: 'sys_scope_privilege'
+                        id: 'aa1978c49c1a4e95bee8678f8b459d5c'
+                    }
+                    priv_glide_api_event_mgmt_execute: {
+                        table: 'sys_scope_privilege'
+                        id: '72a4d1e27567408cb6054caae8d43c2d'
+                    }
+                    priv_glide_api_scripting_execute: {
+                        table: 'sys_scope_privilege'
+                        id: 'cc81e2a8f9fe449fbc9f219acd03a0f3'
+                    }
+                    priv_glide_api_user_roles_groups: {
+                        table: 'sys_scope_privilege'
+                        id: '2aa13b7cc3f0d310147bd71d050131f9'
+                    }
+                    priv_gliderecord_deleterecord_execute: {
+                        table: 'sys_scope_privilege'
+                        id: 'b59dd71d3c104c5facb8ac545ef7d9f5'
+                    }
+                    priv_gliderecordsecure_getvalue_execute: {
+                        table: 'sys_scope_privilege'
+                        id: '13802734c370d310147bd71d050131b3'
+                    }
+                    priv_resource_support_execute: {
+                        table: 'sys_scope_privilege'
+                        id: '3ec27bbd39d943d7b9bc462d5abacc65'
+                    }
+                    priv_rest_api_request: {
+                        table: 'sys_scope_privilege'
+                        id: '22a17b7cc3f0d310147bd71d05013104'
+                    }
+                    priv_result_builder_set_body: {
+                        table: 'sys_scope_privilege'
+                        id: '32a17b7cc3f0d310147bd71d0501310c'
+                    }
+                    priv_result_builder_set_status: {
+                        table: 'sys_scope_privilege'
+                        id: '36a17b7cc3f0d310147bd71d05013108'
+                    }
+                    priv_sc_cat_item_read: {
+                        table: 'sys_scope_privilege'
+                        id: 'e231b6c73d9a4f908c8e26435b69ac21'
+                    }
+                    priv_sc_req_item_read: {
+                        table: 'sys_scope_privilege'
+                        id: '7ad7fcc9d9a54cdda1619e31817f3c9b'
+                    }
+                    priv_sc_req_item_write: {
+                        table: 'sys_scope_privilege'
+                        id: '0bcb15e4a16147e389616054be064821'
+                    }
+                    priv_sc_request_read: {
+                        table: 'sys_scope_privilege'
+                        id: 'b40def11a6824437a827e575c1412eaf'
+                    }
+                    priv_sc_request_write: {
+                        table: 'sys_scope_privilege'
+                        id: 'cfadd5a9be744a38ab51e810d649ea0c'
+                    }
+                    priv_sc_task_create: {
+                        table: 'sys_scope_privilege'
+                        id: '94b6be973612467486713dad58c14408'
+                    }
+                    priv_sc_task_read: {
+                        table: 'sys_scope_privilege'
+                        id: '9e532e9551304b44bd20c7e79f908b31'
+                    }
+                    priv_sc_task_write: {
+                        table: 'sys_scope_privilege'
+                        id: 'a0608c54481f418f99b4bba02acf2efe'
+                    }
+                    priv_scopedglideelement_execute: {
+                        table: 'sys_scope_privilege'
+                        id: 'e7dbe4c6a94c40ae93b5008c75b8a89c'
+                    }
+                    priv_servicesubscriptionutils_execute: {
+                        table: 'sys_scope_privilege'
+                        id: 'b0bccb26b8cb4bd180dfd007f44f2b3a'
+                    }
+                    priv_sys_email_read: {
+                        table: 'sys_scope_privilege'
+                        id: '787e2752968a44b88cb3942b041db401'
+                    }
+                    priv_sys_user_group_read: {
+                        table: 'sys_scope_privilege'
+                        id: '31b632795f874ae4abb50d4f2a44cd3a'
+                    }
+                    priv_sys_user_read: {
+                        table: 'sys_scope_privilege'
+                        id: 'c04f1655410745ec9117b0ed0c853e8c'
+                    }
+                    priv_sysapproval_approver_read: {
+                        table: 'sys_scope_privilege'
+                        id: '2b25ffd0981c4f58bf469f4bda8b414e'
+                    }
+                    priv_sysapproval_approver_write: {
+                        table: 'sys_scope_privilege'
+                        id: 'c7c6ead918a44821a7b7ccbab86220d7'
+                    }
+                    priv_sysevent_create: {
+                        table: 'sys_scope_privilege'
+                        id: '221502ce290945f7812e5290e01e0a77'
+                    }
+                    priv_sysevent_read: {
+                        table: 'sys_scope_privilege'
+                        id: '183297dbae95460a956454387fd2259a'
+                    }
+                    priv_sysevent_register_read: {
+                        table: 'sys_scope_privilege'
+                        id: 'b71c9d7fe5f14f83a2b9398b472df386'
+                    }
+                    priv_template_printer_print: {
+                        table: 'sys_scope_privilege'
+                        id: '49aab3b0c374d310147bd71d05013104'
+                    }
+                    route_get_assets: {
+                        table: 'sys_ws_operation'
+                        id: '8958db93f93e45449caa48af1425ed37'
+                    }
+                    sc_category_country_access: {
+                        table: 'sc_category'
+                        id: '6bd84fdd87dc4e8d81b6ad512c05261c'
+                    }
+                    test_asset_atf_assignment_script: {
+                        table: 'sys_atf_step'
+                        id: 'accb24ee552547f1ae221120756e2943'
+                    }
+                    test_asset_before_rule: {
+                        table: 'sys_script'
+                        id: '92e39f99fbb44aec917efa08c4e4e372'
+                    }
+                    test_asset_read_acl: {
+                        table: 'sys_security_acl'
+                        id: 'ac03e9555268434f8694e73d43cb1b89'
+                    }
+                    test_assignment_on_status_in_use: {
+                        table: 'sys_atf_test'
+                        id: 'c1859c74d31946c7b818aeba0391deac'
+                    }
+                    test_duplicate_rejection: {
+                        table: 'sys_atf_test'
+                        id: '1081a1ad10eb4465a4a37a56e0e40b57'
+                    }
+                    test_duplicate_rejection_script: {
+                        table: 'sys_atf_step'
+                        id: '29e27160856e460ca78bb627e868506a'
+                    }
+                    test_serial_normalisation: {
+                        table: 'sys_atf_test'
+                        id: '34b2057257d14f17bdbfb579f317df5e'
+                    }
+                    test_serial_normalisation_script: {
+                        table: 'sys_atf_step'
+                        id: '467b3ed3baf948d8aa4d6b77460f0060'
+                    }
+                    uc_country_test_all_active_users: {
+                        table: 'user_criteria'
+                        id: '71f83b598c884a28aca4ee3b7b1b4e33'
+                    }
+                }
+                composite: [
+                    {
+                        table: 'sys_documentation'
+                        id: '0460a7751435415382c18810edb66885'
+                        key: {
+                            name: 'x_608645_country_t_test_asset'
+                            element: 'serial'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: '057f7539325445c8aed9ce8e3b9ab3c3'
+                        key: {
+                            name: 'x_608645_country_t_test_asset'
+                            element: 'status'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_list_element'
+                        id: '064e5462f2764526981f931e5ee582d3'
+                        key: {
+                            list_id: {
+                                id: '0fb227a577834b10977c25d36834e8d5'
+                                key: {
+                                    name: 'x_608645_country_t_test_asset'
+                                    view: {
+                                        id: 'Default view'
+                                        key: {
+                                            name: 'NULL'
+                                        }
+                                    }
+                                    sys_domain: 'global'
+                                    element: 'NULL'
+                                    relationship: 'NULL'
+                                    parent: 'NULL'
+                                }
+                            }
+                            element: 'purchase_date'
+                        }
+                    },
+                    {
+                        table: 'sys_element_mapping'
+                        id: '0b72e547ea0443c4b7108c81ed7a5f6d'
+                        key: {
+                            id: 'bcf55b3387f343f19cb870d7efeaa7e7'
+                            table: 'var__m_atf_input_variable_14872288df60220062fe6c7a4df26319'
+                            field: 'field_values'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: '0b79f1652b73469dbac1701db3a0cd89'
+                        key: {
+                            name: 'x_608645_country_t_test_asset'
+                            element: 'department'
+                        }
+                    },
+                    {
+                        table: 'ua_table_licensing_config'
+                        id: '0c032feca98244aa87ff12bd8aeffd0d'
+                        key: {
+                            name: 'x_608645_country_t_test_asset'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_form'
+                        id: '0cab415a0abb499096056e069f1ce2c4'
+                        key: {
+                            name: 'x_608645_country_t_test_asset'
+                            view: {
+                                id: 'Default view'
+                                key: {
+                                    name: 'NULL'
+                                }
+                            }
+                            sys_domain: 'global'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_list'
+                        id: '0fb227a577834b10977c25d36834e8d5'
+                        key: {
+                            name: 'x_608645_country_t_test_asset'
+                            view: {
+                                id: 'Default view'
+                                key: {
+                                    name: 'NULL'
+                                }
+                            }
+                            sys_domain: 'global'
+                            element: 'NULL'
+                            relationship: 'NULL'
+                            parent: 'NULL'
+                        }
+                    },
+                    {
+                        table: 'sys_security_acl_role'
+                        id: '12a188b06fc244f08cbca0a89113a8ce'
+                        key: {
+                            sys_security_acl: 'ac03e9555268434f8694e73d43cb1b89'
+                            sys_user_role: {
+                                id: '730be3ba3b8f4703a63ca6818fa1adad'
+                                key: {
+                                    name: 'x_608645_country_t.compliance_reader'
+                                }
+                            }
+                        }
+                    },
+                    {
+                        table: 'sys_security_acl_role'
+                        id: '12bc05c4df3d44268da54f86486b7ed9'
+                        key: {
+                            sys_security_acl: '3676f81564974a54b97f1e16854a428a'
+                            sys_user_role: {
+                                id: '730be3ba3b8f4703a63ca6818fa1adad'
+                                key: {
+                                    name: 'x_608645_country_t.compliance_reader'
+                                }
+                            }
+                        }
+                    },
+                    {
+                        table: 'sys_element_mapping'
+                        id: '191679a189ff44cf8d44ee3dd136c550'
+                        key: {
+                            id: '605bc18eee7047678ed058faf8f71199'
+                            table: 'var__m_atf_input_variable_071ee5b253331200040729cac2dc348d'
+                            field: 'user'
+                        }
+                    },
+                    {
+                        table: 'sys_variable_value'
+                        id: '1d3786860ae64603934f76a793e3abc9'
+                        key: {
+                            document_key: '18215ad88bb34451b267052d10d2d346'
+                            variable: '586e2c4253e0220002c6435723dc3415'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_form_section'
+                        id: '1d80b58c9dad4ab48359ad3cc078ce14'
+                        key: {
+                            sys_ui_form: {
+                                id: '0cab415a0abb499096056e069f1ce2c4'
+                                key: {
+                                    name: 'x_608645_country_t_test_asset'
+                                    view: {
+                                        id: 'Default view'
+                                        key: {
+                                            name: 'NULL'
+                                        }
+                                    }
+                                    sys_domain: 'global'
+                                }
+                            }
+                            sys_ui_section: {
+                                id: 'c3e8fa7f482c47b8b33836480b149c9a'
+                                key: {
+                                    name: 'x_608645_country_t_test_asset'
+                                    caption: 'Lifecycle'
+                                    view: {
+                                        id: 'Default view'
+                                        key: {
+                                            name: 'NULL'
+                                        }
+                                    }
+                                    sys_domain: 'global'
+                                }
+                            }
+                        }
+                    },
+                    {
+                        table: 'sys_choice'
+                        id: '2421976eeb004a5d803b9d4718c76740'
+                        key: {
+                            name: 'x_608645_country_t_test_asset'
+                            element: 'status'
+                            value: 'retired'
+                            language: 'en'
+                            dependent_value: 'NULL'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_list_element'
+                        id: '2a183936f6f840de9ab7d308c792ef2a'
+                        key: {
+                            list_id: {
+                                id: '0fb227a577834b10977c25d36834e8d5'
+                                key: {
+                                    name: 'x_608645_country_t_test_asset'
+                                    view: {
+                                        id: 'Default view'
+                                        key: {
+                                            name: 'NULL'
+                                        }
+                                    }
+                                    sys_domain: 'global'
+                                    element: 'NULL'
+                                    relationship: 'NULL'
+                                    parent: 'NULL'
+                                }
+                            }
+                            element: 'serial'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: '308eb07b1f1e45b78d017520678300c7'
+                        key: {
+                            name: 'x_608645_country_t_test_asset'
+                            element: 'serial'
+                        }
+                    },
+                    {
+                        table: 'sys_variable_value'
+                        id: '3a6225fd96cb49149911e15bf57b8f79'
+                        key: {
+                            document_key: '960a176fbab540d6b8d1ac1351528a41'
+                            variable: '9024a37f671003007ba405225685efe5'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: '3b0594d04aa64c6989a236d1ad7db6e8'
+                        key: {
+                            name: 'x_608645_country_t_test_asset'
+                            element: 'notes'
+                        }
+                    },
+                    {
+                        table: 'sys_variable_value'
+                        id: '3b83dbae339849729522f55cfd12e663'
+                        key: {
+                            document_key: 'f0d33407fb36422086baf38fc5493efc'
+                            variable: '9024a37f671003007ba405225685efe5'
+                        }
+                    },
+                    {
+                        table: 'sys_variable_value'
+                        id: '4498b2bd82ec4a5d9dd4e67744cde3e5'
+                        key: {
+                            document_key: 'accb24ee552547f1ae221120756e2943'
+                            variable: '989d9e235324220002c6435723dc3484'
+                        }
+                    },
+                    {
+                        table: 'sys_variable_value'
+                        id: '44fc8974469e4b1dbf2ff21f362c4953'
+                        key: {
+                            document_key: 'bcf55b3387f343f19cb870d7efeaa7e7'
+                            variable: '90144b535320220002c6435723dc3488'
+                        }
+                    },
+                    {
+                        table: 'question_choice'
+                        id: '4d3e83f9083b45799f5391988a033e03'
+                        key: {
+                            question: {
+                                id: '6d861ea33ce145f7980e9e4839d8e27b'
+                                key: {
+                                    cat_item: 'd8d82fa368024dcf98fd0ebf7978c3f9'
+                                    variable_set: 'NULL'
+                                    name: 'country'
+                                }
+                            }
+                            value: 'italy'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: '53319e97280e4104996964e02d89f6f8'
+                        key: {
+                            name: 'x_608645_country_t_test_asset'
+                            element: 'NULL'
+                        }
+                    },
+                    {
+                        table: 'sys_variable_value'
+                        id: '54b51dffeb694bc480cefc08f73b2b3f'
+                        key: {
+                            document_key: '29e27160856e460ca78bb627e868506a'
+                            variable: '989d9e235324220002c6435723dc3484'
+                        }
+                    },
+                    {
+                        table: 'sys_element_mapping'
+                        id: '55ab4dc0a3ed43af94eca80b1074e18d'
+                        key: {
+                            id: '2ce893265590466b8d93ed81d094da2c'
+                            table: 'var__m_atf_input_variable_41de4a935332120028bc29cac2dc349a'
+                            field: 'script'
+                        }
+                    },
+                    {
+                        table: 'sys_variable_value'
+                        id: '5839aa6dcbec43459af6688df8257cea'
+                        key: {
+                            document_key: '12504445aa1441ee92769d8f3d857f3d'
+                            variable: '9024a37f671003007ba405225685efe5'
+                        }
+                    },
+                    {
+                        table: 'sys_security_acl_role'
+                        id: '6087f71cec6c4581964d0a1344f3ef2a'
+                        key: {
+                            sys_security_acl: 'ac03e9555268434f8694e73d43cb1b89'
+                            sys_user_role: {
+                                id: 'a3073da537db41648843e41efb633102'
+                                key: {
+                                    name: 'admin'
+                                }
+                            }
+                        }
+                    },
+                    {
+                        table: 'sys_variable_value'
+                        id: '61754635d9794611aa072d5b29bc05a5'
+                        key: {
+                            document_key: '1074fe517a094ec886207d64a73c8e73'
+                            variable: 'e6e3c7535320220002c6435723dc3496'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_element'
+                        id: '625949b60f12429da49779aecacfc1cf'
+                        key: {
+                            sys_ui_section: {
+                                id: 'c3e8fa7f482c47b8b33836480b149c9a'
+                                key: {
+                                    name: 'x_608645_country_t_test_asset'
+                                    caption: 'Lifecycle'
+                                    view: {
+                                        id: 'Default view'
+                                        key: {
+                                            name: 'NULL'
+                                        }
+                                    }
+                                    sys_domain: 'global'
+                                }
+                            }
+                            element: 'department'
+                            position: '3'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: '65047c2cd267471ca16472caaaaf5a85'
+                        key: {
+                            name: 'x_608645_country_t_test_asset'
+                            element: 'name'
+                        }
+                    },
+                    {
+                        table: 'sys_atf_test_suite_test'
+                        id: '655d0b9ce9c0452abb9e5d9b0b9279e0'
+                        key: {
+                            test_suite: '4c177c396fba441fa26a63048e662f93'
+                            test: '34b2057257d14f17bdbfb579f317df5e'
+                        }
+                    },
+                    {
+                        table: 'sys_atf_test_suite_test'
+                        id: '6627d5296323437abdc3d3f1787bf2f7'
+                        key: {
+                            test_suite: '47727aa66c1e42bf864c72a33b215f0f'
+                            test: '39058b77e3a34d77bc761b01f5907f47'
+                        }
+                    },
+                    {
+                        table: 'sys_element_mapping'
+                        id: '66344ec95732498f8a39871f5761a586'
+                        key: {
+                            id: '29e27160856e460ca78bb627e868506a'
+                            table: 'var__m_atf_input_variable_41de4a935332120028bc29cac2dc349a'
+                            field: 'script'
+                        }
+                    },
+                    {
+                        table: 'sys_variable_value'
+                        id: '6733492c86cd4b0e909246628a7247af'
+                        key: {
+                            document_key: '5572c2e1442647cbb6303bded3ac4494'
+                            variable: '586e2c4253e0220002c6435723dc3415'
+                        }
+                    },
+                    {
+                        table: 'sys_variable_value'
+                        id: '682f57652c2f45b99a2febc2113ecf40'
+                        key: {
+                            document_key: 'db305cb6e1dd4ff1b3f3e4f9839500a8'
+                            variable: '90144b535320220002c6435723dc3488'
+                        }
+                    },
+                    {
+                        table: 'sys_variable_value'
+                        id: '699ef08c460a448cbff8acfd5624c41e'
+                        key: {
+                            document_key: 'bcf55b3387f343f19cb870d7efeaa7e7'
+                            variable: 'dd54cf535320220002c6435723dc34fd'
+                        }
+                    },
+                    {
+                        table: 'item_option_new'
+                        id: '6d861ea33ce145f7980e9e4839d8e27b'
+                        key: {
+                            cat_item: 'd8d82fa368024dcf98fd0ebf7978c3f9'
+                            variable_set: 'NULL'
+                            name: 'country'
+                        }
+                    },
+                    {
+                        table: 'sys_ws_query_parameter_map'
+                        id: '707bc8c44695412782c20386f0d90d1b'
+                        key: {
+                            web_service_operation: '8958db93f93e45449caa48af1425ed37'
+                            web_service_query_parameter: 'cba4c74354e44b858a31e9cd5068c250'
+                        }
+                    },
+                    {
+                        table: 'sys_user_role'
+                        id: '730be3ba3b8f4703a63ca6818fa1adad'
+                        key: {
+                            name: 'x_608645_country_t.compliance_reader'
+                        }
+                    },
+                    {
+                        table: 'sys_element_mapping'
+                        id: '77005ec325b448efb9bd9768235f3851'
+                        key: {
+                            id: '18215ad88bb34451b267052d10d2d346'
+                            table: 'var__m_atf_input_variable_071ee5b253331200040729cac2dc348d'
+                            field: 'user'
+                        }
+                    },
+                    {
+                        table: 'sys_variable_value'
+                        id: '776220651b1d4ccc9638497add5325d0'
+                        key: {
+                            document_key: '960a176fbab540d6b8d1ac1351528a41'
+                            variable: 'e6e3c7535320220002c6435723dc3496'
+                        }
+                    },
+                    {
+                        table: 'sys_variable_value'
+                        id: '7a69ed0e8cf144f9b9e7b161a89803cb'
+                        key: {
+                            document_key: '1074fe517a094ec886207d64a73c8e73'
+                            variable: 'dd54cf535320220002c6435723dc34fd'
+                        }
+                    },
+                    {
+                        table: 'sys_variable_value'
+                        id: '7a72dd359e814845a184aa81043a1bbc'
+                        key: {
+                            document_key: '12504445aa1441ee92769d8f3d857f3d'
+                            variable: 'e6e3c7535320220002c6435723dc3496'
+                        }
+                    },
+                    {
+                        table: 'sys_variable_value'
+                        id: '7fbffc82afb54e9d8baca733d8a8c3bd'
+                        key: {
+                            document_key: '29e27160856e460ca78bb627e868506a'
+                            variable: '42f2564b73031300440211d8faf6a777'
+                        }
+                    },
+                    {
+                        table: 'sys_security_acl_role'
+                        id: '8110355a17094fd3b26970983c6b7c08'
+                        key: {
+                            sys_security_acl: '2259348d50e74e7f9d7b63b814c1e027'
+                            sys_user_role: {
+                                id: '730be3ba3b8f4703a63ca6818fa1adad'
+                                key: {
+                                    name: 'x_608645_country_t.compliance_reader'
+                                }
+                            }
+                        }
+                    },
+                    {
+                        table: 'item_option_new'
+                        id: '8477cbd1c2ee4609bf7c655873ab24b2'
+                        key: {
+                            cat_item: 'd8d82fa368024dcf98fd0ebf7978c3f9'
+                            variable_set: 'NULL'
+                            name: 'justification'
+                        }
+                    },
+                    {
+                        table: 'sc_cat_item_catalog'
+                        id: '84e5a49a799b41a3bbbe39d1c96606b4'
+                        key: {
+                            sc_cat_item: 'd8d82fa368024dcf98fd0ebf7978c3f9'
+                            sc_catalog: 'E0D08B13C3330100C8B837659BBA8FB4'
+                        }
+                    },
+                    {
+                        table: 'sys_element_mapping'
+                        id: '860d0d92a4f34dee80213771ed8c522b'
+                        key: {
+                            id: '12504445aa1441ee92769d8f3d857f3d'
+                            table: 'var__m_atf_input_variable_14872288df60220062fe6c7a4df26319'
+                            field: 'field_values'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '89c23f9c3be94316b8e6a8cc8cdd3cdd'
+                        key: {
+                            name: 'x_608645_country_t_test_asset'
+                            element: 'name'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_element'
+                        id: '8ad8f5ecea7e4e39bcaf457acdd94e31'
+                        key: {
+                            sys_ui_section: {
+                                id: 'c3e8fa7f482c47b8b33836480b149c9a'
+                                key: {
+                                    name: 'x_608645_country_t_test_asset'
+                                    caption: 'Lifecycle'
+                                    view: {
+                                        id: 'Default view'
+                                        key: {
+                                            name: 'NULL'
+                                        }
+                                    }
+                                    sys_domain: 'global'
+                                }
+                            }
+                            element: 'status'
+                            position: '1'
+                        }
+                    },
+                    {
+                        table: 'sys_security_acl_role'
+                        id: '8c128fb750bb4399ab615737e141588b'
+                        key: {
+                            sys_security_acl: 'ac03e9555268434f8694e73d43cb1b89'
+                            sys_user_role: {
+                                id: 'a78d7470ef5d4d8e92a05c4654124f77'
+                                key: {
+                                    name: 'x_608645_country_t.country_test.compliance_reader'
+                                }
+                            }
+                        }
+                    },
+                    {
+                        table: 'sys_variable_value'
+                        id: '8d15a0c8e3084dfbbb01b94e9758319c'
+                        key: {
+                            document_key: 'db305cb6e1dd4ff1b3f3e4f9839500a8'
+                            variable: 'dd54cf535320220002c6435723dc34fd'
+                        }
+                    },
+                    {
+                        table: 'sys_choice_set'
+                        id: '912ed0b2e36e4a5aa03839f155cdce4b'
+                        key: {
+                            name: 'x_608645_country_t_test_asset'
+                            element: 'status'
+                        }
+                    },
+                    {
+                        table: 'sys_variable_value'
+                        id: '98377247cba647f98644e51e2bb725f9'
+                        key: {
+                            document_key: '2ce893265590466b8d93ed81d094da2c'
+                            variable: '42f2564b73031300440211d8faf6a777'
+                        }
+                    },
+                    {
+                        table: 'sc_cat_item_category'
+                        id: '99f28e8f164349718554430b6b165c7e'
+                        key: {
+                            sc_cat_item: 'd8d82fa368024dcf98fd0ebf7978c3f9'
+                            sc_category: '6bd84fdd87dc4e8d81b6ad512c05261c'
+                        }
+                    },
+                    {
+                        table: 'sys_atf_test_suite_test'
+                        id: '9a6c661e229d458fac24ddc0cc113394'
+                        key: {
+                            test_suite: '4c177c396fba441fa26a63048e662f93'
+                            test: '1081a1ad10eb4465a4a37a56e0e40b57'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '9e5729653f5c4dbb8c5afe73d8be1e1c'
+                        key: {
+                            name: 'x_608645_country_t_test_asset'
+                            element: 'assigned_to'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_variable_value'
+                        id: 'a2269b27fec04907b12dcc7c5005c7f9'
+                        key: {
+                            document_key: 'f0d33407fb36422086baf38fc5493efc'
+                            variable: '90144b535320220002c6435723dc3488'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_element'
+                        id: 'a23e368e59ad4706bee2c103368f90ce'
+                        key: {
+                            sys_ui_section: {
+                                id: 'c3e8fa7f482c47b8b33836480b149c9a'
+                                key: {
+                                    name: 'x_608645_country_t_test_asset'
+                                    caption: 'Lifecycle'
+                                    view: {
+                                        id: 'Default view'
+                                        key: {
+                                            name: 'NULL'
+                                        }
+                                    }
+                                    sys_domain: 'global'
+                                }
+                            }
+                            element: 'assigned_to'
+                            position: '2'
+                        }
+                    },
+                    {
+                        table: 'sys_variable_value'
+                        id: 'a6300abba5bf470880206644dc398aa8'
+                        key: {
+                            document_key: '960a176fbab540d6b8d1ac1351528a41'
+                            variable: '90144b535320220002c6435723dc3488'
+                        }
+                    },
+                    {
+                        table: 'sys_user_role'
+                        id: 'a78d7470ef5d4d8e92a05c4654124f77'
+                        key: {
+                            name: 'x_608645_country_t.country_test.compliance_reader'
+                        }
+                    },
+                    {
+                        table: 'sys_ws_query_parameter_map'
+                        id: 'a84a1cbd6607478bb5e44e9cb1bb974b'
+                        key: {
+                            web_service_operation: '8958db93f93e45449caa48af1425ed37'
+                            web_service_query_parameter: '4e01f4395f194d3fa010893aa46f1acf'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_section'
+                        id: 'a919e09455724bd6a2d4e93836272b1b'
+                        key: {
+                            name: 'x_608645_country_t_test_asset'
+                            caption: 'Identity'
+                            view: {
+                                id: 'Default view'
+                                key: {
+                                    name: 'NULL'
+                                }
+                            }
+                            sys_domain: 'global'
+                        }
+                    },
+                    {
+                        table: 'sc_cat_item_user_criteria_mtom'
+                        id: 'ac9b4c6d203242b6a69e940fc80821e7'
+                        key: {
+                            sc_cat_item: 'd8d82fa368024dcf98fd0ebf7978c3f9'
+                            user_criteria: '71f83b598c884a28aca4ee3b7b1b4e33'
+                        }
+                    },
+                    {
+                        table: 'sys_db_object'
+                        id: 'acb97cbbea3e43eb97c4d628dec740b7'
+                        key: {
+                            name: 'x_608645_country_t_test_asset'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_element'
+                        id: 'ad35645c54834a4796e4a82e084ab412'
+                        key: {
+                            sys_ui_section: {
+                                id: 'a919e09455724bd6a2d4e93836272b1b'
+                                key: {
+                                    name: 'x_608645_country_t_test_asset'
+                                    caption: 'Identity'
+                                    view: {
+                                        id: 'Default view'
+                                        key: {
+                                            name: 'NULL'
+                                        }
+                                    }
+                                    sys_domain: 'global'
+                                }
+                            }
+                            element: 'serial'
+                            position: '1'
+                        }
+                    },
+                    {
+                        table: 'sys_variable_value'
+                        id: 'ae61540ee1ab49ddb3dc612b96c694bc'
+                        key: {
+                            document_key: 'accb24ee552547f1ae221120756e2943'
+                            variable: '42f2564b73031300440211d8faf6a777'
+                        }
+                    },
+                    {
+                        table: 'sys_variable_value'
+                        id: 'b1b6ab7f7ff84ce7bbb1a4cdd126fc49'
+                        key: {
+                            document_key: 'f0d33407fb36422086baf38fc5493efc'
+                            variable: 'dd54cf535320220002c6435723dc34fd'
+                        }
+                    },
+                    {
+                        table: 'sys_variable_value'
+                        id: 'b3bacc783ce04421a7f8a981931c047c'
+                        key: {
+                            document_key: 'f0d33407fb36422086baf38fc5493efc'
+                            variable: 'e6e3c7535320220002c6435723dc3496'
+                        }
+                    },
+                    {
+                        table: 'sys_atf_test_suite_test'
+                        id: 'b731661896164e29876a70b565efdfa8'
+                        key: {
+                            test_suite: '47727aa66c1e42bf864c72a33b215f0f'
+                            test: 'a8439761d4ac43d586cc56d57d304e46'
+                        }
+                    },
+                    {
+                        table: 'item_option_new'
+                        id: 'ba3ebf5dace24ae98bfea5dd6ac81a22'
+                        key: {
+                            cat_item: 'd8d82fa368024dcf98fd0ebf7978c3f9'
+                            variable_set: 'NULL'
+                            name: 'start_date'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_form_section'
+                        id: 'bb0936954a324c92ae60a5b59c3f5408'
+                        key: {
+                            sys_ui_form: {
+                                id: '0cab415a0abb499096056e069f1ce2c4'
+                                key: {
+                                    name: 'x_608645_country_t_test_asset'
+                                    view: {
+                                        id: 'Default view'
+                                        key: {
+                                            name: 'NULL'
+                                        }
+                                    }
+                                    sys_domain: 'global'
+                                }
+                            }
+                            sys_ui_section: {
+                                id: 'a919e09455724bd6a2d4e93836272b1b'
+                                key: {
+                                    name: 'x_608645_country_t_test_asset'
+                                    caption: 'Identity'
+                                    view: {
+                                        id: 'Default view'
+                                        key: {
+                                            name: 'NULL'
+                                        }
+                                    }
+                                    sys_domain: 'global'
+                                }
+                            }
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: 'bb218066313f4212814254a9c5912633'
+                        key: {
+                            name: 'x_608645_country_t_test_asset'
+                            element: 'purchase_date'
+                        }
+                    },
+                    {
+                        table: 'sys_element_mapping'
+                        id: 'bd7c718cc51a4e4b93fcc367af52e692'
+                        key: {
+                            id: 'e4f70477ae4c4199a92b4988bc7664c5'
+                            table: 'var__m_atf_input_variable_41de4a935332120028bc29cac2dc349a'
+                            field: 'script'
+                        }
+                    },
+                    {
+                        table: 'question_choice'
+                        id: 'be021e8daa0a4879a535b0a7cd548a89'
+                        key: {
+                            question: {
+                                id: '6d861ea33ce145f7980e9e4839d8e27b'
+                                key: {
+                                    cat_item: 'd8d82fa368024dcf98fd0ebf7978c3f9'
+                                    variable_set: 'NULL'
+                                    name: 'country'
+                                }
+                            }
+                            value: 'switzerland'
+                        }
+                    },
+                    {
+                        table: 'sys_variable_value'
+                        id: 'bfa2bf5e721e453bb365819c21b85a18'
+                        key: {
+                            document_key: 'db305cb6e1dd4ff1b3f3e4f9839500a8'
+                            variable: '9024a37f671003007ba405225685efe5'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_section'
+                        id: 'c3e8fa7f482c47b8b33836480b149c9a'
+                        key: {
+                            name: 'x_608645_country_t_test_asset'
+                            caption: 'Lifecycle'
+                            view: {
+                                id: 'Default view'
+                                key: {
+                                    name: 'NULL'
+                                }
+                            }
+                            sys_domain: 'global'
+                        }
+                    },
+                    {
+                        table: 'sys_variable_value'
+                        id: 'c6e3dadae73d49cc837eb172df4d9388'
+                        key: {
+                            document_key: '1074fe517a094ec886207d64a73c8e73'
+                            variable: '90144b535320220002c6435723dc3488'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_element'
+                        id: 'c72fb06ffadb40a9ae69d307fc5930b8'
+                        key: {
+                            sys_ui_section: {
+                                id: 'a919e09455724bd6a2d4e93836272b1b'
+                                key: {
+                                    name: 'x_608645_country_t_test_asset'
+                                    caption: 'Identity'
+                                    view: {
+                                        id: 'Default view'
+                                        key: {
+                                            name: 'NULL'
+                                        }
+                                    }
+                                    sys_domain: 'global'
+                                }
+                            }
+                            element: 'name'
+                            position: '0'
+                        }
+                    },
+                    {
+                        table: 'sys_choice'
+                        id: 'c869e8258d9142559d774ef12fb64e99'
+                        key: {
+                            name: 'x_608645_country_t_test_asset'
+                            element: 'status'
+                            value: 'in use'
+                            language: 'en'
+                            dependent_value: 'NULL'
+                        }
+                    },
+                    {
+                        table: 'sys_variable_value'
+                        id: 'c901c86eabec448f9644109c843b722e'
+                        key: {
+                            document_key: 'db305cb6e1dd4ff1b3f3e4f9839500a8'
+                            variable: 'e6e3c7535320220002c6435723dc3496'
+                        }
+                    },
+                    {
+                        table: 'sys_variable_value'
+                        id: 'ca0f6710708a4396b9e3d5a225a51478'
+                        key: {
+                            document_key: '12504445aa1441ee92769d8f3d857f3d'
+                            variable: '90144b535320220002c6435723dc3488'
+                        }
+                    },
+                    {
+                        table: 'sys_atf_test_suite_test'
+                        id: 'cc2cc4e25d3e49d28a0b6241a9e95166'
+                        key: {
+                            test_suite: '4c177c396fba441fa26a63048e662f93'
+                            test: 'c1859c74d31946c7b818aeba0391deac'
+                        }
+                    },
+                    {
+                        table: 'sys_variable_value'
+                        id: 'cd9a8aaabfcb437aac8cee0972e43f90'
+                        key: {
+                            document_key: '960a176fbab540d6b8d1ac1351528a41'
+                            variable: 'dd54cf535320220002c6435723dc34fd'
+                        }
+                    },
+                    {
+                        table: 'sys_variable_value'
+                        id: 'd036117ce71d42fcbed1bd2a0f67ecb7'
+                        key: {
+                            document_key: '605bc18eee7047678ed058faf8f71199'
+                            variable: '586e2c4253e0220002c6435723dc3415'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: 'd058a0a5d01c4d15bd32d14cd67a8c3e'
+                        key: {
+                            name: 'x_608645_country_t_test_asset'
+                            element: 'status'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_element_mapping'
+                        id: 'd0abf357e2444b5cbe191a10ceaa9470'
+                        key: {
+                            id: 'accb24ee552547f1ae221120756e2943'
+                            table: 'var__m_atf_input_variable_41de4a935332120028bc29cac2dc349a'
+                            field: 'script'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_element'
+                        id: 'd308f2681e7c4f53875cf15af8785821'
+                        key: {
+                            sys_ui_section: {
+                                id: 'c3e8fa7f482c47b8b33836480b149c9a'
+                                key: {
+                                    name: 'x_608645_country_t_test_asset'
+                                    caption: 'Lifecycle'
+                                    view: {
+                                        id: 'Default view'
+                                        key: {
+                                            name: 'NULL'
+                                        }
+                                    }
+                                    sys_domain: 'global'
+                                }
+                            }
+                            element: 'purchase_date'
+                            position: '0'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: 'd522422948484f1e97d4e3337d49458d'
+                        key: {
+                            name: 'x_608645_country_t_test_asset'
+                            element: 'NULL'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_element_mapping'
+                        id: 'da6d87a6b2cc46b8812819b3690ce50b'
+                        key: {
+                            id: '5572c2e1442647cbb6303bded3ac4494'
+                            table: 'var__m_atf_input_variable_071ee5b253331200040729cac2dc348d'
+                            field: 'user'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: 'dab94f0770fa40618ff8cde57b798d8a'
+                        key: {
+                            name: 'x_608645_country_t_test_asset'
+                            element: 'notes'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_variable_value'
+                        id: 'db6652c63f0647d998d2cf1b7e8535ff'
+                        key: {
+                            document_key: '467b3ed3baf948d8aa4d6b77460f0060'
+                            variable: '989d9e235324220002c6435723dc3484'
+                        }
+                    },
+                    {
+                        table: 'sys_variable_value'
+                        id: 'df7d74622e8e4f58ad2851abbca5b125'
+                        key: {
+                            document_key: 'e4f70477ae4c4199a92b4988bc7664c5'
+                            variable: '42f2564b73031300440211d8faf6a777'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_list_element'
+                        id: 'e0dcac39dc954f07b13c1d8ba0fde176'
+                        key: {
+                            list_id: {
+                                id: '0fb227a577834b10977c25d36834e8d5'
+                                key: {
+                                    name: 'x_608645_country_t_test_asset'
+                                    view: {
+                                        id: 'Default view'
+                                        key: {
+                                            name: 'NULL'
+                                        }
+                                    }
+                                    sys_domain: 'global'
+                                    element: 'NULL'
+                                    relationship: 'NULL'
+                                    parent: 'NULL'
+                                }
+                            }
+                            element: 'status'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_element'
+                        id: 'e10396056445428aa850c2786cd333cd'
+                        key: {
+                            sys_ui_section: {
+                                id: 'c3e8fa7f482c47b8b33836480b149c9a'
+                                key: {
+                                    name: 'x_608645_country_t_test_asset'
+                                    caption: 'Lifecycle'
+                                    view: {
+                                        id: 'Default view'
+                                        key: {
+                                            name: 'NULL'
+                                        }
+                                    }
+                                    sys_domain: 'global'
+                                }
+                            }
+                            element: 'notes'
+                            position: '4'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_list_element'
+                        id: 'e1e6969f9d8348ad908843f180c92175'
+                        key: {
+                            list_id: {
+                                id: '0fb227a577834b10977c25d36834e8d5'
+                                key: {
+                                    name: 'x_608645_country_t_test_asset'
+                                    view: {
+                                        id: 'Default view'
+                                        key: {
+                                            name: 'NULL'
+                                        }
+                                    }
+                                    sys_domain: 'global'
+                                    element: 'NULL'
+                                    relationship: 'NULL'
+                                    parent: 'NULL'
+                                }
+                            }
+                            element: 'name'
+                        }
+                    },
+                    {
+                        table: 'sys_element_mapping'
+                        id: 'e267aa62ecc64a71a40ef092dc083dd1'
+                        key: {
+                            id: 'f0d33407fb36422086baf38fc5493efc'
+                            table: 'var__m_atf_input_variable_14872288df60220062fe6c7a4df26319'
+                            field: 'field_values'
+                        }
+                    },
+                    {
+                        table: 'sys_variable_value'
+                        id: 'e45cee5f51bc4dc4a3cb7de557bcf88f'
+                        key: {
+                            document_key: 'e4f70477ae4c4199a92b4988bc7664c5'
+                            variable: '989d9e235324220002c6435723dc3484'
+                        }
+                    },
+                    {
+                        table: 'sys_variable_value'
+                        id: 'e4e5d0b634c2419b8b37d9ded60b0785'
+                        key: {
+                            document_key: '2ce893265590466b8d93ed81d094da2c'
+                            variable: '989d9e235324220002c6435723dc3484'
+                        }
+                    },
+                    {
+                        table: 'sys_variable_value'
+                        id: 'ebce1d4d6ab443c4929fc1aa6578382a'
+                        key: {
+                            document_key: '1074fe517a094ec886207d64a73c8e73'
+                            variable: '9024a37f671003007ba405225685efe5'
+                        }
+                    },
+                    {
+                        table: 'sys_element_mapping'
+                        id: 'ebef6a1278e5431295597e2abc644c56'
+                        key: {
+                            id: '467b3ed3baf948d8aa4d6b77460f0060'
+                            table: 'var__m_atf_input_variable_41de4a935332120028bc29cac2dc349a'
+                            field: 'script'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_page'
+                        id: 'ebf24e9312a041cdbe8694892c0a2a5e'
+                        key: {
+                            endpoint: 'x_608645_country_t_country_assets.do'
+                        }
+                    },
+                    {
+                        table: 'sys_variable_value'
+                        id: 'ec04ef9021ca48e198bc8b664c874fd4'
+                        key: {
+                            document_key: '467b3ed3baf948d8aa4d6b77460f0060'
+                            variable: '42f2564b73031300440211d8faf6a777'
+                        }
+                    },
+                    {
+                        table: 'sys_variable_value'
+                        id: 'ed6f9e62f5c14cc7abfc9c6571a9349c'
+                        key: {
+                            document_key: 'bcf55b3387f343f19cb870d7efeaa7e7'
+                            variable: 'e6e3c7535320220002c6435723dc3496'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: 'ed9d7346f32b41edbc0f824b5d503d94'
+                        key: {
+                            name: 'x_608645_country_t_test_asset'
+                            element: 'department'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: 'f0b17e07591643b89a9322598f58f3d4'
+                        key: {
+                            name: 'x_608645_country_t_test_asset'
+                            element: 'assigned_to'
+                        }
+                    },
+                    {
+                        table: 'sys_variable_value'
+                        id: 'f17a615b14644fe2b87d87cd6a9d41a9'
+                        key: {
+                            document_key: '12504445aa1441ee92769d8f3d857f3d'
+                            variable: 'dd54cf535320220002c6435723dc34fd'
+                        }
+                    },
+                    {
+                        table: 'sys_choice'
+                        id: 'f4781604741a4f57af4e68a14402f085'
+                        key: {
+                            name: 'x_608645_country_t_test_asset'
+                            element: 'status'
+                            value: 'new'
+                            language: 'en'
+                            dependent_value: 'NULL'
+                        }
+                    },
+                    {
+                        table: 'question_choice'
+                        id: 'f4b0720880104d1aa47b398fdf45ecc7'
+                        key: {
+                            question: {
+                                id: '6d861ea33ce145f7980e9e4839d8e27b'
+                                key: {
+                                    cat_item: 'd8d82fa368024dcf98fd0ebf7978c3f9'
+                                    variable_set: 'NULL'
+                                    name: 'country'
+                                }
+                            }
+                            value: 'germany'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: 'f9d2e99a51054402898eb6e362d32b8e'
+                        key: {
+                            name: 'x_608645_country_t_test_asset'
+                            element: 'purchase_date'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_element'
+                        id: 'faac18c7f39c4e71bf7b7893ca6e981d'
+                        key: {
+                            sys_ui_section: {
+                                id: 'c3e8fa7f482c47b8b33836480b149c9a'
+                                key: {
+                                    name: 'x_608645_country_t_test_asset'
+                                    caption: 'Lifecycle'
+                                    view: {
+                                        id: 'Default view'
+                                        key: {
+                                            name: 'NULL'
+                                        }
+                                    }
+                                    sys_domain: 'global'
+                                }
+                            }
+                            element: 'notes'
+                            position: '3'
+                        }
+                    },
+                    {
+                        table: 'sys_variable_value'
+                        id: 'fc122b2314384b03a782b1a6be64b57b'
+                        key: {
+                            document_key: 'bcf55b3387f343f19cb870d7efeaa7e7'
+                            variable: '9024a37f671003007ba405225685efe5'
+                        }
+                    },
+                ]
+            }
+        }
+    }
+}
