@@ -4,10 +4,11 @@ One file per task of the Lab for this application. Search it with Grep before yo
 
 | Key | Project | Status | Updated | Title | File |
 |---|---|---|---|---|---|
+| MIC-466 | Gantry | todo | 2026-11-25 | Gantry Artifacts page: Check on instance (exists / missing), and the delete hands over what is left… | MIC-466.md |
 | MIC-465 | Gantry | todo | 2026-11-25 | Gantry: update Process.md, agent prompts, help and the Gantry brief for the end-to-end release | MIC-465.md |
 | MIC-464 | Gantry | todo | 2026-11-25 | Gantry: end-to-end proof of the automatic release on the dev instance | MIC-464.md |
 | MIC-463 | Gantry | todo | 2026-11-25 | Gantry: remove 'Ready to release', the release banner and the Release button; redefine the Board col… | MIC-463.md |
-| MIC-462 | Gantry | todo | 2026-11-25 | Gantry: a run goes end to end to Release by itself (install from its worktree, read-back, land on ma… | MIC-462.md |
+| MIC-462 | Gantry | done | 2026-11-25 | Gantry: a run goes end to end to Release by itself (install from its worktree, read-back, land on ma… | MIC-462.md |
 | MIC-461 | Gantry | done | 2026-11-25 | Gantry: put the requirements without an iteration into November 2026 and default new ones to the cur… | MIC-461.md |
 | MIC-460 | Gantry | done | 2026-11-25 | Gantry Sprint Backlog table: same as the bigMike Lab task table (columns fit and autosize, Delivery… | MIC-460.md |
 | MIC-459 | Gantry | done | 2026-11-25 | Gantry PBI chat: answer box you can resize with Send and Edit, better point buttons, icons for Valid… | MIC-459.md |
