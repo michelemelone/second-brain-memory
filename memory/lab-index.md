@@ -4,7 +4,7 @@ Every task of the Lab across applications, with the path of its file (relative t
 
 | Key | Project | Status | Updated | Title | File |
 |---|---|---|---|---|---|
-| MIC-454 | Gantry | todo | 2026-11-25 | Gantry: end-to-end check of deleting a PBI on the dev instance | gantry/lab/MIC-454.md |
+| MIC-454 | Gantry | needs_input | 2026-11-25 | Gantry: end-to-end check of deleting a PBI on the dev instance | gantry/lab/MIC-454.md |
 | MIC-453 | Gantry | done | 2026-11-25 | Gantry: Delete button in every state with a preview of what will be removed | gantry/lab/MIC-453.md |
 | MIC-452 | Gantry | done | 2026-11-25 | Gantry: delete a PBI in any state with a cleanup release | gantry/lab/MIC-452.md |
 | MIC-451 | Gantry | done | 2026-11-25 | Gantry: footprint scan of a PBI (where its code and records are) | gantry/lab/MIC-451.md |
