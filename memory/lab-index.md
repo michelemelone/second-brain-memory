@@ -4,6 +4,9 @@ Every task of the Lab across applications, with the path of its file (relative t
 
 | Key | Project | Status | Updated | Title | File |
 |---|---|---|---|---|---|
+| MIC-472 | Gantry | todo | 2026-11-25 | Gantry: end-to-end proof of a Global-scope requirement (create, release, Artifacts, delete) | gantry/lab/MIC-472.md |
+| MIC-471 | Gantry | todo | 2026-11-25 | Gantry: deleting a Global-scope requirement also removes what it created on the instance | gantry/lab/MIC-471.md |
+| MIC-470 | Gantry | needs_input | 2026-11-25 | Gantry spike: can Fluent install into the Global scope from a worktree (current and latest now-sdk)? | gantry/lab/MIC-470.md |
 | MIC-469 | Gantry | done | 2026-11-25 | Gantry: a Global-scope requirement produces its Update Set and shows it in Artifacts | gantry/lab/MIC-469.md |
 | MIC-468 | Gantry | done | 2026-11-25 | Gantry: the validation gate stays on after the owner applied the chat's update (Start run stays disa… | gantry/lab/MIC-468.md |
 | MIC-467 | Gantry | done | 2026-11-25 | Gantry: a Global-scope requirement finishes its run without an SDK install (no 'no project to releas… | gantry/lab/MIC-467.md |
