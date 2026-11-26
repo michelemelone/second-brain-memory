@@ -4,6 +4,7 @@ One file per task of the Lab for this application. Search it with Grep before yo
 
 | Key | Project | Status | Updated | Title | File |
 |---|---|---|---|---|---|
+| MIC-476 | Gantry | done | 2026-11-26 | Gantry: the chat's update flattens a bulleted description into one line with stray italics (#171) | MIC-476.md |
 | MIC-475 | Gantry | done | 2026-11-25 | Gantry: Check on instance misreads the record of a form in a Global Update Set and reports 'unreadab… | MIC-475.md |
 | MIC-473 | Gantry | done | 2026-11-26 | Gantry: admin route that runs allowed SDK commands on the dev instance with its login, masked, for t… | MIC-473.md |
 | MIC-472 | Gantry | done | 2026-11-25 | Gantry: end-to-end proof of a Global-scope requirement (create, release, Artifacts, delete) | MIC-472.md |
