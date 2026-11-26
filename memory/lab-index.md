@@ -4,7 +4,7 @@ Every task of the Lab across applications, with the path of its file (relative t
 
 | Key | Project | Status | Updated | Title | File |
 |---|---|---|---|---|---|
-| MIC-498 | Gantry | todo | 2026-11-26 | Gantry: no run starts while a validation point of the latest round is open (any severity, any caller… | gantry/lab/MIC-498.md |
+| MIC-498 | Gantry | done | 2026-11-26 | Gantry: no run starts while a validation point of the latest round is open (any severity, any caller… | gantry/lab/MIC-498.md |
 | MIC-497 | Gantry | done | 2026-11-26 | Requirement page Auto-fit: size the three columns from their real content, Conversation at least ~43… | gantry/lab/MIC-497.md |
 | MIC-496 | Gantry | done | 2026-11-26 | PBI form: show the default delivery agent at once, load the engines list in the background | gantry/lab/MIC-496.md |
 | MIC-495 | bigMike | done | 2026-11-26 | Enlarge the hard-to-read text and logo shown in the attached screenshot | bigmike/lab/MIC-495.md |
