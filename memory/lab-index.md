@@ -6,7 +6,7 @@ Every task of the Lab across applications, with the path of its file (relative t
 |---|---|---|---|---|---|
 | MIC-475 | Gantry | done | 2026-11-25 | Gantry: Check on instance misreads the record of a form in a Global Update Set and reports 'unreadab… | gantry/lab/MIC-475.md |
 | MIC-474 | bigMike | done | 2026-11-25 | bigMike Lab: runs on the Gantry project get the SN_SDK_* variables of the dev instance in their envi… | bigmike/lab/MIC-474.md |
-| MIC-473 | Gantry | blocked | 2026-11-25 | Gantry: admin route that runs allowed SDK commands on the dev instance with its login, masked, for t… | gantry/lab/MIC-473.md |
+| MIC-473 | Gantry | done | 2026-11-26 | Gantry: admin route that runs allowed SDK commands on the dev instance with its login, masked, for t… | gantry/lab/MIC-473.md |
 | MIC-472 | Gantry | done | 2026-11-25 | Gantry: end-to-end proof of a Global-scope requirement (create, release, Artifacts, delete) | gantry/lab/MIC-472.md |
 | MIC-471 | Gantry | done | 2026-11-25 | Gantry: deleting a Global-scope requirement also removes what it created on the instance | gantry/lab/MIC-471.md |
 | MIC-470 | Gantry | done | 2026-11-25 | Gantry spike: can Fluent install into the Global scope from a worktree (current and latest now-sdk)? | gantry/lab/MIC-470.md |
