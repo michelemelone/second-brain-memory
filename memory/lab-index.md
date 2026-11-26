@@ -5,9 +5,9 @@ Every task of the Lab across applications, with the path of its file (relative t
 | Key | Project | Status | Updated | Title | File |
 |---|---|---|---|---|---|
 | MIC-490 | Gantry | done | 2026-11-26 | Gantry: really remove the Activity panel and its sidebar button (asked on 23/11, never delivered) | gantry/lab/MIC-490.md |
-| MIC-489 | bigMike | todo | 2026-11-26 | Lab Settings: one project list instead of two, and nothing lost in the merge | bigmike/lab/MIC-489.md |
-| MIC-488 | bigMike | todo | 2026-11-26 | Lab Settings: remove what is no longer needed (Mission, old projectEngines key, stale seats text) | bigmike/lab/MIC-488.md |
-| MIC-487 | bigMike | todo | 2026-11-26 | Lab Settings: sub-tabs like Gantry instead of one long page | bigmike/lab/MIC-487.md |
+| MIC-489 | bigMike | done | 2026-11-26 | Lab Settings: one project list instead of two, and nothing lost in the merge | bigmike/lab/MIC-489.md |
+| MIC-488 | bigMike | done | 2026-11-26 | Lab Settings: remove what is no longer needed (Mission, old projectEngines key, stale seats text) | bigmike/lab/MIC-488.md |
+| MIC-487 | bigMike | done | 2026-11-26 | Lab Settings: sub-tabs like Gantry instead of one long page | bigmike/lab/MIC-487.md |
 | MIC-486 | bigMike | done | 2026-11-26 | Lab: the task page and seats line show where a run works (worktree) and whether it is landed and liv… | bigmike/lab/MIC-486.md |
 | MIC-485 | bigMike | done | 2026-11-26 | Lab: a run works in its own git worktree and lands on main when done, so two tasks of the same app r… | bigmike/lab/MIC-485.md |
 | MIC-484 | bigMike | done | 2026-11-26 | Lab: a task whose assignee is busy starts on a free agent of the same role instead of waiting (MIC-3… | bigmike/lab/MIC-484.md |
