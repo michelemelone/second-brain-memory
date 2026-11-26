@@ -4,6 +4,8 @@ One file per task of the Lab for this application. Search it with Grep before yo
 
 | Key | Project | Status | Updated | Title | File |
 |---|---|---|---|---|---|
+| MIC-481 | Gantry | todo | 2026-11-26 | Gantry Sprint Backlog: the State column shows 'In progress' with a pulsing dot while a delivery runs… | MIC-481.md |
+| MIC-477 | Gantry | done | 2026-11-26 | Gantry: the table toolbar shows the same icon for Auto-fit columns and Columns | MIC-477.md |
 | MIC-476 | Gantry | done | 2026-11-26 | Gantry: the chat's update flattens a bulleted description into one line with stray italics (#171) | MIC-476.md |
 | MIC-475 | Gantry | done | 2026-11-25 | Gantry: Check on instance misreads the record of a form in a Global Update Set and reports 'unreadab… | MIC-475.md |
 | MIC-473 | Gantry | done | 2026-11-26 | Gantry: admin route that runs allowed SDK commands on the dev instance with its login, masked, for t… | MIC-473.md |
@@ -29,7 +31,7 @@ One file per task of the Lab for this application. Search it with Grep before yo
 | MIC-452 | Gantry | done | 2026-11-25 | Gantry: delete a PBI in any state with a cleanup release | MIC-452.md |
 | MIC-451 | Gantry | done | 2026-11-25 | Gantry: footprint scan of a PBI (where its code and records are) | MIC-451.md |
 | MIC-449 | Gantry | done | 2026-11-24 | Gantry: requirement list rows on one line, no 'sub task' text, Run and Release columns never wrap | MIC-449.md |
-| MIC-446 | Gantry | done | 2026-11-23 | Gantry: a released requirement can be iterated many times — resolve the validation points and Start… | MIC-446.md |
+| MIC-446 | Gantry | done | 2026-11-26 | Gantry: a released requirement can be iterated many times — resolve the validation points and Start… | MIC-446.md |
 | MIC-444 | Gantry | done | 2026-11-23 | Gantry: enable pasting and uploading attachments in requirement chat | MIC-444.md |
 | MIC-443 | Gantry | done | 2026-11-23 | Gantry: open blank requirement page directly instead of popup for new requirement, bug, and API task | MIC-443.md |
 | MIC-442 | Gantry | done | 2026-11-23 | Gantry: the cross-scope check runs already in the build run, so a forbidden operation is found befor… | MIC-442.md |
