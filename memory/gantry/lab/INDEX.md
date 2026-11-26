@@ -31,7 +31,7 @@ One file per task of the Lab for this application. Search it with Grep before yo
 | MIC-452 | Gantry | done | 2026-11-25 | Gantry: delete a PBI in any state with a cleanup release | MIC-452.md |
 | MIC-451 | Gantry | done | 2026-11-25 | Gantry: footprint scan of a PBI (where its code and records are) | MIC-451.md |
 | MIC-449 | Gantry | done | 2026-11-24 | Gantry: requirement list rows on one line, no 'sub task' text, Run and Release columns never wrap | MIC-449.md |
-| MIC-446 | Gantry | todo | 2026-11-26 | Gantry: a released requirement can be iterated many times — resolve the validation points and Start… | MIC-446.md |
+| MIC-446 | Gantry | done | 2026-11-26 | Gantry: a released requirement can be iterated many times — resolve the validation points and Start… | MIC-446.md |
 | MIC-444 | Gantry | done | 2026-11-23 | Gantry: enable pasting and uploading attachments in requirement chat | MIC-444.md |
 | MIC-443 | Gantry | done | 2026-11-23 | Gantry: open blank requirement page directly instead of popup for new requirement, bug, and API task | MIC-443.md |
 | MIC-442 | Gantry | done | 2026-11-23 | Gantry: the cross-scope check runs already in the build run, so a forbidden operation is found befor… | MIC-442.md |

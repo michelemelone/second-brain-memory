@@ -4,6 +4,14 @@ Every task of the Lab across applications, with the path of its file (relative t
 
 | Key | Project | Status | Updated | Title | File |
 |---|---|---|---|---|---|
+| MIC-489 | bigMike | todo | 2026-11-26 | Lab Settings: one project list instead of two, and nothing lost in the merge | bigmike/lab/MIC-489.md |
+| MIC-488 | bigMike | todo | 2026-11-26 | Lab Settings: remove what is no longer needed (Mission, old projectEngines key, stale seats text) | bigmike/lab/MIC-488.md |
+| MIC-487 | bigMike | todo | 2026-11-26 | Lab Settings: sub-tabs like Gantry instead of one long page | bigmike/lab/MIC-487.md |
+| MIC-486 | bigMike | todo | 2026-11-26 | Lab: the task page and seats line show where a run works (worktree) and whether it is landed and liv… | bigmike/lab/MIC-486.md |
+| MIC-485 | bigMike | todo | 2026-11-26 | Lab: a run works in its own git worktree and lands on main when done, so two tasks of the same app r… | bigmike/lab/MIC-485.md |
+| MIC-484 | bigMike | todo | 2026-11-26 | Lab: a task whose assignee is busy starts on a free agent of the same role instead of waiting (MIC-3… | bigmike/lab/MIC-484.md |
+| MIC-483 | bigMike | done | 2026-11-26 | bigMike chat: a used-up engine limit must never swallow the message — the warning is a banner, not a… | bigmike/lab/MIC-483.md |
+| MIC-482 | bigMike | done | 2026-11-26 | bigMike chat: a reply that lands while you type the next message must never disappear from the scree… | bigmike/lab/MIC-482.md |
 | MIC-481 | Gantry | done | 2026-11-26 | Gantry Sprint Backlog: the State column shows 'In progress' with a pulsing dot while a delivery runs… | gantry/lab/MIC-481.md |
 | MIC-480 | bigMike | done | 2026-11-26 | bigMike Lab: remove the Tester step end to end from the Lab | bigmike/lab/MIC-480.md |
 | MIC-479 | bigMike | done | 2026-11-26 | bigMike Lab: remove the PASS/FAIL verification tables from the requirement pages | bigmike/lab/MIC-479.md |
@@ -39,7 +47,7 @@ Every task of the Lab across applications, with the path of its file (relative t
 | MIC-449 | Gantry | done | 2026-11-24 | Gantry: requirement list rows on one line, no 'sub task' text, Run and Release columns never wrap | gantry/lab/MIC-449.md |
 | MIC-448 | bigMike | done | 2026-11-23 | Antigravity stays connected after sign-in: the credential reaches every chat and its models become u… | bigmike/lab/MIC-448.md |
 | MIC-447 | bigMike | done | 2026-11-23 | Antigravity sign-in works from the Accounts panel on a headless server (CLI 1.5.15) | bigmike/lab/MIC-447.md |
-| MIC-446 | Gantry | todo | 2026-11-26 | Gantry: a released requirement can be iterated many times — resolve the validation points and Start… | gantry/lab/MIC-446.md |
+| MIC-446 | Gantry | done | 2026-11-26 | Gantry: a released requirement can be iterated many times — resolve the validation points and Start… | gantry/lab/MIC-446.md |
 | MIC-445 | bigMike | done | 2026-11-23 | Lab intake: 'Describe what you want' always starts at once in parallel, follows the engine order, an… | bigmike/lab/MIC-445.md |
 | MIC-444 | Gantry | done | 2026-11-23 | Gantry: enable pasting and uploading attachments in requirement chat | gantry/lab/MIC-444.md |
 | MIC-443 | Gantry | done | 2026-11-23 | Gantry: open blank requirement page directly instead of popup for new requirement, bug, and API task | gantry/lab/MIC-443.md |
