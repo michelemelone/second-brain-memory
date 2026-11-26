@@ -22,7 +22,7 @@ Per-app Lab history in `memory/<app>/lab/` with global `memory/lab-index.md` (MI
 - English only; Markdown views only.
 
 ## Recent work
-MIC-413 the import path runs Office/HTML/CSV/JSON through the `markitdown` skill (doc-ocr/ocr.sh), not raw text; MIC-341 multi-select in the explorer; MIC-324 drag-and-drop moves; MIC-320 chat composer redesign; MIC-304 application briefs.
+MIC-512 (2026-11-26): Complete architecture review — defined "Second Brain as central authority," GET /api/summary contract, nightly Markdown exports for all apps, cross-domain querying design, phased delivery plan MIC-511–MIC-518 (weekend). MIC-413 the import path runs Office/HTML/CSV/JSON through the `markitdown` skill (doc-ocr/ocr.sh), not raw text; MIC-341 multi-select in the explorer; MIC-324 drag-and-drop moves; MIC-320 chat composer redesign; MIC-304 application briefs.
 
 ## Known pitfalls
 - Service needs `Environment=PATH` or engines show "NOT INSTALLED" (MIC-195).
