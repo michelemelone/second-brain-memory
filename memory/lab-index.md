@@ -4,9 +4,9 @@ Every task of the Lab across applications, with the path of its file (relative t
 
 | Key | Project | Status | Updated | Title | File |
 |---|---|---|---|---|---|
-| MIC-503 | bigMike | todo | 2026-11-26 | bigMike: centred chat landing like Employee Works, with the composer sliding down on send | bigmike/lab/MIC-503.md |
+| MIC-503 | bigMike | done | 2026-11-26 | bigMike: centred chat landing like Employee Works, with the composer sliding down on send | bigmike/lab/MIC-503.md |
 | MIC-502 | bigMike | done | 2026-11-26 | bigMike: Auto-fit button and text, and a chat column that collapses to icons or hides | bigmike/lab/MIC-502.md |
-| MIC-501 | bigMike | todo | 2026-11-26 | bigMike layout: collapsible chat column, auto-fit and a centred chat like Employee Works | bigmike/lab/MIC-501.md |
+| MIC-501 | bigMike | done | 2026-11-26 | bigMike layout: collapsible chat column, auto-fit and a centred chat like Employee Works | bigmike/lab/MIC-501.md |
 | MIC-500 | Gantry | done | 2026-11-26 | Demo video: preview copies (WebM Opus and MP4 Opus) so the video plays with sound in the VS Code pre… | gantry/lab/MIC-500.md |
 | MIC-499 | bigMike | done | 2026-11-26 | Costs page: show DeepSeek total spent so far, like OpenRouter | bigmike/lab/MIC-499.md |
 | MIC-498 | Gantry | done | 2026-11-26 | Gantry: no run starts while a validation point of the latest round is open (any severity, any caller… | gantry/lab/MIC-498.md |
