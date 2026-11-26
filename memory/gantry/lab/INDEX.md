@@ -4,6 +4,7 @@ One file per task of the Lab for this application. Search it with Grep before yo
 
 | Key | Project | Status | Updated | Title | File |
 |---|---|---|---|---|---|
+| MIC-490 | Gantry | done | 2026-11-26 | Gantry: really remove the Activity panel and its sidebar button (asked on 23/11, never delivered) | MIC-490.md |
 | MIC-481 | Gantry | done | 2026-11-26 | Gantry Sprint Backlog: the State column shows 'In progress' with a pulsing dot while a delivery runs… | MIC-481.md |
 | MIC-477 | Gantry | done | 2026-11-26 | Gantry: the table toolbar shows the same icon for Auto-fit columns and Columns | MIC-477.md |
 | MIC-476 | Gantry | done | 2026-11-26 | Gantry: the chat's update flattens a bulleted description into one line with stray italics (#171) | MIC-476.md |
