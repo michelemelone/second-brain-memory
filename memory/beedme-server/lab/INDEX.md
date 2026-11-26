@@ -4,5 +4,6 @@ One file per task of the Lab for this application. Search it with Grep before yo
 
 | Key | Project | Status | Updated | Title | File |
 |---|---|---|---|---|---|
+| MIC-504 | beedme-Server | done | 2026-11-26 | Update the Homepage (home.beedme.online) with all the apps | MIC-504.md |
 | MIC-372 | beedme-Server | done | 2026-11-20 | Services: a crash loop can never run silently for hours — systemd limits plus a visible alert | MIC-372.md |
 | MIC-326 | beedme-Server | done | 2026-11-19 | Server: delete Paperclip (the old external app) completely, never the bigMike Lab | MIC-326.md |

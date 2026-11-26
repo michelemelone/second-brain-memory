@@ -4,6 +4,7 @@ Every task of the Lab across applications, with the path of its file (relative t
 
 | Key | Project | Status | Updated | Title | File |
 |---|---|---|---|---|---|
+| MIC-504 | beedme-Server | done | 2026-11-26 | Update the Homepage (home.beedme.online) with all the apps | beedme-server/lab/MIC-504.md |
 | MIC-503 | bigMike | done | 2026-11-26 | bigMike: centred chat landing like Employee Works, with the composer sliding down on send | bigmike/lab/MIC-503.md |
 | MIC-502 | bigMike | done | 2026-11-26 | bigMike: Auto-fit button and text, and a chat column that collapses to icons or hides | bigmike/lab/MIC-502.md |
 | MIC-501 | bigMike | done | 2026-11-26 | bigMike layout: collapsible chat column, auto-fit and a centred chat like Employee Works | bigmike/lab/MIC-501.md |
