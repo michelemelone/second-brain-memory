@@ -4,7 +4,7 @@ Every task of the Lab across applications, with the path of its file (relative t
 
 | Key | Project | Status | Updated | Title | File |
 |---|---|---|---|---|---|
-| MIC-481 | Gantry | todo | 2026-11-26 | Gantry Sprint Backlog: the State column shows 'In progress' with a pulsing dot while a delivery runs… | gantry/lab/MIC-481.md |
+| MIC-481 | Gantry | done | 2026-11-26 | Gantry Sprint Backlog: the State column shows 'In progress' with a pulsing dot while a delivery runs… | gantry/lab/MIC-481.md |
 | MIC-480 | bigMike | blocked | 2026-11-26 | bigMike Lab: remove the Tester step end to end from the Lab | bigmike/lab/MIC-480.md |
 | MIC-479 | bigMike | done | 2026-11-26 | bigMike Lab: remove the PASS/FAIL verification tables from the requirement pages | bigmike/lab/MIC-479.md |
 | MIC-478 | bigMike | done | 2026-11-26 | bigMike Lab: the Columns menu and Auto-fit columns use nearly the same icon | bigmike/lab/MIC-478.md |
