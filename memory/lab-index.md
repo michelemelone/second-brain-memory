@@ -5,7 +5,7 @@ Every task of the Lab across applications, with the path of its file (relative t
 | Key | Project | Status | Updated | Title | File |
 |---|---|---|---|---|---|
 | MIC-481 | Gantry | done | 2026-11-26 | Gantry Sprint Backlog: the State column shows 'In progress' with a pulsing dot while a delivery runs… | gantry/lab/MIC-481.md |
-| MIC-480 | bigMike | blocked | 2026-11-26 | bigMike Lab: remove the Tester step end to end from the Lab | bigmike/lab/MIC-480.md |
+| MIC-480 | bigMike | done | 2026-11-26 | bigMike Lab: remove the Tester step end to end from the Lab | bigmike/lab/MIC-480.md |
 | MIC-479 | bigMike | done | 2026-11-26 | bigMike Lab: remove the PASS/FAIL verification tables from the requirement pages | bigmike/lab/MIC-479.md |
 | MIC-478 | bigMike | done | 2026-11-26 | bigMike Lab: the Columns menu and Auto-fit columns use nearly the same icon | bigmike/lab/MIC-478.md |
 | MIC-477 | Gantry | done | 2026-11-26 | Gantry: the table toolbar shows the same icon for Auto-fit columns and Columns | gantry/lab/MIC-477.md |
@@ -39,7 +39,7 @@ Every task of the Lab across applications, with the path of its file (relative t
 | MIC-449 | Gantry | done | 2026-11-24 | Gantry: requirement list rows on one line, no 'sub task' text, Run and Release columns never wrap | gantry/lab/MIC-449.md |
 | MIC-448 | bigMike | done | 2026-11-23 | Antigravity stays connected after sign-in: the credential reaches every chat and its models become u… | bigmike/lab/MIC-448.md |
 | MIC-447 | bigMike | done | 2026-11-23 | Antigravity sign-in works from the Accounts panel on a headless server (CLI 1.5.15) | bigmike/lab/MIC-447.md |
-| MIC-446 | Gantry | done | 2026-11-26 | Gantry: a released requirement can be iterated many times — resolve the validation points and Start… | gantry/lab/MIC-446.md |
+| MIC-446 | Gantry | todo | 2026-11-26 | Gantry: a released requirement can be iterated many times — resolve the validation points and Start… | gantry/lab/MIC-446.md |
 | MIC-445 | bigMike | done | 2026-11-23 | Lab intake: 'Describe what you want' always starts at once in parallel, follows the engine order, an… | bigmike/lab/MIC-445.md |
 | MIC-444 | Gantry | done | 2026-11-23 | Gantry: enable pasting and uploading attachments in requirement chat | gantry/lab/MIC-444.md |
 | MIC-443 | Gantry | done | 2026-11-23 | Gantry: open blank requirement page directly instead of popup for new requirement, bug, and API task | gantry/lab/MIC-443.md |
