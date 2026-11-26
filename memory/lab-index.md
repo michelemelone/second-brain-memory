@@ -4,10 +4,11 @@ Every task of the Lab across applications, with the path of its file (relative t
 
 | Key | Project | Status | Updated | Title | File |
 |---|---|---|---|---|---|
+| MIC-498 | Gantry | todo | 2026-11-26 | Gantry: no run starts while a validation point of the latest round is open (any severity, any caller… | gantry/lab/MIC-498.md |
 | MIC-497 | Gantry | done | 2026-11-26 | Requirement page Auto-fit: size the three columns from their real content, Conversation at least ~43… | gantry/lab/MIC-497.md |
 | MIC-496 | Gantry | done | 2026-11-26 | PBI form: show the default delivery agent at once, load the engines list in the background | gantry/lab/MIC-496.md |
 | MIC-495 | bigMike | done | 2026-11-26 | Enlarge the hard-to-read text and logo shown in the attached screenshot | bigmike/lab/MIC-495.md |
-| MIC-494 | Gantry | todo | 2026-11-26 | Demo video 4/4: record, edit and render the 3-minute video, with an OCR check for company names | gantry/lab/MIC-494.md |
+| MIC-494 | Gantry | done | 2026-11-26 | Demo video 4/4: record, edit and render the 3-minute video, with an OCR check for company names | gantry/lab/MIC-494.md |
 | MIC-493 | Gantry | done | 2026-11-26 | Demo video 3/4: script, narration and subtitles for the 3-minute English video | gantry/lab/MIC-493.md |
 | MIC-492 | Gantry | done | 2026-11-26 | Demo video 2/4: audit every screen of the video for company names and limit it to the demo app | gantry/lab/MIC-492.md |
 | MIC-491 | Gantry | done | 2026-11-26 | Demo video 1/4: build the anonymous 'Paws & Co' demo app through Gantry (4 requirements, delivered e… | gantry/lab/MIC-491.md |
