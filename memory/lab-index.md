@@ -4,6 +4,15 @@ Every task of the Lab across applications, with the path of its file (relative t
 
 | Key | Project | Status | Updated | Title | File |
 |---|---|---|---|---|---|
+| MIC-513 | bigMike | done | 2026-11-26 | Cockpit: central home in bigMike with one card per area (Mail, Finance, Health, Lab, Second Brain) | bigmike/lab/MIC-513.md |
+| MIC-512 | second-brain-app | done | 2026-11-26 | Second Brain review: make it the most powerful app, covering everything under data, and define who d… | bigmike/lab/no-project/MIC-512.md |
+| MIC-511 | mail | todo | 2026-11-26 | Mail 6/6: summary endpoint for the central cockpit and the Second Brain | bigmike/lab/no-project/MIC-511.md |
+| MIC-510 | mail | todo | 2026-11-26 | Mail 5/6: reply drafts in Gmail | bigmike/lab/no-project/MIC-510.md |
+| MIC-509 | mail | todo | 2026-11-26 | Mail 4/6: bulk clean-up with confirmation (Trash only) | bigmike/lab/no-project/MIC-509.md |
+| MIC-508 | mail | done | 2026-11-26 | Mail 3/6: dashboard UI (triage, sender groups, accounts) | bigmike/lab/no-project/MIC-508.md |
+| MIC-507 | mail | done | 2026-11-26 | Mail 2/6: Gmail read-only connection, sync and triage classification | bigmike/lab/no-project/MIC-507.md |
+| MIC-506 | mail | done | 2026-11-26 | Mail 1/6: app skeleton, multi-account model, service and public address | bigmike/lab/no-project/MIC-506.md |
+| MIC-505 | second-brain-app | done | 2026-11-26 | Responsive layout for foldable/mobile: collapsible left & right sidebars, touch/mouse column resizin… | bigmike/lab/no-project/MIC-505.md |
 | MIC-504 | beedme-Server | done | 2026-11-26 | Update the Homepage (home.beedme.online) with all the apps | beedme-server/lab/MIC-504.md |
 | MIC-503 | bigMike | done | 2026-11-26 | bigMike: centred chat landing like Employee Works, with the composer sliding down on send | bigmike/lab/MIC-503.md |
 | MIC-502 | bigMike | done | 2026-11-26 | bigMike: Auto-fit button and text, and a chat column that collapses to icons or hides | bigmike/lab/MIC-502.md |
