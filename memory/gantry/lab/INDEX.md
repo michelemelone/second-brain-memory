@@ -4,6 +4,11 @@ One file per task of the Lab for this application. Search it with Grep before yo
 
 | Key | Project | Status | Updated | Title | File |
 |---|---|---|---|---|---|
+| MIC-496 | Gantry | todo | 2026-11-26 | PBI form: show the default delivery agent at once, load the engines list in the background | MIC-496.md |
+| MIC-494 | Gantry | todo | 2026-11-26 | Demo video 4/4: record, edit and render the 3-minute video, with an OCR check for company names | MIC-494.md |
+| MIC-493 | Gantry | todo | 2026-11-26 | Demo video 3/4: script, narration and subtitles for the 3-minute English video | MIC-493.md |
+| MIC-492 | Gantry | todo | 2026-11-26 | Demo video 2/4: audit every screen of the video for company names and limit it to the demo app | MIC-492.md |
+| MIC-491 | Gantry | done | 2026-11-26 | Demo video 1/4: build the anonymous 'Paws & Co' demo app through Gantry (4 requirements, delivered e… | MIC-491.md |
 | MIC-490 | Gantry | done | 2026-11-26 | Gantry: really remove the Activity panel and its sidebar button (asked on 23/11, never delivered) | MIC-490.md |
 | MIC-481 | Gantry | done | 2026-11-26 | Gantry Sprint Backlog: the State column shows 'In progress' with a pulsing dot while a delivery runs… | MIC-481.md |
 | MIC-477 | Gantry | done | 2026-11-26 | Gantry: the table toolbar shows the same icon for Auto-fit columns and Columns | MIC-477.md |
