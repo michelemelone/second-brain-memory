@@ -11,6 +11,9 @@ Repo `/home/beedme/data/workspace/gantry/programs` (remote GitHub `servicenow-bu
 ## Where the data lives
 One folder per requirement with `PBI.md` (7 sections) and `state.json` (phases, numbered runs, evidence). Location of the documentation root: unknown here. Secrets stay in the server environment.
 
+## Validation gate (owner decision 2026-11-26, MIC-498)
+No run starts while any point of the latest validation round is open, of any severity (blocking or optional) and kind (change or question), for every caller including the bigMike service account: the server answers 409. The owner resolves each point (apply, decline, answer) or uses "Accept as is, start anyway" (round 3 on, only while a point is open; it records the open points as accepted). It replaces the MIC-437 rule where only blocking points locked the run.
+
 ## Current state: end-to-end release (owner decision 2026-11-25, option A)
 Every requirement goes end to end through its own worktree to **Released**, with no manual step and no automated live test (MIC-462 backend, MIC-463 UI, MIC-465 docs). It replaces the batch model of 2026-11-21 (MIC-426..MIC-432: stop at "Ready to release", **Release (N)** button), kept here only as history.
 1. The owner writes the requirement and validates it with AI (mandatory before the first run and after every change, MIC-429), then starts the run.
