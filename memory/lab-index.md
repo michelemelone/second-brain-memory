@@ -4,8 +4,9 @@ Every task of the Lab across applications, with the path of its file (relative t
 
 | Key | Project | Status | Updated | Title | File |
 |---|---|---|---|---|---|
-| MIC-552 | bigMike | todo | 2026-11-27 | bigMike: embed=mail active-email context and Gmail draft creation | bigmike/lab/MIC-552.md |
-| MIC-551 | mail | todo | 2026-11-27 | Mail: bigMike side drawer with active email context and in-app AI draft prompt | bigmike/lab/no-project/MIC-551.md |
+| MIC-553 | mail | todo | 2026-11-27 | Mail: optimize SQLite queries, add missing indexes and fix memory loading for 77k+ messages | bigmike/lab/no-project/MIC-553.md |
+| MIC-552 | bigMike | done | 2026-11-27 | bigMike: embed=mail active-email context and Gmail draft creation | bigmike/lab/MIC-552.md |
+| MIC-551 | mail | done | 2026-11-27 | Mail: bigMike side drawer with active email context and in-app AI draft prompt | bigmike/lab/no-project/MIC-551.md |
 | MIC-550 | mail | done | 2026-11-27 | Mail: AI drafts with custom instructions and compose endpoint | bigmike/lab/no-project/MIC-550.md |
 | MIC-549 | bigMike | done | 2026-11-27 | Ottimizzazione caricamento e performance Dashboard Lab | bigmike/lab/MIC-549.md |
 | MIC-548 | Gantry | done | 2026-11-27 | Demo video: intro Shuttle 3D v3.7, nuovo outro shuttle e registrazione portale ServiceNow | gantry/lab/MIC-548.md |
