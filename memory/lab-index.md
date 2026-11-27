@@ -5,10 +5,10 @@ Every task of the Lab across applications, with the path of its file (relative t
 | Key | Project | Status | Updated | Title | File |
 |---|---|---|---|---|---|
 | MIC-530 | second-brain-app | done | 2026-11-27 | Fix citation link navigation (:line jump and 404 fix) and expand Memory Operations view | bigmike/lab/no-project/MIC-530.md |
-| MIC-529 | bigMike | todo | 2026-11-27 | bigMike answers data questions from the warehouse: read-only query tool, central rule, cross-applica… | bigmike/lab/MIC-529.md |
+| MIC-529 | bigMike | done | 2026-11-27 | bigMike answers data questions from the warehouse: read-only query tool, central rule, cross-applica… | bigmike/lab/MIC-529.md |
 | MIC-528 | second-brain-app | done | 2026-11-27 | Warehouse adapters: Cucina, Learning German, Live camera, Mail, Mail-live, Gantry data, beedme-serve… | bigmike/lab/no-project/MIC-528.md |
-| MIC-527 | health | todo | 2026-11-27 | Warehouse adapter: Health (nutrition, food catalog, weight, workouts, jabs, energy history, side eff… | bigmike/lab/no-project/MIC-527.md |
-| MIC-526 | personal-finance | in_progress | 2026-11-27 | Warehouse adapter: Finance (every transaction, merchants, overrides, FX rates, imports) into the cen… | bigmike/lab/no-project/MIC-526.md |
+| MIC-527 | health | done | 2026-11-27 | Warehouse adapter: Health (nutrition, food catalog, weight, workouts, jabs, energy history, side eff… | bigmike/lab/no-project/MIC-527.md |
+| MIC-526 | personal-finance | done | 2026-11-27 | Warehouse adapter: Finance (every transaction, merchants, overrides, FX rates, imports) into the cen… | bigmike/lab/no-project/MIC-526.md |
 | MIC-525 | bigMike | done | 2026-11-27 | Warehouse adapter: bigMike (all chats, messages, Lab tasks, comments, runs, decisions, goals, agents… | bigmike/lab/MIC-525.md |
 | MIC-524 | second-brain-app | done | 2026-11-27 | Warehouse: one central database for the atomic data of ALL applications, with sync framework, schema… | bigmike/lab/no-project/MIC-524.md |
 | MIC-523 | bigMike | done | 2026-11-27 | bigMike: supporto tema scuro e styling dedicato per embed Personal Finance | bigmike/lab/MIC-523.md |
