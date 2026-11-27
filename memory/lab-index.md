@@ -8,10 +8,10 @@ Every task of the Lab across applications, with the path of its file (relative t
 | MIC-548 | Gantry | todo | 2026-11-27 | Demo video: intro Shuttle 3D v3.7, nuovo outro shuttle e registrazione portale ServiceNow | gantry/lab/MIC-548.md |
 | MIC-547 | Gantry | done | 2026-11-27 | Paws & Co: restyling portale stile Employee Center e scheda adozione con foto cane | gantry/lab/MIC-547.md |
 | MIC-546 | Finance app | done | 2026-11-27 | Finance: schema transazioni multivaluta (CHF, EUR, USD) e ricalcolo tassi storici nel database | finance/lab/MIC-546.md |
-| MIC-545 | bigMike | todo | 2026-11-27 | Engine analysis: usage, speed, errors and fallbacks per engine and model | bigmike/lab/MIC-545.md |
-| MIC-544 | second-brain-app | todo | 2026-11-27 | Memory: one Data & Sync page replaces Memory Operations; clean Settings; clear icons | bigmike/lab/no-project/MIC-544.md |
-| MIC-543 | Gantry | todo | 2026-11-27 | Gantry: use the shared engine/model picker instead of its own ModelPicker | gantry/lab/MIC-543.md |
-| MIC-542 | health | todo | 2026-11-27 | Health portal and Live camera: replace the hand-written engine selectors with the shared picker | bigmike/lab/no-project/MIC-542.md |
+| MIC-545 | bigMike | done | 2026-11-27 | Engine analysis: usage, speed, errors and fallbacks per engine and model | bigmike/lab/MIC-545.md |
+| MIC-544 | second-brain-app | done | 2026-11-27 | Memory: one Data & Sync page replaces Memory Operations; clean Settings; clear icons | bigmike/lab/no-project/MIC-544.md |
+| MIC-543 | Gantry | in_progress | 2026-11-27 | Gantry: use the shared engine/model picker instead of its own ModelPicker | gantry/lab/MIC-543.md |
+| MIC-542 | health | done | 2026-11-27 | Health portal and Live camera: replace the hand-written engine selectors with the shared picker | bigmike/lab/no-project/MIC-542.md |
 | MIC-541 | second-brain-app | done | 2026-11-27 | Memory: use the shared engine/model picker in the chat and drop the old engine UI | bigmike/lab/no-project/MIC-541.md |
 | MIC-540 | bigMike | done | 2026-11-27 | One shared engine/model picker for every application (bigMike chat component, themeable) | bigmike/lab/MIC-540.md |
 | MIC-539 | bigMike | done | 2026-11-27 | Second Brain: prove the split warehouse and the weekly job end to end, and record the decisions | bigmike/lab/MIC-539.md |
