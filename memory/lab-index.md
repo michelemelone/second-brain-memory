@@ -4,6 +4,12 @@ Every task of the Lab across applications, with the path of its file (relative t
 
 | Key | Project | Status | Updated | Title | File |
 |---|---|---|---|---|---|
+| MIC-584 | mail | todo | 2026-11-27 | Mail: the shared picker where the AI writes - choose the engine and model of a draft and see which m… | bigmike/lab/no-project/MIC-584.md |
+| MIC-583 | mail | todo | 2026-11-27 | Mail: AI Engine settings like the other apps - engine selection, default model and the ordered fallb… | bigmike/lab/no-project/MIC-583.md |
+| MIC-582 | bigMike | todo | 2026-11-27 | bigMike: shared model picker — restore the old picker's clear layout and modernize only its look, wi… | bigmike/lab/MIC-582.md |
+| MIC-581 | bigMike | todo | 2026-11-27 | bigMike: a chat whose messages are still waiting in the queue stays visible in the sidebar (stuck An… | bigmike/lab/MIC-581.md |
+| MIC-580 | bigMike | todo | 2026-11-27 | bigMike: a chat is held only when every fallback is blocked — the queue drains through the model tha… | bigmike/lab/MIC-580.md |
+| MIC-579 | bigMike | todo | 2026-11-27 | bigMike: an agent chat falls back only inside its own engine and that agent's providers (never Antig… | bigmike/lab/MIC-579.md |
 | MIC-578 | second-brain-app | done | 2026-11-27 | Memory: move Data & Sync into Settings, collapse Graph settings by default, fix single-click buttons… | bigmike/lab/no-project/MIC-578.md |
 | MIC-577 | bigMike | done | 2026-11-27 | bigMike: add 'memory' (Second Brain) embed theme and hide robot face logo in embed=memory empty stat… | bigmike/lab/MIC-577.md |
 | MIC-576 | mail | done | 2026-11-27 | Mail: topbar cleanup, Autofit for sidebar + bigMike, and Appearance settings (Theme, Layout, Font) | bigmike/lab/no-project/MIC-576.md |
@@ -39,10 +45,10 @@ Every task of the Lab across applications, with the path of its file (relative t
 | MIC-546 | Finance app | done | 2026-11-27 | Finance: schema transazioni multivaluta (CHF, EUR, USD) e ricalcolo tassi storici nel database | finance/lab/MIC-546.md |
 | MIC-545 | bigMike | done | 2026-11-27 | Engine analysis: usage, speed, errors and fallbacks per engine and model | bigmike/lab/MIC-545.md |
 | MIC-544 | second-brain-app | done | 2026-11-27 | Memory: one Data & Sync page replaces Memory Operations; clean Settings; clear icons | bigmike/lab/no-project/MIC-544.md |
-| MIC-543 | Gantry | done | 2026-11-27 | Gantry: use the shared engine/model picker instead of its own ModelPicker | gantry/lab/MIC-543.md |
+| MIC-543 | Gantry | todo | 2026-11-27 | Gantry: own its model picker - a copy inside the Gantry repo, never an import of bigMike's source | gantry/lab/MIC-543.md |
 | MIC-542 | health | done | 2026-11-27 | Health portal and Live camera: replace the hand-written engine selectors with the shared picker | bigmike/lab/no-project/MIC-542.md |
 | MIC-541 | second-brain-app | done | 2026-11-27 | Memory: centralize AI engine settings across apps (shared control with provider keys, full models ch… | bigmike/lab/no-project/MIC-541.md |
-| MIC-540 | bigMike | done | 2026-11-27 | One shared engine/model picker for every application (bigMike chat component, themeable) | bigmike/lab/MIC-540.md |
+| MIC-540 | bigMike | todo | 2026-11-27 | bigMike: shared model picker — restore selecting the default model and the ordered fallback chain (f… | bigmike/lab/MIC-540.md |
 | MIC-539 | bigMike | done | 2026-11-27 | Second Brain: prove the split warehouse and the weekly job end to end, and record the decisions | bigmike/lab/MIC-539.md |
 | MIC-538 | second-brain-app | done | 2026-11-27 | Warehouse job: weekly sync on Friday at 03:00 instead of nightly | bigmike/lab/no-project/MIC-538.md |
 | MIC-537 | second-brain-app | done | 2026-11-27 | Warehouse: split the one database into per-application files with a compatibility layer | bigmike/lab/no-project/MIC-537.md |
