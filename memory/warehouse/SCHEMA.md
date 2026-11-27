@@ -15,7 +15,14 @@ Location: `/home/beedme/data/workspace/second-brain/memory/warehouse`
 | `apps.sqlite` | `camera_sessions`, `cucina_meals`, `gantry_chat_messages`, `gantry_chats`, `gantry_requirements`, `german_sessions`, `german_vocabulary` | Application adapters (Gantry, Cucina, German learning, Live camera) and generic workspace folder tables. |
 
 This file is generated automatically from the warehouse databases after every sync.
-Agents should query the warehouse via `programs/bin/bigmike-data` (read-only) for any factual or cross-application data question.
+Agents should query the warehouse via `programs/bin/bigmike-data` (read-only) for any factual or cross-application data question; table names are plain (no schema prefix) and resolve to the file above.
+
+## Storage policy
+
+- **Where:** the six files above live in git on GitHub, in `second-brain` under `memory/warehouse/`; one file per application group, so no single file grows with every application. Codeberg is used only if the GitHub per-file limit becomes a real problem (owner decision 2026-11-27, MIC-537/MIC-539).
+- **Thresholds:** GitHub warns above 50 MiB per file and blocks above 100 MiB (push refused). A file above 25 MiB is flagged in the weekly check.
+- **When a file gets close:** at 50 MiB split the heaviest table of that group into its own file (or drop what is rebuildable, then `VACUUM`); never commit a file near 100 MiB, because the push would fail and the warehouse would stop being saved.
+- **Sync:** one weekly job, Friday 03:00 (`warehouse_jobs` row `0 3 * * 5`), covering every application; this manifest is rewritten at the end of each run.
 
 ## Tables
 

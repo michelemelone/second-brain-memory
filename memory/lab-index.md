@@ -5,7 +5,7 @@ Every task of the Lab across applications, with the path of its file (relative t
 | Key | Project | Status | Updated | Title | File |
 |---|---|---|---|---|---|
 | MIC-539 | bigMike | todo | 2026-11-27 | Second Brain: prove the split warehouse and the weekly job end to end, and record the decisions | bigmike/lab/MIC-539.md |
-| MIC-538 | second-brain-app | todo | 2026-11-27 | Warehouse job: weekly sync on Friday at 03:00 instead of nightly | bigmike/lab/no-project/MIC-538.md |
+| MIC-538 | second-brain-app | done | 2026-11-27 | Warehouse job: weekly sync on Friday at 03:00 instead of nightly | bigmike/lab/no-project/MIC-538.md |
 | MIC-537 | second-brain-app | done | 2026-11-27 | Warehouse: split the one database into per-application files with a compatibility layer | bigmike/lab/no-project/MIC-537.md |
 | MIC-536 | bigMike | done | 2026-11-27 | Sidebar embed: nascondere Space General e isolare la visualizzazione al solo progetto | bigmike/lab/MIC-536.md |
 | MIC-535 | Finance app | done | 2026-11-27 | Finance: responsive layout for foldable/mobile, touch & pointer column resizing, resizable AI drawer… | finance/lab/MIC-535.md |
