@@ -4,7 +4,15 @@ Every task of the Lab across applications, with the path of its file (relative t
 
 | Key | Project | Status | Updated | Title | File |
 |---|---|---|---|---|---|
-| MIC-553 | mail | todo | 2026-11-27 | Mail: optimize SQLite queries, add missing indexes and fix memory loading for 77k+ messages | bigmike/lab/no-project/MIC-553.md |
+| MIC-561 | mail | todo | 2026-11-27 | Mail: Create draft expands inline menu with prompt input, AI draft, and Create draft buttons | bigmike/lab/no-project/MIC-561.md |
+| MIC-560 | mail | todo | 2026-11-27 | Mail: hideable sidebar, Auto-fit columns button, and full-body/all-emails context for AI drafts | bigmike/lab/no-project/MIC-560.md |
+| MIC-559 | second-brain-app | todo | 2026-11-27 | Second Brain: embed centralized bigMike chat in right panel and graph matching Finance & Health | bigmike/lab/no-project/MIC-559.md |
+| MIC-558 | bigMike | done | 2026-11-27 | bigMike: support 'memory' project display name and embed=memory alias for second-brain-app | bigmike/lab/MIC-558.md |
+| MIC-557 | mail | todo | 2026-11-27 | Mail: full Gmail-style UI clone with reading view, folders and inline reply/forward box | bigmike/lab/no-project/MIC-557.md |
+| MIC-556 | mail | done | 2026-11-27 | Mail: on-demand email body endpoint and reply/forward draft support | bigmike/lab/no-project/MIC-556.md |
+| MIC-555 | mail | done | 2026-11-27 | Mail: fast batch deletion for trashed and 404 messages during sync | bigmike/lab/no-project/MIC-555.md |
+| MIC-554 | second-brain-app | done | 2026-11-27 | Memory: resilient /picker/bigmike-picker.js loading, visible error/retry UI, and cache-busting | bigmike/lab/no-project/MIC-554.md |
+| MIC-553 | mail | done | 2026-11-27 | Mail: optimize SQLite queries, add missing indexes and fix memory loading for 77k+ messages | bigmike/lab/no-project/MIC-553.md |
 | MIC-552 | bigMike | done | 2026-11-27 | bigMike: embed=mail active-email context and Gmail draft creation | bigmike/lab/MIC-552.md |
 | MIC-551 | mail | done | 2026-11-27 | Mail: bigMike side drawer with active email context and in-app AI draft prompt | bigmike/lab/no-project/MIC-551.md |
 | MIC-550 | mail | done | 2026-11-27 | Mail: AI drafts with custom instructions and compose endpoint | bigmike/lab/no-project/MIC-550.md |
