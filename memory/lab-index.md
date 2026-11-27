@@ -4,17 +4,24 @@ Every task of the Lab across applications, with the path of its file (relative t
 
 | Key | Project | Status | Updated | Title | File |
 |---|---|---|---|---|---|
-| MIC-571 | bigMike | in_progress | 2026-11-27 | bigMike: centralizzazione DefaultAgentSettings nel bundle condiviso con autofit e sizing | bigmike/lab/MIC-571.md |
+| MIC-578 | second-brain-app | done | 2026-11-27 | Memory: move Data & Sync into Settings, collapse Graph settings by default, fix single-click buttons… | bigmike/lab/no-project/MIC-578.md |
+| MIC-577 | bigMike | done | 2026-11-27 | bigMike: add 'memory' (Second Brain) embed theme and hide robot face logo in embed=memory empty stat… | bigmike/lab/MIC-577.md |
+| MIC-576 | mail | in_progress | 2026-11-27 | Mail: topbar cleanup, Autofit for sidebar + bigMike, and Appearance settings (Theme, Layout, Font) | bigmike/lab/no-project/MIC-576.md |
+| MIC-575 | mail | done | 2026-11-27 | Mail: fix Open in Gmail links (avoid 404) | bigmike/lab/no-project/MIC-575.md |
+| MIC-574 | Gantry | todo | 2026-11-27 | Demo video (Version 2 - classic v3.7 without Paws & Co): full v3.7 tour with new UI, slimmer sidebar… | gantry/lab/MIC-574.md |
+| MIC-573 | Gantry | in_progress | 2026-11-27 | Demo video (Version 1 - Paws & Co only): full v3.7 tour with new UI, slimmer sidebar, and working in… | gantry/lab/MIC-573.md |
+| MIC-572 | Gantry | done | 2026-11-27 | Gantry UI: make the left navigation sidebar slimmer/narrower | gantry/lab/MIC-572.md |
+| MIC-571 | bigMike | done | 2026-11-27 | bigMike: centralizzazione DefaultAgentSettings nel bundle condiviso con autofit e sizing | bigmike/lab/MIC-571.md |
 | MIC-570 | Gantry | done | 2026-11-27 | Gantry: velocizzazione caricamento Default Agent, cache locale e persistenza selezioni | gantry/lab/MIC-570.md |
-| MIC-569 | health | todo | 2026-11-27 | Health: standardize Settings panel to Gantry grouped layout with resizable columns and auto-fit | bigmike/lab/no-project/MIC-569.md |
-| MIC-568 | personal-finance | in_progress | 2026-11-27 | Finance: align Settings page to Gantry grouped layout with resizable sidebar and auto-fit | bigmike/lab/no-project/MIC-568.md |
+| MIC-569 | health | done | 2026-11-27 | Health: standardize Settings panel to Gantry grouped layout with resizable columns and auto-fit | bigmike/lab/no-project/MIC-569.md |
+| MIC-568 | personal-finance | done | 2026-11-27 | Finance: align Settings page to Gantry grouped layout with resizable sidebar and auto-fit | bigmike/lab/no-project/MIC-568.md |
 | MIC-567 | bigMike | done | 2026-11-27 | bigMike Lab: move AI Engines, Analysis, Skills and Connectors under Settings in Gantry grouped layou… | bigmike/lab/MIC-567.md |
-| MIC-566 | bigMike | todo | 2026-11-27 | bigMike: render Memory page as an inline tab view inside the main workspace instead of full-screen o… | bigmike/lab/MIC-566.md |
+| MIC-566 | bigMike | done | 2026-11-27 | bigMike: render Memory page as an inline tab view inside the main workspace instead of full-screen o… | bigmike/lab/MIC-566.md |
 | MIC-565 | second-brain-app | done | 2026-11-27 | Second Brain: remove empty settings column, adopt Gantry grouped settings layout and auto-fit column… | bigmike/lab/no-project/MIC-565.md |
 | MIC-564 | Gantry | done | 2026-11-27 | Gantry: rename Integrations and AI integrations to AI Engines across navigation and headers | gantry/lab/MIC-564.md |
 | MIC-563 | bigMike | done | 2026-11-27 | bigMike: redesign EngineSettings to Gantry horizontal card layout with tabs and rename to AI Engines | bigmike/lab/MIC-563.md |
 | MIC-562 | bigMike | done | 2026-11-27 | AI Engines: uniform naming and Gantry horizontal card layout across all applications | bigmike/lab/MIC-562.md |
-| MIC-561 | mail | todo | 2026-11-27 | Mail: Create draft expands inline menu with prompt input, AI draft, and Create draft buttons | bigmike/lab/no-project/MIC-561.md |
+| MIC-561 | mail | done | 2026-11-27 | Mail: Create draft expands inline menu with prompt input, AI draft, and Create draft buttons | bigmike/lab/no-project/MIC-561.md |
 | MIC-560 | mail | done | 2026-11-27 | Mail: hideable sidebar, auto-fit columns, and Gantry-style grouped settings layout | bigmike/lab/no-project/MIC-560.md |
 | MIC-559 | second-brain-app | done | 2026-11-27 | Second Brain: embed centralized bigMike chat in right panel and graph matching Finance & Health | bigmike/lab/no-project/MIC-559.md |
 | MIC-558 | bigMike | done | 2026-11-27 | bigMike: support 'memory' project display name and embed=memory alias for second-brain-app | bigmike/lab/MIC-558.md |

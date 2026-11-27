@@ -4,6 +4,9 @@ One file per task of the Lab for this application. Search it with Grep before yo
 
 | Key | Project | Status | Updated | Title | File |
 |---|---|---|---|---|---|
+| MIC-574 | Gantry | todo | 2026-11-27 | Demo video (Version 2 - classic v3.7 without Paws & Co): full v3.7 tour with new UI, slimmer sidebar… | MIC-574.md |
+| MIC-573 | Gantry | in_progress | 2026-11-27 | Demo video (Version 1 - Paws & Co only): full v3.7 tour with new UI, slimmer sidebar, and working in… | MIC-573.md |
+| MIC-572 | Gantry | done | 2026-11-27 | Gantry UI: make the left navigation sidebar slimmer/narrower | MIC-572.md |
 | MIC-570 | Gantry | done | 2026-11-27 | Gantry: velocizzazione caricamento Default Agent, cache locale e persistenza selezioni | MIC-570.md |
 | MIC-564 | Gantry | done | 2026-11-27 | Gantry: rename Integrations and AI integrations to AI Engines across navigation and headers | MIC-564.md |
 | MIC-548 | Gantry | done | 2026-11-27 | Demo video: intro Shuttle 3D v3.7, nuovo outro shuttle e registrazione portale ServiceNow | MIC-548.md |
