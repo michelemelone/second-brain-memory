@@ -16,12 +16,14 @@ About 3,300 moves; accounts Yuh and Revolut. Pages: Dashboard, Cards, Transactio
 
 ## Decisions that constrain changes
 - UI is entirely English; default period "Year to date" (`CLAUDE.md`).
+- Multi-currency schema: transaction CSVs persist `amount_chf`, `amount_eur`, `amount_usd`, `fx_rate_applied` (historical ECB day rate with weekend/holiday fallback).
 - New data source = new `transactions_*.csv` with the same schema; the loader reads `transactions*.csv`.
 - Corrections go to `overrides.csv` / `merchants.csv`; they survive re-imports.
 - Anthropic key stays in `web/.env.local`, never sent to the browser.
-- Multi-currency "All -> CHF" uses daily ECB rates in `fx_rates.json`.
+- Multi-currency conversions use daily ECB rates in `fx_rates.json`.
 
 ## Recent work (no Lab keys yet; from the wiki)
+- 2026-11-27 MIC-546: Multi-currency transaction schema (CHF, EUR, USD) and historical rate backfill.
 - 2026-11-14 Account tabs, chart filter toggles, value labels.
 - 2026-11-13 Ledger overhaul, Settings, AI document import, public domain.
 - Earlier: Revolut import, systemd unit (`b22d2af`).
