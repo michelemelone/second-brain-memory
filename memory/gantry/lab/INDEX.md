@@ -4,6 +4,8 @@ One file per task of the Lab for this application. Search it with Grep before yo
 
 | Key | Project | Status | Updated | Title | File |
 |---|---|---|---|---|---|
+| MIC-570 | Gantry | done | 2026-11-27 | Gantry: velocizzazione caricamento Default Agent, cache locale e persistenza selezioni | MIC-570.md |
+| MIC-564 | Gantry | done | 2026-11-27 | Gantry: rename Integrations and AI integrations to AI Engines across navigation and headers | MIC-564.md |
 | MIC-548 | Gantry | done | 2026-11-27 | Demo video: intro Shuttle 3D v3.7, nuovo outro shuttle e registrazione portale ServiceNow | MIC-548.md |
 | MIC-547 | Gantry | done | 2026-11-27 | Paws & Co: restyling portale stile Employee Center e scheda adozione con foto cane | MIC-547.md |
 | MIC-543 | Gantry | done | 2026-11-27 | Gantry: use the shared engine/model picker instead of its own ModelPicker | MIC-543.md |

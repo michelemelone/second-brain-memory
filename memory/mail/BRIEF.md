@@ -6,13 +6,13 @@ Sources: `mail/CLAUDE.md`, `mail/README.md`, `mail/docs/summary-api.md`, Lab tas
 Michele's personal mail app: several Gmail accounts side by side, triage into classes (reply urgent/normal, read, newsletter...), sender groups, bulk clean-up to Trash, reply drafts. UI in English.
 
 ## Stack and where the code lives
-Repo `/home/beedme/data/workspace/mail`: Node 24 + TypeScript + Express (`server/src`), React 18 + Vite (`web/src`), vitest. Public `https://mail.beedme.online`, port 4001, systemd user unit `deploy/mail.service`, runs from the clean checkout `/home/beedme/data/workspace/mail-live` (`CLAUDE.md`).
+Repo `/home/beedme/data/workspace/mail`: Node 24 + TypeScript + Express (`server/src`), React 18 + Vite (`web/src`), vitest. Public `https://mail.beedme.online`, port 4001, systemd user unit `deploy/mail.service`, runs directly from `/home/beedme/data/workspace/mail` (`CLAUDE.md`).
 
 ## Where the data lives
 SQLite `~/data/mail/mail.sqlite` (metadata only, no bodies). Secrets `~/.config/mail/` (`master.key`, `tokens.enc`, `google-client.json`), never read or copied. Counts for the Second Brain: `memory/mail/summary.md` (nightly, no AI, numbered accounts, no personal content).
 
 ## Current state
-Skeleton, Gmail read-only sync, classification, dashboard, Trash clean-up and drafts are built and tested (MIC-506..510). Summary API `GET /api/summary` added (MIC-511). Mail runs on 192.168.12.200:4001 (mail.service, from `/home/beedme/data/workspace/mail-live`, MIC-514); `bigmike-restart mail` works now (project mail is in APP_SERVICES). One real Gmail account is connected (michimel@gmail.com, compose granted) and syncs.
+Skeleton, Gmail read-only sync, classification, dashboard, Trash clean-up and drafts are built and tested (MIC-506..510). Summary API `GET /api/summary` added (MIC-511). Mail runs on 192.168.12.200:4001 (mail.service, from `/home/beedme/data/workspace/mail`); `bigmike-restart mail` works now (project mail is in APP_SERVICES). One real Gmail account is connected (michimel@gmail.com, compose granted) and syncs.
 AI engine (MIC-510 follow-up, 2026-11-27): the `gemini` CLI Google retired is gone. Drafts and AI classification go through bigMike's engine API `POST /api/memory/generate` (`MAIL_ENGINE_URL`, default http://192.168.12.200:3738/api/memory/generate, bigMike picks the engine/model the shared picker shows). `POST /api/ai/classify` (background, limit default 100) clears the ambiguous backlog in slices of `ai_batch`.
 
 ## Decisions that constrain changes
@@ -35,6 +35,6 @@ AI engine (MIC-510 follow-up, 2026-11-27): the `gemini` CLI Google retired is go
 - Tests that touch node:sqlite must load it through `createRequire`.
 
 ## How to verify and restart
-`npm test`, `npm run build`; `curl localhost:4001/api/health`. Live: in mail-live `git pull && npm ci && npm run build && systemctl --user restart mail.service` (owner only).
+`npm test`, `npm run build`; `curl localhost:4001/api/health`. Live: in mail `npm run build && systemctl --user restart mail.service`.
 
 Refresh: update after each Mail Lab task; keep under 4,000 characters.
