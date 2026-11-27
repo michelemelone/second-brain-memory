@@ -4,7 +4,7 @@ Every task of the Lab across applications, with the path of its file (relative t
 
 | Key | Project | Status | Updated | Title | File |
 |---|---|---|---|---|---|
-| MIC-549 | bigMike | todo | 2026-11-27 | Ottimizzazione caricamento e performance Dashboard Lab | bigmike/lab/MIC-549.md |
+| MIC-549 | bigMike | done | 2026-11-27 | Ottimizzazione caricamento e performance Dashboard Lab | bigmike/lab/MIC-549.md |
 | MIC-548 | Gantry | todo | 2026-11-27 | Demo video: intro Shuttle 3D v3.7, nuovo outro shuttle e registrazione portale ServiceNow | gantry/lab/MIC-548.md |
 | MIC-547 | Gantry | done | 2026-11-27 | Paws & Co: restyling portale stile Employee Center e scheda adozione con foto cane | gantry/lab/MIC-547.md |
 | MIC-546 | Finance app | done | 2026-11-27 | Finance: schema transazioni multivaluta (CHF, EUR, USD) e ricalcolo tassi storici nel database | finance/lab/MIC-546.md |
@@ -12,7 +12,7 @@ Every task of the Lab across applications, with the path of its file (relative t
 | MIC-544 | second-brain-app | todo | 2026-11-27 | Memory: one Data & Sync page replaces Memory Operations; clean Settings; clear icons | bigmike/lab/no-project/MIC-544.md |
 | MIC-543 | Gantry | todo | 2026-11-27 | Gantry: use the shared engine/model picker instead of its own ModelPicker | gantry/lab/MIC-543.md |
 | MIC-542 | health | todo | 2026-11-27 | Health portal and Live camera: replace the hand-written engine selectors with the shared picker | bigmike/lab/no-project/MIC-542.md |
-| MIC-541 | second-brain-app | todo | 2026-11-27 | Memory: use the shared engine/model picker in the chat and drop the old engine UI | bigmike/lab/no-project/MIC-541.md |
+| MIC-541 | second-brain-app | done | 2026-11-27 | Memory: use the shared engine/model picker in the chat and drop the old engine UI | bigmike/lab/no-project/MIC-541.md |
 | MIC-540 | bigMike | done | 2026-11-27 | One shared engine/model picker for every application (bigMike chat component, themeable) | bigmike/lab/MIC-540.md |
 | MIC-539 | bigMike | done | 2026-11-27 | Second Brain: prove the split warehouse and the weekly job end to end, and record the decisions | bigmike/lab/MIC-539.md |
 | MIC-538 | second-brain-app | done | 2026-11-27 | Warehouse job: weekly sync on Friday at 03:00 instead of nightly | bigmike/lab/no-project/MIC-538.md |
@@ -33,7 +33,7 @@ Every task of the Lab across applications, with the path of its file (relative t
 | MIC-523 | bigMike | done | 2026-11-27 | bigMike: supporto tema scuro e styling dedicato per embed Personal Finance | bigmike/lab/MIC-523.md |
 | MIC-522 | mail-live | done | 2026-11-27 | Mail: Deletable grouped by sender and category, with a link to Gmail filtered on the sender | bigmike/lab/no-project/MIC-522.md |
 | MIC-521 | mail-live | done | 2026-11-27 | Mail: make "Create draft" work with compose only (no modify) | bigmike/lab/no-project/MIC-521.md |
-| MIC-520 | mail-live | todo | 2026-11-27 | Mail: fix "Open in Gmail" opening a blank error page | bigmike/lab/no-project/MIC-520.md |
+| MIC-520 | mail-live | done | 2026-11-27 | Mail: fix "Open in Gmail" opening a blank error page | bigmike/lab/no-project/MIC-520.md |
 | MIC-519 | Finance app | done | 2026-11-27 | Finance: sidebar ridimensionabile con drag handle, collapse in alto e tasto Auto-fit columns | finance/lab/MIC-519.md |
 | MIC-518 | Finance app | done | 2026-11-27 | Finance: pannello laterale destro con istanza embedded di bigMike per Personal Finance | finance/lab/MIC-518.md |
 | MIC-517 | Finance app | done | 2026-11-27 | Finance: export CSV tabella dettagli categorie nel formato personalizzato | finance/lab/MIC-517.md |
