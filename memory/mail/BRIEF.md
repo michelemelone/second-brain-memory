@@ -34,7 +34,7 @@ AI engine (MIC-510 follow-up, 2026-11-27): the `gemini` CLI Google retired is go
 ## Known pitfalls
 - Service not restartable through the Lab yet (project mail has no registered app).
 - The Homepage tile for Mail (MIC-504) was not in `services.yaml` on 2026-11-26.
-- Tests that touch node:sqlite must load it through `createRequire`.
+- Tests touching node:sqlite load it through `createRequire`.
 
 ## How to verify and restart
 `npm test`, `npm run build`; `curl localhost:4001/api/health`. Live: in mail `npm run build && systemctl --user restart mail.service`.
