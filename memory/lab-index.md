@@ -4,10 +4,21 @@ Every task of the Lab across applications, with the path of its file (relative t
 
 | Key | Project | Status | Updated | Title | File |
 |---|---|---|---|---|---|
+| MIC-530 | second-brain-app | todo | 2026-11-27 | Fix citation link navigation (:line jump and 404 fix) and expand Memory Operations view | bigmike/lab/no-project/MIC-530.md |
+| MIC-529 | bigMike | todo | 2026-11-27 | bigMike answers data questions from the warehouse: read-only query tool, central rule, cross-applica… | bigmike/lab/MIC-529.md |
+| MIC-528 | second-brain-app | todo | 2026-11-27 | Warehouse adapters: Cucina, Learning German, Live camera, Mail, Mail-live, Gantry data, beedme-serve… | bigmike/lab/no-project/MIC-528.md |
+| MIC-527 | health | todo | 2026-11-27 | Warehouse adapter: Health (nutrition, food catalog, weight, workouts, jabs, energy history, side eff… | bigmike/lab/no-project/MIC-527.md |
+| MIC-526 | personal-finance | todo | 2026-11-27 | Warehouse adapter: Finance (every transaction, merchants, overrides, FX rates, imports) into the cen… | bigmike/lab/no-project/MIC-526.md |
+| MIC-525 | bigMike | todo | 2026-11-27 | Warehouse adapter: bigMike (all chats, messages, Lab tasks, comments, runs, decisions, goals, agents… | bigmike/lab/MIC-525.md |
+| MIC-524 | second-brain-app | in_progress | 2026-11-27 | Warehouse: one central database for the atomic data of ALL applications, with sync framework, schema… | bigmike/lab/no-project/MIC-524.md |
+| MIC-523 | bigMike | done | 2026-11-27 | bigMike: supporto tema scuro e styling dedicato per embed Personal Finance | bigmike/lab/MIC-523.md |
+| MIC-522 | mail-live | done | 2026-11-27 | Mail: Deletable grouped by sender and category, with a link to Gmail filtered on the sender | bigmike/lab/no-project/MIC-522.md |
+| MIC-521 | mail-live | done | 2026-11-27 | Mail: make "Create draft" work with compose only (no modify) | bigmike/lab/no-project/MIC-521.md |
+| MIC-520 | mail-live | done | 2026-11-27 | Mail: fix "Open in Gmail" opening a blank error page | bigmike/lab/no-project/MIC-520.md |
 | MIC-519 | Finance app | done | 2026-11-27 | Finance: sidebar ridimensionabile con drag handle, collapse in alto e tasto Auto-fit columns | finance/lab/MIC-519.md |
 | MIC-518 | Finance app | done | 2026-11-27 | Finance: pannello laterale destro con istanza embedded di bigMike per Personal Finance | finance/lab/MIC-518.md |
 | MIC-517 | Finance app | done | 2026-11-27 | Finance: export CSV tabella dettagli categorie nel formato personalizzato | finance/lab/MIC-517.md |
-| MIC-516 | mail | in_progress | 2026-11-27 | Mail: one bad message (Google 400) must not abort the whole Gmail sync | bigmike/lab/no-project/MIC-516.md |
+| MIC-516 | mail | done | 2026-11-27 | Mail: one bad message (Google 400) must not abort the whole Gmail sync | bigmike/lab/no-project/MIC-516.md |
 | MIC-515 | bigMike | done | 2026-11-26 | Cockpit: fix broken cards, links, fake urgent strip and home scrolling | bigmike/lab/MIC-515.md |
 | MIC-514 | mail | done | 2026-11-26 | Mail: make the app really live on port 4001 (service stopped, unit still on 3740) | bigmike/lab/no-project/MIC-514.md |
 | MIC-513 | bigMike | done | 2026-11-26 | Cockpit: central home in bigMike with one card per area (Mail, Finance, Health, Lab, Second Brain) | bigmike/lab/MIC-513.md |

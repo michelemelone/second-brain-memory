@@ -14,16 +14,22 @@ Env: BIGMIKE_URLS (comma list, default 127.0.0.1 and 192.168.12.200 on port 3738
      WIKI_MAX_AGE_DAYS (default 3).
 """
 import os
+import sqlite3
 import subprocess
 import sys
 import time
 import urllib.request
+from datetime import datetime, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 REPOS = [ROOT, ROOT / "memory" / "bigmike"]
 WIKIS = [ROOT / "memory" / "bigmike" / "wiki"]  # filled by the nightly job
 CENTRAL_WIKI = ROOT / "wiki"
+WAREHOUSE_DIR = ROOT / "memory" / "warehouse"
+WAREHOUSE_DB = WAREHOUSE_DIR / "warehouse.sqlite"
+WAREHOUSE_SCHEMA = WAREHOUSE_DIR / "SCHEMA.md"
+WAREHOUSE_MAX_AGE = float(os.environ.get("WAREHOUSE_MAX_AGE_DAYS", "2")) * 86400
 MAX_AGE = float(os.environ.get("WIKI_MAX_AGE_DAYS", "3")) * 86400
 URLS = os.environ.get(
     "BIGMIKE_URLS", "http://127.0.0.1:3738,http://192.168.12.200:3738"
@@ -84,13 +90,47 @@ def check_wiki(path):
         problems.append(f"wiki: {path.relative_to(ROOT)} not updated for {days:.1f} days")
 
 
+ALLOWED_WAREHOUSE_FILES = {
+    "memory/warehouse/warehouse.sqlite",
+    "memory/warehouse/warehouse.sqlite-wal",
+    "memory/warehouse/warehouse.sqlite-shm",
+}
+
+
 def check_forbidden():
     for dirpath, dirs, files in os.walk(ROOT):
         dirs[:] = [d for d in dirs if d not in SKIP_DIRS]
         for f in files:
             low = f.lower()
+            rel = Path(dirpath, f).relative_to(ROOT).as_posix()
+            if rel in ALLOWED_WAREHOUSE_FILES:
+                continue
             if low in BAD_NAMES or any(low.endswith(s) for s in BAD_SUFFIXES) or low.startswith(".env"):
-                problems.append(f"secret/db: forbidden file {Path(dirpath, f).relative_to(ROOT)}")
+                problems.append(f"secret/db: forbidden file {rel}")
+
+
+def check_warehouse():
+    if not WAREHOUSE_DB.is_file():
+        problems.append("warehouse: memory/warehouse/warehouse.sqlite is missing")
+        return
+    if not WAREHOUSE_SCHEMA.is_file():
+        problems.append("warehouse: memory/warehouse/SCHEMA.md is missing")
+    try:
+        conn = sqlite3.connect(f"file:{WAREHOUSE_DB}?mode=ro", uri=True)
+        try:
+            row = conn.execute("SELECT MAX(finished_at) FROM sync_log WHERE status = 'ok'").fetchone()
+        finally:
+            conn.close()
+        last = row[0] if row else None
+        if not last:
+            problems.append("warehouse: sync_log has no successful sync run")
+            return
+        ts = datetime.fromisoformat(last.replace("Z", "+00:00")).timestamp()
+        age = time.time() - ts
+        if age > WAREHOUSE_MAX_AGE:
+            problems.append(f"warehouse: last successful sync was {age / 86400:.1f} days ago")
+    except Exception as exc:
+        problems.append(f"warehouse: check failed ({exc})")
 
 
 def check_app():
@@ -110,6 +150,7 @@ for r in REPOS:
 for w in WIKIS + [CENTRAL_WIKI]:
     check_wiki(w)
 check_forbidden()
+check_warehouse()
 check_app()
 
 if problems:

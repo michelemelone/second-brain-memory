@@ -1,18 +1,19 @@
 # Second Brain: brief
-Updated: 2026-11-20 · Refresh: see end · Contract: `memory/README.md`
-Sources: `second-brain-app/README.md`, `second-brain-app/deploy/README.md`, `second-brain/README.md`, wiki `projects/second-brain-app`, `topics/memory-wiki`, `decisions/all-application-memory-under-second-brain`, `wiki/gantry-memory-excluded.md`, Lab MIC-269, 272, 283, 303, 304, 320, 324, 341, 413; `agent-skills/doc-ocr/SKILL.md`.
+Updated: 2026-11-27 · Refresh: see end · Contract: `memory/README.md`
+Sources: `second-brain-app/README.md`, `second-brain-app/deploy/README.md`, `second-brain/README.md`, wiki `projects/second-brain-app`, `topics/memory-wiki`, `decisions/all-application-memory-under-second-brain`, `wiki/gantry-memory-excluded.md`, Lab MIC-269, 272, 283, 303, 304, 320, 324, 341, 413, 524; `agent-skills/doc-ocr/SKILL.md`.
 
 ## What it is
-Two things: the vault `/home/beedme/data/workspace/second-brain` (Markdown memory of every application) and the web app "Memory / Second Brain" that browses, edits and searches it, with a chat on the graph view and an Import History tab.
+Two things: the vault `/home/beedme/data/workspace/second-brain` (Markdown memory + central atomic data warehouse `memory/warehouse/warehouse.sqlite`) and the web app "Memory / Second Brain" that browses, edits, searches, and triggers warehouse syncs, with a chat on the graph view and an Import History tab.
 
 ## Stack and where the code lives
-App repo `/home/beedme/data/workspace/second-brain-app` (Node API + React/Vite; `npm test`, `npm run build`). Own systemd user unit `second-brain.service`, port 3739, public `memory.beedme.online` behind Cloudflare Access. Vault repo `michelemelone/second-brain-memory`; `memory/bigmike/` and `memory/library/` are separate or ignored repos. Scripts `second-brain/scripts/` (monthly summaries).
+App repo `/home/beedme/data/workspace/second-brain-app` (Node API + React/Vite + `node:sqlite` warehouse runner; `npm test`, `npm run build`, `node scripts/warehouse.mjs sync [app]`). Own systemd user unit `second-brain.service`, port 3739, public `memory.beedme.online` behind Cloudflare Access, plus nightly timer `second-brain-warehouse.timer` (03:05). Vault repo `michelemelone/second-brain-memory`; `memory/bigmike/`, `memory/library/`, and `memory/warehouse/` are separate or gitignored.
 
 ## Where the data lives
-Only Markdown in the vault: `memory/<app>/` (summaries, `BRIEF.md`, `lab/`), `memory/bigmike/{chats,wiki,lab}`, `memory/library/` (imports), `wiki/`. Raw data stays in each app database. Layout and rules: `second-brain/README.md`.
+- **Structured atomic data (source for any data question):** `memory/warehouse/warehouse.sqlite` (gitignored; manifest `memory/warehouse/SCHEMA.md`), synced idempotently from every app (read-only on source, no secrets).
+- **Markdown only:** `memory/<app>/` (`BRIEF.md`, `lab/`), `memory/bigmike/{chats,wiki,lab}`, `memory/library/` (imports), `wiki/`. Old monthly summary generators (`gen_finance_summary.py`, `gen_health_summary.py`) were removed in MIC-524. Layout and rules: `second-brain/README.md`.
 
 ## Current state
-Per-app Lab history in `memory/<app>/lab/` with global `memory/lab-index.md` (MIC-303, live after its restart). Nightly chat sync 03:15, wiki updated by hand. Briefs: this task (MIC-304); injection is MIC-305.
+Central warehouse framework, `sync_log`, `SCHEMA.md` generator, 10 app adapter skeletons, CLI (`node scripts/warehouse.mjs sync`), UI sync button, and nightly timer live (MIC-524). Per-app Lab history in `memory/<app>/lab/` with `memory/lab-index.md` (MIC-303). Nightly chat sync 03:15, warehouse sync 03:05.
 
 ## Decisions that constrain changes
 - Gantry never reads the vault; Gantry memory excluded (MIC-13), only `memory/gantry/lab/` allowed (MIC-303).

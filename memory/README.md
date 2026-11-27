@@ -1,5 +1,7 @@
 # Memory: global index (always injectable)
-Updated: 2026-11-18. One line per application: what it is, and the brief to read first. Task history of all apps: `memory/lab-index.md`. Gantry: brief and Lab history only (MIC-13, MIC-432).
+Updated: 2026-11-27. One line per application: what it is, and the brief to read first. Task history of all apps: `memory/lab-index.md`. Gantry: brief and Lab history only in Markdown (MIC-13, MIC-432); operational data (no secrets) goes to the warehouse.
+
+**Data source rule:** `memory/warehouse/warehouse.sqlite` (documented in `memory/warehouse/SCHEMA.md`) is the central source for ANY question on application data (atomic rows across all apps). Markdown is only for chats, wiki, briefs, Lab history, and documents.
 
 | App | What it is | Read first |
 |---|---|---|
