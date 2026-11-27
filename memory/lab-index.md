@@ -9,7 +9,7 @@ Every task of the Lab across applications, with the path of its file (relative t
 | MIC-582 | bigMike | todo | 2026-11-27 | bigMike: shared model picker — restore the old picker's clear layout and modernize only its look, wi… | bigmike/lab/MIC-582.md |
 | MIC-581 | bigMike | todo | 2026-11-27 | bigMike: a chat whose messages are still waiting in the queue stays visible in the sidebar (stuck An… | bigmike/lab/MIC-581.md |
 | MIC-580 | bigMike | todo | 2026-11-27 | bigMike: a chat is held only when every fallback is blocked — the queue drains through the model tha… | bigmike/lab/MIC-580.md |
-| MIC-579 | bigMike | todo | 2026-11-27 | bigMike: an agent chat falls back only inside its own engine and that agent's providers (never Antig… | bigmike/lab/MIC-579.md |
+| MIC-579 | bigMike | done | 2026-11-27 | bigMike: an agent chat falls back only inside its own engine and that agent's providers (never Antig… | bigmike/lab/MIC-579.md |
 | MIC-578 | second-brain-app | done | 2026-11-27 | Memory: move Data & Sync into Settings, collapse Graph settings by default, fix single-click buttons… | bigmike/lab/no-project/MIC-578.md |
 | MIC-577 | bigMike | done | 2026-11-27 | bigMike: add 'memory' (Second Brain) embed theme and hide robot face logo in embed=memory empty stat… | bigmike/lab/MIC-577.md |
 | MIC-576 | mail | done | 2026-11-27 | Mail: topbar cleanup, Autofit for sidebar + bigMike, and Appearance settings (Theme, Layout, Font) | bigmike/lab/no-project/MIC-576.md |
