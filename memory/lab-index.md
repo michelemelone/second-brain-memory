@@ -6,10 +6,10 @@ Every task of the Lab across applications, with the path of its file (relative t
 |---|---|---|---|---|---|
 | MIC-578 | second-brain-app | done | 2026-11-27 | Memory: move Data & Sync into Settings, collapse Graph settings by default, fix single-click buttons… | bigmike/lab/no-project/MIC-578.md |
 | MIC-577 | bigMike | done | 2026-11-27 | bigMike: add 'memory' (Second Brain) embed theme and hide robot face logo in embed=memory empty stat… | bigmike/lab/MIC-577.md |
-| MIC-576 | mail | in_progress | 2026-11-27 | Mail: topbar cleanup, Autofit for sidebar + bigMike, and Appearance settings (Theme, Layout, Font) | bigmike/lab/no-project/MIC-576.md |
+| MIC-576 | mail | done | 2026-11-27 | Mail: topbar cleanup, Autofit for sidebar + bigMike, and Appearance settings (Theme, Layout, Font) | bigmike/lab/no-project/MIC-576.md |
 | MIC-575 | mail | done | 2026-11-27 | Mail: fix Open in Gmail links (avoid 404) | bigmike/lab/no-project/MIC-575.md |
 | MIC-574 | Gantry | todo | 2026-11-27 | Demo video (Version 2 - classic v3.7 without Paws & Co): full v3.7 tour with new UI, slimmer sidebar… | gantry/lab/MIC-574.md |
-| MIC-573 | Gantry | in_progress | 2026-11-27 | Demo video (Version 1 - Paws & Co only): full v3.7 tour with new UI, slimmer sidebar, and working in… | gantry/lab/MIC-573.md |
+| MIC-573 | Gantry | done | 2026-11-27 | Demo video (Version 1 - Paws & Co only): full v3.7 tour with new UI, slimmer sidebar, and working in… | gantry/lab/MIC-573.md |
 | MIC-572 | Gantry | done | 2026-11-27 | Gantry UI: make the left navigation sidebar slimmer/narrower | gantry/lab/MIC-572.md |
 | MIC-571 | bigMike | done | 2026-11-27 | bigMike: centralizzazione DefaultAgentSettings nel bundle condiviso con autofit e sizing | bigmike/lab/MIC-571.md |
 | MIC-570 | Gantry | done | 2026-11-27 | Gantry: velocizzazione caricamento Default Agent, cache locale e persistenza selezioni | gantry/lab/MIC-570.md |
