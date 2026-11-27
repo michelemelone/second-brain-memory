@@ -4,6 +4,8 @@ Every task of the Lab across applications, with the path of its file (relative t
 
 | Key | Project | Status | Updated | Title | File |
 |---|---|---|---|---|---|
+| MIC-517 | Finance app | done | 2026-11-27 | Finance: export CSV tabella dettagli categorie nel formato personalizzato | finance/lab/MIC-517.md |
+| MIC-516 | mail | in_progress | 2026-11-27 | Mail: one bad message (Google 400) must not abort the whole Gmail sync | bigmike/lab/no-project/MIC-516.md |
 | MIC-515 | bigMike | done | 2026-11-26 | Cockpit: fix broken cards, links, fake urgent strip and home scrolling | bigmike/lab/MIC-515.md |
 | MIC-514 | mail | done | 2026-11-26 | Mail: make the app really live on port 4001 (service stopped, unit still on 3740) | bigmike/lab/no-project/MIC-514.md |
 | MIC-513 | bigMike | done | 2026-11-26 | Cockpit: central home in bigMike with one card per area (Mail, Finance, Health, Lab, Second Brain) | bigmike/lab/MIC-513.md |
