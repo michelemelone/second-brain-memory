@@ -1,6 +1,6 @@
 # Warehouse Schema Manifest
 
-Generated: 2026-11-27T12:58:55.339Z
+Generated: 2026-11-27T15:41:43.444Z
 Location: `/home/beedme/data/workspace/second-brain/memory/warehouse`
 
 ## Database Files Map
@@ -28,81 +28,81 @@ Agents should query the warehouse via `programs/bin/bigmike-data` (read-only) fo
 
 | Table | App | Rows | Last Sync | Meaning |
 |---|---|---:|---|---|
-| `bigmike_activity` | bigmike | 4447 | 2026-11-27T12:58:41.221Z | Lab audit trail: who did what to which entity and when (a task status change is action=update, entity=issue, detail=status). |
-| `bigmike_agent_revisions` | bigmike | 1 | 2026-11-27T12:58:41.221Z | History of edits to agent instructions. |
-| `bigmike_agents` | bigmike | 24 | 2026-11-27T12:58:41.221Z | Lab agents (name, role, engine, model, instructions). |
-| `bigmike_cron_jobs` | bigmike | 5 | 2026-11-27T12:58:41.221Z | Scheduled automations and reminders of bigMike (schedule, prompt, last run, status). |
-| `bigmike_cron_runs` | bigmike | 0 | 2026-11-27T12:58:41.221Z | Every execution of a cron job. |
-| `bigmike_decisions` | bigmike | 108 | 2026-11-27T12:58:41.221Z | Owner decisions on tasks in review (approved, replied, sent_back) with date. |
-| `bigmike_drafts` | bigmike | 3 | 2026-11-27T12:58:41.221Z | Unsent composer drafts per chat. |
-| `bigmike_goals` | bigmike | 32 | 2026-11-27T12:58:41.221Z | Company and project goals of the Lab. |
-| `bigmike_issue_comments` | bigmike | 1478 | 2026-11-27T12:58:41.221Z | Every comment and agent report on a Lab task (author, body, created_at). |
-| `bigmike_issue_status_events` | bigmike | 1358 | 2026-11-27T12:58:41.221Z | Status change events of Lab tasks (issue_id, key, actor, at ISO); the source records the field changed, not the new value. |
-| `bigmike_issues` | bigmike | 515 | 2026-11-27T12:58:41.221Z | Every Lab task (key MIC-n, title, description, status, priority, project, assignee) plus done_at = when it became done. |
-| `bigmike_lab_chat` | bigmike | 20 | 2026-11-27T12:58:41.221Z | Messages of the Lab agent chats. |
-| `bigmike_messages` | bigmike | 6077 | 2026-11-27T12:58:41.221Z | Every chat message, full text, by role (user = the owner, assistant = bigMike), with ts (ISO) and thread_id. |
-| `bigmike_projects` | bigmike | 16 | 2026-11-27T12:58:41.221Z | Lab projects (applications) with folder and status. |
-| `bigmike_routine_runs` | bigmike | 0 | 2026-11-27T12:58:41.221Z | Every routine firing and its outcome. |
-| `bigmike_routines` | bigmike | 5 | 2026-11-27T12:58:41.221Z | Lab routines (scheduled agent work). |
-| `bigmike_runs` | bigmike | 808 | 2026-11-27T12:58:41.221Z | Every agent run (task, agent, status, start/finish, cost, tokens, summary, result). |
-| `bigmike_threads` | bigmike | 363 | 2026-11-27T12:58:41.221Z | Every bigMike chat thread (title, scope/project, engine, model, created/updated/archived/deleted dates). |
-| `camera_sessions` | camera | 79 | 2026-11-27T12:58:41.392Z | Camera session metadata with AI analysis, questions, and answers |
-| `cucina_meals` | cucina | 0 | 2026-11-27T12:58:41.306Z | Cooked meals log with recipes, servings, and ratings |
-| `finance_fx_rates` | finance | 3354 | 2026-11-27T12:58:39.578Z | Daily exchange rates to CHF (ECB via frankfurter.dev) for multi-currency conversion. |
-| `finance_imports` | finance | 1 | 2026-11-27T12:58:39.578Z | Metadata audit log of imported statement files, raw uploads, date bounds, and import counts. |
-| `finance_merchants` | finance | 341 | 2026-11-27T12:58:39.578Z | Merchant classification rules mapping raw name patterns to canonical merchant and spending categories. |
-| `finance_overrides` | finance | 27 | 2026-11-27T12:58:39.578Z | Manual per-transaction classification and note overrides that supersede imported classification. |
-| `finance_spending_chf` | finance | 3319 | 2026-11-27T12:58:39.578Z | Convenience view with amounts converted to CHF at daily FX rate, original currency/amount preserved, overrides applied. |
-| `finance_transactions` | finance | 3319 | 2026-11-27T12:58:39.578Z | Atomic ledger transactions across all accounts with classification, direction, and review status. |
-| `finance_transactions_import_revolut` | finance | 2233 | 2026-11-27T12:58:39.578Z | Filtered view of transactions imported from Revolut statement files. |
-| `gantry_chat_messages` | gantry | 416 | 2026-11-27T12:58:52.932Z | Every message of every Gantry chat, full text, with proposals, actions, cost and engine used. |
-| `gantry_chats` | gantry | 105 | 2026-11-27T12:58:52.932Z | One row per Gantry ask-ai chat (active, archived and trash views): title, kind, engine, model, links to requirement and space. |
-| `gantry_requirements` | gantry | 69 | 2026-11-27T12:58:52.932Z | Gantry backlog: one row per requirement, bug or task with state, assignee, dates, description, acceptance criteria and validation history. |
-| `german_sessions` | german | 5 | 2026-11-27T12:58:41.343Z | Study sessions with duration, activity type, topic, and score |
-| `german_vocabulary` | german | 96 | 2026-11-27T12:58:41.343Z | German vocabulary words with translations, examples, and learning status |
-| `health_analysis` | health | 33 | 2026-11-27T12:58:40.761Z | Daily analysis notes (markdown body) in data/analysis, one row per day. |
-| `health_boosts` | health | 1 | 2026-11-27T12:58:40.761Z | Dose-boost schedule entries (start date, dose, interval). |
-| `health_chat_messages` | health | 14 | 2026-11-27T12:58:40.761Z | Messages of the Health chat threads (thread, ts, role, text). |
-| `health_config` | health | 253 | 2026-11-27T12:58:40.761Z | Flattened JSON settings: profile.json, jab_settings.json, personal_trainer_plan.json, integrations.json (credentials/tokens/e-mails dropped), tracker/garmin/today.json, analysis/energy_reserve_params.json. One row per leaf value (file, path, value). |
-| `health_energy_history` | health | 1764 | 2026-11-27T12:58:40.761Z | Energy need per day (bmr_kcal + active_kcal = total_burn_kcal), with weight, intake_kcal and net_deficit_kcal where known. |
-| `health_food_catalog` | health | 82 | 2026-11-27T12:58:40.761Z | Food catalog: per-100 g (or per-label) kcal, protein, carbs and fat of known products, with Nutri-Score and category. |
-| `health_garmin_activities` | health | 510 | 2026-11-27T12:58:40.761Z | Garmin activities (type, duration, distance, heart rate, kcal, training effect). |
-| `health_garmin_daily` | health | 1958 | 2026-11-27T12:58:40.761Z | Garmin daily indicators. |
-| `health_garmin_exercise_sets` | health | 6616 | 2026-11-27T12:58:40.761Z | Every strength set recorded by Garmin (exercise, reps, weight, duration). |
-| `health_garmin_raw_daily` | health | 6279 | 2026-11-27T12:58:40.761Z | Scalar values of the Garmin daily API dumps (tracker/garmin/raw/YYYY-MM/*_stats|sleep|readiness|training_status.json), one row per (date, kind) with the non-null scalar values as a JSON object in `data` (query with json_extract); long time series are not stored. |
-| `health_garmin_training` | health | 1757 | 2026-11-27T12:58:40.761Z | Garmin readiness score and training status per day. |
-| `health_jabs` | health | 9 | 2026-11-27T12:58:40.761Z | Every injection (date, time, dose_mg, site, side effects). |
-| `health_meal_catalog_match` | health | 18 | 2026-11-27T12:58:40.761Z | View linking each meal to the food-catalog products whose name appears in the meal description (meal_row, product, catalog protein/kcal per 100 g). |
-| `health_nutrition` | health | 241 | 2026-11-27T12:58:40.761Z | Every logged meal (date ISO, meal, description, kcal, protein_g, carbs_g, fat_g, notes). CAUTION: meal='daily_total' rows are the day's own total, not a meal: sum meals only (see view health_nutrition_daily). |
-| `health_nutrition_daily` | health | 54 | 2026-11-27T12:58:40.761Z | View: per day sums of the real meals (daily_total rows excluded): kcal, protein_g, carbs_g, fat_g and number of meals. Use it for grams of protein per day. |
-| `health_protein_vs_energy` | health | 54 | 2026-11-27T12:58:40.761Z | View: per day protein_g and kcal eaten next to the energy need (total_burn_kcal) and protein share of the need (kcal*4/need). |
-| `health_side_effects` | health | 0 | 2026-11-27T12:58:40.761Z | Side effects log (symptom, severity, resolution). |
-| `health_tracker_conflicts` | health | 0 | 2026-11-27T12:58:40.761Z | Indicator values that disagreed between devices. |
-| `health_tracker_daily` | health | 2941 | 2026-11-27T12:58:40.761Z | Merged daily wearable indicators (steps, sleep hours, resting HR, distance, weight) with the source of each value. |
-| `health_tracker_devices` | health | 4 | 2026-11-27T12:58:40.761Z | Wearable devices used (Garmin, Xiaomi) with first/last date. |
-| `health_weight` | health | 131 | 2026-11-27T12:58:40.761Z | Body measurements (weight, waist, body fat, muscle, water, circumferences) with source and context; deleted flags removed entries. |
-| `health_weight_outbox` | health | 115 | 2026-11-27T12:58:40.761Z | Weights queued for pushing to Garmin, with the time they were pushed. |
-| `health_workouts` | health | 1 | 2026-11-27T12:58:40.761Z | Strength workouts logged by hand: session, exercise, sets, reps, load, RPE, duration. |
-| `health_xiaomi_activities` | health | 17 | 2026-11-27T12:58:40.761Z | Xiaomi/Zepp activities. |
-| `health_xiaomi_activity_segments` | health | 6161 | 2026-11-27T12:58:40.761Z | Xiaomi/Zepp activity segments (steps, distance, kcal per time span). |
-| `health_xiaomi_body` | health | 75 | 2026-11-27T12:58:40.761Z | Xiaomi scale body measurements. |
-| `health_xiaomi_daily` | health | 1327 | 2026-11-27T12:58:40.761Z | Xiaomi daily indicators (steps, sleep, heart rate). |
-| `health_xiaomi_heartrate_manual` | health | 80 | 2026-11-27T12:58:40.761Z | Heart-rate readings taken manually on the Xiaomi band. |
-| `mail_accounts` | mail | 1 | 2026-11-27T12:58:55.211Z | Connected mailboxes (provider, address, status, access level); OAuth tokens are never copied. |
-| `mail_actions_log` | mail | 3 | 2026-11-27T12:58:55.211Z | Log of actions proposed or applied on messages (action, detail JSON, actor, status, undo time). |
-| `mail_classifications` | mail | 42500 | 2026-11-27T12:58:55.211Z | AI/rule classification of messages: category, confidence, source, reason and time. |
-| `mail_drafts` | mail | 0 | 2026-11-27T12:58:55.211Z | Reply drafts prepared for messages (recipient, subject, body, tone, status). |
-| `mail_labels` | mail | 29 | 2026-11-27T12:58:55.211Z | Labels of each mailbox (provider label id, name, system or user kind). |
-| `mail_message_labels` | mail | 0 | 2026-11-27T12:58:55.211Z | Link table message to label (id = message_id:label_id); the source link table is empty, so see mail_messages.label_ids. |
-| `mail_messages` | mail | 45000 | 2026-11-27T12:58:55.211Z | Every email message with real source columns (from_addr, from_email, to_addrs JSON, subject, snippet, received_at ISO, unread, label_ids JSON, size, thread_id, ai_checked); no bodies. |
-| `mail_sync_log` | mail | 14 | 2026-11-27T12:58:55.211Z | History of the mail app's own Gmail sync runs (trigger, kind, fetched, removed, classified, status, detail). |
-| `mail_sync_state` | mail | 1 | 2026-11-27T12:58:55.211Z | Per-mailbox sync progress (history id, full sync done, last sync time, status, error); page tokens are not copied. |
-| `sync_log` | warehouse | 123 | 2026-11-27T12:58:55.339Z | Audit log of every warehouse sync run (app, timestamps, row counts, errors, status). |
-| `warehouse_apps` | warehouse | 22 | 2026-11-27T12:58:55.339Z | Registry of every workspace folder: adapter, status (ok, no_structured_data, error, ignored), source paths, last sync, rows, last error and the scan proof. |
-| `warehouse_coverage` | warehouse | 0 | 2026-11-27T12:58:55.339Z | Coverage check result of the last sync: workspace folders without a warehouse_apps entry or with status error (empty = full coverage). |
-| `warehouse_generic_tables` | warehouse | 0 | 2026-11-27T12:58:55.339Z | Tables created by the generic adapter: folder, source file, kind and row count. |
-| `warehouse_jobs` | warehouse | 1 | 2026-11-27T12:58:55.339Z | Scheduled warehouse sync jobs (default: weekly, Friday 03:00): app (empty = all), cron, enabled flag and last run result. |
-| `warehouse_tables` | warehouse | 75 | 2026-11-27T12:58:55.339Z | Registry of warehouse tables with owning app and one-line meaning. |
+| `bigmike_activity` | bigmike | 4553 | 2026-11-27T15:41:25.690Z | Lab audit trail: who did what to which entity and when (a task status change is action=update, entity=issue, detail=status). |
+| `bigmike_agent_revisions` | bigmike | 1 | 2026-11-27T15:41:25.690Z | History of edits to agent instructions. |
+| `bigmike_agents` | bigmike | 24 | 2026-11-27T15:41:25.690Z | Lab agents (name, role, engine, model, instructions). |
+| `bigmike_cron_jobs` | bigmike | 5 | 2026-11-27T15:41:25.690Z | Scheduled automations and reminders of bigMike (schedule, prompt, last run, status). |
+| `bigmike_cron_runs` | bigmike | 0 | 2026-11-27T15:41:25.690Z | Every execution of a cron job. |
+| `bigmike_decisions` | bigmike | 108 | 2026-11-27T15:41:25.690Z | Owner decisions on tasks in review (approved, replied, sent_back) with date. |
+| `bigmike_drafts` | bigmike | 3 | 2026-11-27T15:41:25.690Z | Unsent composer drafts per chat. |
+| `bigmike_goals` | bigmike | 32 | 2026-11-27T15:41:25.690Z | Company and project goals of the Lab. |
+| `bigmike_issue_comments` | bigmike | 1527 | 2026-11-27T15:41:25.690Z | Every comment and agent report on a Lab task (author, body, created_at). |
+| `bigmike_issue_status_events` | bigmike | 1386 | 2026-11-27T15:41:25.690Z | Status change events of Lab tasks (issue_id, key, actor, at ISO); the source records the field changed, not the new value. |
+| `bigmike_issues` | bigmike | 525 | 2026-11-27T15:41:25.690Z | Every Lab task (key MIC-n, title, description, status, priority, project, assignee) plus done_at = when it became done. |
+| `bigmike_lab_chat` | bigmike | 20 | 2026-11-27T15:41:25.690Z | Messages of the Lab agent chats. |
+| `bigmike_messages` | bigmike | 6110 | 2026-11-27T15:41:25.690Z | Every chat message, full text, by role (user = the owner, assistant = bigMike), with ts (ISO) and thread_id. |
+| `bigmike_projects` | bigmike | 16 | 2026-11-27T15:41:25.690Z | Lab projects (applications) with folder and status. |
+| `bigmike_routine_runs` | bigmike | 0 | 2026-11-27T15:41:25.690Z | Every routine firing and its outcome. |
+| `bigmike_routines` | bigmike | 5 | 2026-11-27T15:41:25.690Z | Lab routines (scheduled agent work). |
+| `bigmike_runs` | bigmike | 821 | 2026-11-27T15:41:25.690Z | Every agent run (task, agent, status, start/finish, cost, tokens, summary, result). |
+| `bigmike_threads` | bigmike | 367 | 2026-11-27T15:41:25.690Z | Every bigMike chat thread (title, scope/project, engine, model, created/updated/archived/deleted dates). |
+| `camera_sessions` | camera | 79 | 2026-11-27T15:41:25.817Z | Camera session metadata with AI analysis, questions, and answers |
+| `cucina_meals` | cucina | 0 | 2026-11-27T15:41:25.766Z | Cooked meals log with recipes, servings, and ratings |
+| `finance_fx_rates` | finance | 3354 | 2026-11-27T15:41:23.993Z | Daily exchange rates to CHF (ECB via frankfurter.dev) for multi-currency conversion. |
+| `finance_imports` | finance | 1 | 2026-11-27T15:41:23.993Z | Metadata audit log of imported statement files, raw uploads, date bounds, and import counts. |
+| `finance_merchants` | finance | 341 | 2026-11-27T15:41:23.993Z | Merchant classification rules mapping raw name patterns to canonical merchant and spending categories. |
+| `finance_overrides` | finance | 27 | 2026-11-27T15:41:23.993Z | Manual per-transaction classification and note overrides that supersede imported classification. |
+| `finance_spending_chf` | finance | 3319 | 2026-11-27T15:41:23.993Z | Convenience view with amounts converted to CHF at daily FX rate, original currency/amount preserved, overrides applied. |
+| `finance_transactions` | finance | 3319 | 2026-11-27T15:41:23.993Z | Atomic ledger transactions across all accounts with classification, direction, and review status. |
+| `finance_transactions_import_revolut` | finance | 2233 | 2026-11-27T15:41:23.993Z | Filtered view of transactions imported from Revolut statement files. |
+| `gantry_chat_messages` | gantry | 416 | 2026-11-27T15:41:38.892Z | Every message of every Gantry chat, full text, with proposals, actions, cost and engine used. |
+| `gantry_chats` | gantry | 105 | 2026-11-27T15:41:38.892Z | One row per Gantry ask-ai chat (active, archived and trash views): title, kind, engine, model, links to requirement and space. |
+| `gantry_requirements` | gantry | 69 | 2026-11-27T15:41:38.892Z | Gantry backlog: one row per requirement, bug or task with state, assignee, dates, description, acceptance criteria and validation history. |
+| `german_sessions` | german | 5 | 2026-11-27T15:41:25.791Z | Study sessions with duration, activity type, topic, and score |
+| `german_vocabulary` | german | 96 | 2026-11-27T15:41:25.791Z | German vocabulary words with translations, examples, and learning status |
+| `health_analysis` | health | 33 | 2026-11-27T15:41:25.236Z | Daily analysis notes (markdown body) in data/analysis, one row per day. |
+| `health_boosts` | health | 1 | 2026-11-27T15:41:25.236Z | Dose-boost schedule entries (start date, dose, interval). |
+| `health_chat_messages` | health | 14 | 2026-11-27T15:41:25.236Z | Messages of the Health chat threads (thread, ts, role, text). |
+| `health_config` | health | 249 | 2026-11-27T15:41:25.236Z | Flattened JSON settings: profile.json, jab_settings.json, personal_trainer_plan.json, integrations.json (credentials/tokens/e-mails dropped), tracker/garmin/today.json, analysis/energy_reserve_params.json. One row per leaf value (file, path, value). |
+| `health_energy_history` | health | 1764 | 2026-11-27T15:41:25.236Z | Energy need per day (bmr_kcal + active_kcal = total_burn_kcal), with weight, intake_kcal and net_deficit_kcal where known. |
+| `health_food_catalog` | health | 82 | 2026-11-27T15:41:25.236Z | Food catalog: per-100 g (or per-label) kcal, protein, carbs and fat of known products, with Nutri-Score and category. |
+| `health_garmin_activities` | health | 510 | 2026-11-27T15:41:25.236Z | Garmin activities (type, duration, distance, heart rate, kcal, training effect). |
+| `health_garmin_daily` | health | 1958 | 2026-11-27T15:41:25.236Z | Garmin daily indicators. |
+| `health_garmin_exercise_sets` | health | 6616 | 2026-11-27T15:41:25.236Z | Every strength set recorded by Garmin (exercise, reps, weight, duration). |
+| `health_garmin_raw_daily` | health | 6279 | 2026-11-27T15:41:25.236Z | Scalar values of the Garmin daily API dumps (tracker/garmin/raw/YYYY-MM/*_stats|sleep|readiness|training_status.json), one row per (date, kind) with the non-null scalar values as a JSON object in `data` (query with json_extract); long time series are not stored. |
+| `health_garmin_training` | health | 1757 | 2026-11-27T15:41:25.236Z | Garmin readiness score and training status per day. |
+| `health_jabs` | health | 9 | 2026-11-27T15:41:25.236Z | Every injection (date, time, dose_mg, site, side effects). |
+| `health_meal_catalog_match` | health | 18 | 2026-11-27T15:41:25.236Z | View linking each meal to the food-catalog products whose name appears in the meal description (meal_row, product, catalog protein/kcal per 100 g). |
+| `health_nutrition` | health | 241 | 2026-11-27T15:41:25.236Z | Every logged meal (date ISO, meal, description, kcal, protein_g, carbs_g, fat_g, notes). CAUTION: meal='daily_total' rows are the day's own total, not a meal: sum meals only (see view health_nutrition_daily). |
+| `health_nutrition_daily` | health | 54 | 2026-11-27T15:41:25.236Z | View: per day sums of the real meals (daily_total rows excluded): kcal, protein_g, carbs_g, fat_g and number of meals. Use it for grams of protein per day. |
+| `health_protein_vs_energy` | health | 54 | 2026-11-27T15:41:25.236Z | View: per day protein_g and kcal eaten next to the energy need (total_burn_kcal) and protein share of the need (kcal*4/need). |
+| `health_side_effects` | health | 0 | 2026-11-27T15:41:25.236Z | Side effects log (symptom, severity, resolution). |
+| `health_tracker_conflicts` | health | 0 | 2026-11-27T15:41:25.236Z | Indicator values that disagreed between devices. |
+| `health_tracker_daily` | health | 2941 | 2026-11-27T15:41:25.236Z | Merged daily wearable indicators (steps, sleep hours, resting HR, distance, weight) with the source of each value. |
+| `health_tracker_devices` | health | 4 | 2026-11-27T15:41:25.236Z | Wearable devices used (Garmin, Xiaomi) with first/last date. |
+| `health_weight` | health | 131 | 2026-11-27T15:41:25.236Z | Body measurements (weight, waist, body fat, muscle, water, circumferences) with source and context; deleted flags removed entries. |
+| `health_weight_outbox` | health | 115 | 2026-11-27T15:41:25.236Z | Weights queued for pushing to Garmin, with the time they were pushed. |
+| `health_workouts` | health | 1 | 2026-11-27T15:41:25.236Z | Strength workouts logged by hand: session, exercise, sets, reps, load, RPE, duration. |
+| `health_xiaomi_activities` | health | 17 | 2026-11-27T15:41:25.236Z | Xiaomi/Zepp activities. |
+| `health_xiaomi_activity_segments` | health | 6161 | 2026-11-27T15:41:25.236Z | Xiaomi/Zepp activity segments (steps, distance, kcal per time span). |
+| `health_xiaomi_body` | health | 75 | 2026-11-27T15:41:25.236Z | Xiaomi scale body measurements. |
+| `health_xiaomi_daily` | health | 1327 | 2026-11-27T15:41:25.236Z | Xiaomi daily indicators (steps, sleep, heart rate). |
+| `health_xiaomi_heartrate_manual` | health | 80 | 2026-11-27T15:41:25.236Z | Heart-rate readings taken manually on the Xiaomi band. |
+| `mail_accounts` | mail | 1 | 2026-11-27T15:41:43.301Z | Connected mailboxes (provider, address, status, access level); OAuth tokens are never copied. |
+| `mail_actions_log` | mail | 4 | 2026-11-27T15:41:43.301Z | Log of actions proposed or applied on messages (action, detail JSON, actor, status, undo time). |
+| `mail_classifications` | mail | 71999 | 2026-11-27T15:41:43.301Z | AI/rule classification of messages: category, confidence, source, reason and time. |
+| `mail_drafts` | mail | 1 | 2026-11-27T15:41:43.301Z | Reply drafts prepared for messages (recipient, subject, body, tone, status). |
+| `mail_labels` | mail | 29 | 2026-11-27T15:41:43.301Z | Labels of each mailbox (provider label id, name, system or user kind). |
+| `mail_message_labels` | mail | 0 | 2026-11-27T15:41:43.301Z | Link table message to label (id = message_id:label_id); the source link table is empty, so see mail_messages.label_ids. |
+| `mail_messages` | mail | 73800 | 2026-11-27T15:41:43.301Z | Every email message with real source columns (from_addr, from_email, to_addrs JSON, subject, snippet, received_at ISO, unread, label_ids JSON, size, thread_id, ai_checked); no bodies. |
+| `mail_sync_log` | mail | 21 | 2026-11-27T15:41:43.301Z | History of the mail app's own Gmail sync runs (trigger, kind, fetched, removed, classified, status, detail). |
+| `mail_sync_state` | mail | 1 | 2026-11-27T15:41:43.301Z | Per-mailbox sync progress (history id, full sync done, last sync time, status, error); page tokens are not copied. |
+| `sync_log` | warehouse | 141 | 2026-11-27T15:41:43.444Z | Audit log of every warehouse sync run (app, timestamps, row counts, errors, status). |
+| `warehouse_apps` | warehouse | 22 | 2026-11-27T15:41:43.444Z | Registry of every workspace folder: adapter, status (ok, no_structured_data, error, ignored), source paths, last sync, rows, last error and the scan proof. |
+| `warehouse_coverage` | warehouse | 0 | 2026-11-27T15:41:43.444Z | Coverage check result of the last sync: workspace folders without a warehouse_apps entry or with status error (empty = full coverage). |
+| `warehouse_generic_tables` | warehouse | 0 | 2026-11-27T15:41:43.444Z | Tables created by the generic adapter: folder, source file, kind and row count. |
+| `warehouse_jobs` | warehouse | 1 | 2026-11-27T15:41:43.444Z | Scheduled warehouse sync jobs (default: weekly, Friday 03:00): app (empty = all), cron, enabled flag and last run result. |
+| `warehouse_tables` | warehouse | 75 | 2026-11-27T15:41:43.444Z | Registry of warehouse tables with owning app and one-line meaning. |
 
 ## Column Definitions
 
