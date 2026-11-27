@@ -10,7 +10,7 @@ Every task of the Lab across applications, with the path of its file (relative t
 | MIC-527 | health | todo | 2026-11-27 | Warehouse adapter: Health (nutrition, food catalog, weight, workouts, jabs, energy history, side eff… | bigmike/lab/no-project/MIC-527.md |
 | MIC-526 | personal-finance | todo | 2026-11-27 | Warehouse adapter: Finance (every transaction, merchants, overrides, FX rates, imports) into the cen… | bigmike/lab/no-project/MIC-526.md |
 | MIC-525 | bigMike | todo | 2026-11-27 | Warehouse adapter: bigMike (all chats, messages, Lab tasks, comments, runs, decisions, goals, agents… | bigmike/lab/MIC-525.md |
-| MIC-524 | second-brain-app | in_progress | 2026-11-27 | Warehouse: one central database for the atomic data of ALL applications, with sync framework, schema… | bigmike/lab/no-project/MIC-524.md |
+| MIC-524 | second-brain-app | done | 2026-11-27 | Warehouse: one central database for the atomic data of ALL applications, with sync framework, schema… | bigmike/lab/no-project/MIC-524.md |
 | MIC-523 | bigMike | done | 2026-11-27 | bigMike: supporto tema scuro e styling dedicato per embed Personal Finance | bigmike/lab/MIC-523.md |
 | MIC-522 | mail-live | done | 2026-11-27 | Mail: Deletable grouped by sender and category, with a link to Gmail filtered on the sender | bigmike/lab/no-project/MIC-522.md |
 | MIC-521 | mail-live | done | 2026-11-27 | Mail: make "Create draft" work with compose only (no modify) | bigmike/lab/no-project/MIC-521.md |
