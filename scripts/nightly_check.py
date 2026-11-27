@@ -9,6 +9,7 @@ Checks:
   2. Wiki: wiki/ (central) and memory/bigmike/wiki were updated recently.
   3. No secret or database file is inside the folder.
   4. bigMike answers over HTTP.
+  5. Warehouse: fresh sync, coverage of every workspace folder, no app in error (MIC-532).
 
 Env: BIGMIKE_URLS (comma list, default 127.0.0.1 and 192.168.12.200 on port 3738),
      WIKI_MAX_AGE_DAYS (default 3).
@@ -129,6 +130,24 @@ def check_warehouse():
         age = time.time() - ts
         if age > WAREHOUSE_MAX_AGE:
             problems.append(f"warehouse: last successful sync was {age / 86400:.1f} days ago")
+        # Coverage (MIC-532): every workspace folder has a registry entry and none is in error.
+        conn = sqlite3.connect(f"file:{WAREHOUSE_DB}?mode=ro", uri=True)
+        try:
+            for folder, issue, detail in conn.execute("SELECT folder, issue, detail FROM warehouse_coverage"):
+                problems.append(f"warehouse coverage: {folder}: {issue} ({detail})")
+            for folder, err in conn.execute("SELECT folder, last_error FROM warehouse_apps WHERE status = 'error'"):
+                problems.append(f"warehouse app error: {folder}: {err}")
+            workspace = ROOT.parent
+            known = {r[0] for r in conn.execute("SELECT folder FROM warehouse_apps")}
+            for d in sorted(workspace.iterdir()):
+                if d.is_dir() and d.name != ".git" and d.name not in known:
+                    problems.append(f"warehouse coverage: workspace folder {d.name} has no warehouse_apps entry")
+            for folder, ls in conn.execute("SELECT folder, last_sync FROM warehouse_apps WHERE status IN ('ok', 'no_structured_data') AND last_sync IS NOT NULL"):
+                age = time.time() - datetime.fromisoformat(ls.replace("Z", "+00:00")).timestamp()
+                if age > WAREHOUSE_MAX_AGE:
+                    problems.append(f"warehouse: {folder} last refreshed {age / 86400:.1f} days ago")
+        finally:
+            conn.close()
     except Exception as exc:
         problems.append(f"warehouse: check failed ({exc})")
 
