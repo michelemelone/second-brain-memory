@@ -4,6 +4,7 @@ Every task of the Lab across applications, with the path of its file (relative t
 
 | Key | Project | Status | Updated | Title | File |
 |---|---|---|---|---|---|
+| MIC-519 | Finance app | done | 2026-11-27 | Finance: sidebar ridimensionabile con drag handle, collapse in alto e tasto Auto-fit columns | finance/lab/MIC-519.md |
 | MIC-518 | Finance app | done | 2026-11-27 | Finance: pannello laterale destro con istanza embedded di bigMike per Personal Finance | finance/lab/MIC-518.md |
 | MIC-517 | Finance app | done | 2026-11-27 | Finance: export CSV tabella dettagli categorie nel formato personalizzato | finance/lab/MIC-517.md |
 | MIC-516 | mail | in_progress | 2026-11-27 | Mail: one bad message (Google 400) must not abort the whole Gmail sync | bigmike/lab/no-project/MIC-516.md |
