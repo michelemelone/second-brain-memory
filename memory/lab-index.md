@@ -4,6 +4,9 @@ Every task of the Lab across applications, with the path of its file (relative t
 
 | Key | Project | Status | Updated | Title | File |
 |---|---|---|---|---|---|
+| MIC-552 | bigMike | todo | 2026-11-27 | bigMike: embed=mail active-email context and Gmail draft creation | bigmike/lab/MIC-552.md |
+| MIC-551 | mail | todo | 2026-11-27 | Mail: bigMike side drawer with active email context and in-app AI draft prompt | bigmike/lab/no-project/MIC-551.md |
+| MIC-550 | mail | done | 2026-11-27 | Mail: AI drafts with custom instructions and compose endpoint | bigmike/lab/no-project/MIC-550.md |
 | MIC-549 | bigMike | done | 2026-11-27 | Ottimizzazione caricamento e performance Dashboard Lab | bigmike/lab/MIC-549.md |
 | MIC-548 | Gantry | done | 2026-11-27 | Demo video: intro Shuttle 3D v3.7, nuovo outro shuttle e registrazione portale ServiceNow | gantry/lab/MIC-548.md |
 | MIC-547 | Gantry | done | 2026-11-27 | Paws & Co: restyling portale stile Employee Center e scheda adozione con foto cane | gantry/lab/MIC-547.md |
@@ -12,7 +15,7 @@ Every task of the Lab across applications, with the path of its file (relative t
 | MIC-544 | second-brain-app | done | 2026-11-27 | Memory: one Data & Sync page replaces Memory Operations; clean Settings; clear icons | bigmike/lab/no-project/MIC-544.md |
 | MIC-543 | Gantry | done | 2026-11-27 | Gantry: use the shared engine/model picker instead of its own ModelPicker | gantry/lab/MIC-543.md |
 | MIC-542 | health | done | 2026-11-27 | Health portal and Live camera: replace the hand-written engine selectors with the shared picker | bigmike/lab/no-project/MIC-542.md |
-| MIC-541 | second-brain-app | done | 2026-11-27 | Memory: use the shared engine/model picker in the chat and drop the old engine UI | bigmike/lab/no-project/MIC-541.md |
+| MIC-541 | second-brain-app | done | 2026-11-27 | Memory: centralize AI engine settings across apps (shared control with provider keys, full models ch… | bigmike/lab/no-project/MIC-541.md |
 | MIC-540 | bigMike | done | 2026-11-27 | One shared engine/model picker for every application (bigMike chat component, themeable) | bigmike/lab/MIC-540.md |
 | MIC-539 | bigMike | done | 2026-11-27 | Second Brain: prove the split warehouse and the weekly job end to end, and record the decisions | bigmike/lab/MIC-539.md |
 | MIC-538 | second-brain-app | done | 2026-11-27 | Warehouse job: weekly sync on Friday at 03:00 instead of nightly | bigmike/lab/no-project/MIC-538.md |
@@ -43,7 +46,7 @@ Every task of the Lab across applications, with the path of its file (relative t
 | MIC-513 | bigMike | done | 2026-11-26 | Cockpit: central home in bigMike with one card per area (Mail, Finance, Health, Lab, Second Brain) | bigmike/lab/MIC-513.md |
 | MIC-512 | second-brain-app | done | 2026-11-26 | Second Brain review: make it the most powerful app, covering everything under data, and define who d… | bigmike/lab/no-project/MIC-512.md |
 | MIC-511 | mail | done | 2026-11-26 | Mail 6/6: summary endpoint for the central cockpit and the Second Brain | bigmike/lab/no-project/MIC-511.md |
-| MIC-510 | mail | todo | 2026-11-27 | Mail 5/6: reply drafts in Gmail | bigmike/lab/no-project/MIC-510.md |
+| MIC-510 | mail | done | 2026-11-27 | Mail 5/6: reply drafts in Gmail | bigmike/lab/no-project/MIC-510.md |
 | MIC-509 | mail | done | 2026-11-26 | Mail 4/6: bulk clean-up with confirmation (Trash only) | bigmike/lab/no-project/MIC-509.md |
 | MIC-508 | mail | done | 2026-11-26 | Mail 3/6: dashboard UI (triage, sender groups, accounts) | bigmike/lab/no-project/MIC-508.md |
 | MIC-507 | mail | done | 2026-11-26 | Mail 2/6: Gmail read-only connection, sync and triage classification | bigmike/lab/no-project/MIC-507.md |
