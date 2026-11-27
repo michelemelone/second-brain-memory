@@ -1,6 +1,6 @@
 # Warehouse Schema Manifest
 
-Generated: 2026-11-27T10:15:34.870Z
+Generated: 2026-11-27T10:43:43.876Z
 Database: `/home/beedme/data/workspace/second-brain/memory/warehouse/warehouse.sqlite`
 
 This file is generated automatically from `warehouse.sqlite` after every sync.
@@ -67,9 +67,17 @@ Agents should query `warehouse.sqlite` directly (read-only) for any factual or c
 | `health_xiaomi_body` | health | 75 | 2026-11-27T10:15:34.826Z | Xiaomi scale body measurements. |
 | `health_xiaomi_daily` | health | 1327 | 2026-11-27T10:15:34.826Z | Xiaomi daily indicators (steps, sleep, heart rate). |
 | `health_xiaomi_heartrate_manual` | health | 80 | 2026-11-27T10:15:34.826Z | Heart-rate readings taken manually on the Xiaomi band. |
-| `mail_messages` | mail | 10000 | 2026-11-27T10:09:29.722Z | Email messages with metadata (sender, recipients, date, subject, labels, preview) |
-| `sync_log` | warehouse | 51 | 2026-11-27T10:15:34.870Z | Audit log of every warehouse sync run (app, timestamps, row counts, errors, status). |
-| `warehouse_tables` | warehouse | 61 | 2026-11-27T10:15:34.870Z | Registry of warehouse tables with owning app and one-line meaning. |
+| `mail_accounts` | mail | 1 | 2026-11-27T10:43:43.863Z | Connected mailboxes (provider, address, status, access level); OAuth tokens are never copied. |
+| `mail_actions_log` | mail | 3 | 2026-11-27T10:43:43.863Z | Log of actions proposed or applied on messages (action, detail JSON, actor, status, undo time). |
+| `mail_classifications` | mail | 17100 | 2026-11-27T10:43:43.863Z | AI/rule classification of messages: category, confidence, source, reason and time. |
+| `mail_drafts` | mail | 0 | 2026-11-27T10:43:43.863Z | Reply drafts prepared for messages (recipient, subject, body, tone, status). |
+| `mail_labels` | mail | 29 | 2026-11-27T10:43:43.863Z | Labels of each mailbox (provider label id, name, system or user kind). |
+| `mail_message_labels` | mail | 0 | 2026-11-27T10:43:43.863Z | Link table message to label (id = message_id:label_id); the source link table is empty, so see mail_messages.label_ids. |
+| `mail_messages` | mail | 22000 | 2026-11-27T10:43:43.863Z | Every email message with real source columns (from_addr, from_email, to_addrs JSON, subject, snippet, received_at ISO, unread, label_ids JSON, size, thread_id, ai_checked); no bodies. |
+| `mail_sync_log` | mail | 8 | 2026-11-27T10:43:43.863Z | History of the mail app's own Gmail sync runs (trigger, kind, fetched, removed, classified, status, detail). |
+| `mail_sync_state` | mail | 1 | 2026-11-27T10:43:43.863Z | Per-mailbox sync progress (history id, full sync done, last sync time, status, error); page tokens are not copied. |
+| `sync_log` | warehouse | 53 | 2026-11-27T10:43:43.876Z | Audit log of every warehouse sync run (app, timestamps, row counts, errors, status). |
+| `warehouse_tables` | warehouse | 69 | 2026-11-27T10:43:43.876Z | Registry of warehouse tables with owning app and one-line meaning. |
 
 ## Column Definitions
 
@@ -1028,25 +1036,145 @@ Heart-rate readings taken manually on the Xiaomi band.
 | `bpm` | TEXT | no | no |  |
 | `notes` | TEXT | no | no |  |
 
-### `mail_messages`
+### `mail_accounts`
 
-Email messages with metadata (sender, recipients, date, subject, labels, preview)
+Connected mailboxes (provider, address, status, access level); OAuth tokens are never copied.
 
 | Column | Type | Not Null | PK | Default |
 |---|---|---|---|---|
 | `id` | TEXT | no | yes |  |
-| `account` | TEXT | no | no |  |
-| `message_id` | TEXT | no | no |  |
-| `sender` | TEXT | no | no |  |
-| `recipients` | TEXT | no | no |  |
-| `cc` | TEXT | no | no |  |
-| `bcc` | TEXT | no | no |  |
-| `date` | TEXT | no | no |  |
-| `subject` | TEXT | no | no |  |
-| `labels` | TEXT | no | no |  |
-| `body_preview` | TEXT | no | no |  |
-| `is_draft` | INTEGER | no | no |  |
+| `provider` | TEXT | no | no |  |
+| `email` | TEXT | no | no |  |
+| `status` | TEXT | no | no |  |
+| `access_level` | TEXT | no | no |  |
 | `created_at` | TEXT | no | no |  |
+| `compose` | INTEGER | no | no |  |
+
+### `mail_actions_log`
+
+Log of actions proposed or applied on messages (action, detail JSON, actor, status, undo time).
+
+| Column | Type | Not Null | PK | Default |
+|---|---|---|---|---|
+| `id` | TEXT | no | yes |  |
+| `account_id` | TEXT | no | no |  |
+| `message_id` | TEXT | no | no |  |
+| `action` | TEXT | no | no |  |
+| `detail` | TEXT | no | no |  |
+| `actor` | TEXT | no | no |  |
+| `status` | TEXT | no | no |  |
+| `created_at` | TEXT | no | no |  |
+| `undone_at` | TEXT | no | no |  |
+
+### `mail_classifications`
+
+AI/rule classification of messages: category, confidence, source, reason and time.
+
+| Column | Type | Not Null | PK | Default |
+|---|---|---|---|---|
+| `id` | TEXT | no | yes |  |
+| `message_id` | TEXT | no | no |  |
+| `category` | TEXT | no | no |  |
+| `confidence` | REAL | no | no |  |
+| `source` | TEXT | no | no |  |
+| `reason` | TEXT | no | no |  |
+| `created_at` | TEXT | no | no |  |
+
+### `mail_drafts`
+
+Reply drafts prepared for messages (recipient, subject, body, tone, status).
+
+| Column | Type | Not Null | PK | Default |
+|---|---|---|---|---|
+| `id` | TEXT | no | yes |  |
+| `account_id` | TEXT | no | no |  |
+| `message_id` | TEXT | no | no |  |
+| `provider_draft_id` | TEXT | no | no |  |
+| `provider_message_id` | TEXT | no | no |  |
+| `thread_id` | TEXT | no | no |  |
+| `to_addr` | TEXT | no | no |  |
+| `subject` | TEXT | no | no |  |
+| `body` | TEXT | no | no |  |
+| `tone` | TEXT | no | no |  |
+| `status` | TEXT | no | no |  |
+| `created_at` | TEXT | no | no |  |
+| `updated_at` | TEXT | no | no |  |
+
+### `mail_labels`
+
+Labels of each mailbox (provider label id, name, system or user kind).
+
+| Column | Type | Not Null | PK | Default |
+|---|---|---|---|---|
+| `id` | TEXT | no | yes |  |
+| `account_id` | TEXT | no | no |  |
+| `provider_label_id` | TEXT | no | no |  |
+| `name` | TEXT | no | no |  |
+| `kind` | TEXT | no | no |  |
+
+### `mail_message_labels`
+
+Link table message to label (id = message_id:label_id); the source link table is empty, so see mail_messages.label_ids.
+
+| Column | Type | Not Null | PK | Default |
+|---|---|---|---|---|
+| `id` | TEXT | no | yes |  |
+| `message_id` | TEXT | no | no |  |
+| `label_id` | TEXT | no | no |  |
+
+### `mail_messages`
+
+Every email message with real source columns (from_addr, from_email, to_addrs JSON, subject, snippet, received_at ISO, unread, label_ids JSON, size, thread_id, ai_checked); no bodies.
+
+| Column | Type | Not Null | PK | Default |
+|---|---|---|---|---|
+| `id` | TEXT | no | yes |  |
+| `account_id` | TEXT | no | no |  |
+| `provider_message_id` | TEXT | no | no |  |
+| `thread_id` | TEXT | no | no |  |
+| `from_addr` | TEXT | no | no |  |
+| `from_email` | TEXT | no | no |  |
+| `to_addrs` | TEXT | no | no |  |
+| `subject` | TEXT | no | no |  |
+| `snippet` | TEXT | no | no |  |
+| `received_at` | TEXT | no | no |  |
+| `unread` | INTEGER | no | no |  |
+| `label_ids` | TEXT | no | no |  |
+| `size` | INTEGER | no | no |  |
+| `list_unsubscribe` | TEXT | no | no |  |
+| `ai_checked` | INTEGER | no | no |  |
+
+### `mail_sync_log`
+
+History of the mail app's own Gmail sync runs (trigger, kind, fetched, removed, classified, status, detail).
+
+| Column | Type | Not Null | PK | Default |
+|---|---|---|---|---|
+| `id` | INTEGER | no | yes |  |
+| `account_id` | TEXT | no | no |  |
+| `trigger` | TEXT | no | no |  |
+| `kind` | TEXT | no | no |  |
+| `started_at` | TEXT | no | no |  |
+| `finished_at` | TEXT | no | no |  |
+| `fetched` | INTEGER | no | no |  |
+| `removed` | INTEGER | no | no |  |
+| `classified` | INTEGER | no | no |  |
+| `ai_used` | INTEGER | no | no |  |
+| `status` | TEXT | no | no |  |
+| `detail` | TEXT | no | no |  |
+
+### `mail_sync_state`
+
+Per-mailbox sync progress (history id, full sync done, last sync time, status, error); page tokens are not copied.
+
+| Column | Type | Not Null | PK | Default |
+|---|---|---|---|---|
+| `account_id` | TEXT | no | yes |  |
+| `history_id` | TEXT | no | no |  |
+| `full_done` | INTEGER | no | no |  |
+| `last_sync_at` | TEXT | no | no |  |
+| `last_status` | TEXT | no | no |  |
+| `last_error` | TEXT | no | no |  |
 
 ### `sync_log`
 

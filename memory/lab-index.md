@@ -13,7 +13,7 @@ Every task of the Lab across applications, with the path of its file (relative t
 | MIC-524 | second-brain-app | done | 2026-11-27 | Warehouse: one central database for the atomic data of ALL applications, with sync framework, schema… | bigmike/lab/no-project/MIC-524.md |
 | MIC-523 | bigMike | done | 2026-11-27 | bigMike: supporto tema scuro e styling dedicato per embed Personal Finance | bigmike/lab/MIC-523.md |
 | MIC-522 | mail-live | done | 2026-11-27 | Mail: Deletable grouped by sender and category, with a link to Gmail filtered on the sender | bigmike/lab/no-project/MIC-522.md |
-| MIC-521 | mail-live | done | 2026-11-27 | Mail: make "Create draft" work with compose only (no modify) | bigmike/lab/no-project/MIC-521.md |
+| MIC-521 | mail-live | todo | 2026-11-27 | Mail: make "Create draft" work with compose only (no modify) | bigmike/lab/no-project/MIC-521.md |
 | MIC-520 | mail-live | done | 2026-11-27 | Mail: fix "Open in Gmail" opening a blank error page | bigmike/lab/no-project/MIC-520.md |
 | MIC-519 | Finance app | done | 2026-11-27 | Finance: sidebar ridimensionabile con drag handle, collapse in alto e tasto Auto-fit columns | finance/lab/MIC-519.md |
 | MIC-518 | Finance app | done | 2026-11-27 | Finance: pannello laterale destro con istanza embedded di bigMike per Personal Finance | finance/lab/MIC-518.md |

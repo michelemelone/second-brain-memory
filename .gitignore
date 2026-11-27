@@ -1,3 +1,5 @@
 memory/bigmike/
 memory/library/
 /gantry/
+memory/warehouse/warehouse.sqlite-shm
+memory/warehouse/warehouse.sqlite-wal
