@@ -28,7 +28,7 @@ REPOS = [ROOT, ROOT / "memory" / "bigmike"]
 WIKIS = [ROOT / "memory" / "bigmike" / "wiki"]  # filled by the nightly job
 CENTRAL_WIKI = ROOT / "wiki"
 WAREHOUSE_DIR = ROOT / "memory" / "warehouse"
-WAREHOUSE_DB = WAREHOUSE_DIR / "warehouse.sqlite"
+WAREHOUSE_DB = WAREHOUSE_DIR / "core.sqlite"
 WAREHOUSE_SCHEMA = WAREHOUSE_DIR / "SCHEMA.md"
 WAREHOUSE_MAX_AGE = float(os.environ.get("WAREHOUSE_MAX_AGE_DAYS", "2")) * 86400
 MAX_AGE = float(os.environ.get("WIKI_MAX_AGE_DAYS", "3")) * 86400
@@ -92,6 +92,24 @@ def check_wiki(path):
 
 
 ALLOWED_WAREHOUSE_FILES = {
+    "memory/warehouse/core.sqlite",
+    "memory/warehouse/core.sqlite-wal",
+    "memory/warehouse/core.sqlite-shm",
+    "memory/warehouse/bigmike.sqlite",
+    "memory/warehouse/bigmike.sqlite-wal",
+    "memory/warehouse/bigmike.sqlite-shm",
+    "memory/warehouse/mail.sqlite",
+    "memory/warehouse/mail.sqlite-wal",
+    "memory/warehouse/mail.sqlite-shm",
+    "memory/warehouse/health.sqlite",
+    "memory/warehouse/health.sqlite-wal",
+    "memory/warehouse/health.sqlite-shm",
+    "memory/warehouse/finance.sqlite",
+    "memory/warehouse/finance.sqlite-wal",
+    "memory/warehouse/finance.sqlite-shm",
+    "memory/warehouse/apps.sqlite",
+    "memory/warehouse/apps.sqlite-wal",
+    "memory/warehouse/apps.sqlite-shm",
     "memory/warehouse/warehouse.sqlite",
     "memory/warehouse/warehouse.sqlite-wal",
     "memory/warehouse/warehouse.sqlite-shm",
@@ -112,7 +130,7 @@ def check_forbidden():
 
 def check_warehouse():
     if not WAREHOUSE_DB.is_file():
-        problems.append("warehouse: memory/warehouse/warehouse.sqlite is missing")
+        problems.append("warehouse: memory/warehouse/core.sqlite is missing")
         return
     if not WAREHOUSE_SCHEMA.is_file():
         problems.append("warehouse: memory/warehouse/SCHEMA.md is missing")

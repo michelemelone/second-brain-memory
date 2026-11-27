@@ -3,3 +3,5 @@ memory/library/
 /gantry/
 memory/warehouse/warehouse.sqlite-shm
 memory/warehouse/warehouse.sqlite-wal
+memory/warehouse/*.sqlite-shm
+memory/warehouse/*.sqlite-wal
