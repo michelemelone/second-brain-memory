@@ -4,8 +4,8 @@ Every task of the Lab across applications, with the path of its file (relative t
 
 | Key | Project | Status | Updated | Title | File |
 |---|---|---|---|---|---|
-| MIC-584 | mail | todo | 2026-11-27 | Mail: the shared picker where the AI writes - choose the engine and model of a draft and see which m… | bigmike/lab/no-project/MIC-584.md |
-| MIC-583 | mail | todo | 2026-11-27 | Mail: AI Engine settings like the other apps - engine selection, default model and the ordered fallb… | bigmike/lab/no-project/MIC-583.md |
+| MIC-584 | mail | done | 2026-11-27 | Mail: the shared picker where the AI writes - choose the engine and model of a draft and see which m… | bigmike/lab/no-project/MIC-584.md |
+| MIC-583 | mail | done | 2026-11-27 | Mail: AI Engine settings like the other apps - engine selection, default model and the ordered fallb… | bigmike/lab/no-project/MIC-583.md |
 | MIC-582 | bigMike | todo | 2026-11-27 | bigMike: shared model picker — restore the old picker's clear layout and modernize only its look, wi… | bigmike/lab/MIC-582.md |
 | MIC-581 | bigMike | todo | 2026-11-27 | bigMike: a chat whose messages are still waiting in the queue stays visible in the sidebar (stuck An… | bigmike/lab/MIC-581.md |
 | MIC-580 | bigMike | todo | 2026-11-27 | bigMike: a chat is held only when every fallback is blocked — the queue drains through the model tha… | bigmike/lab/MIC-580.md |
@@ -14,7 +14,7 @@ Every task of the Lab across applications, with the path of its file (relative t
 | MIC-577 | bigMike | done | 2026-11-27 | bigMike: add 'memory' (Second Brain) embed theme and hide robot face logo in embed=memory empty stat… | bigmike/lab/MIC-577.md |
 | MIC-576 | mail | done | 2026-11-27 | Mail: topbar cleanup, Autofit for sidebar + bigMike, and Appearance settings (Theme, Layout, Font) | bigmike/lab/no-project/MIC-576.md |
 | MIC-575 | mail | done | 2026-11-27 | Mail: fix Open in Gmail links (avoid 404) | bigmike/lab/no-project/MIC-575.md |
-| MIC-574 | Gantry | todo | 2026-11-27 | Demo video (Version 2 - classic v3.7 without Paws & Co): full v3.7 tour with new UI, slimmer sidebar… | gantry/lab/MIC-574.md |
+| MIC-574 | Gantry | blocked | 2026-11-27 | Demo video (Version 2 - classic v3.7 without Paws & Co): full v3.7 tour with new UI, slimmer sidebar… | gantry/lab/MIC-574.md |
 | MIC-573 | Gantry | done | 2026-11-27 | Demo video (Version 1 - Paws & Co only): full v3.7 tour with new UI, slimmer sidebar, and working in… | gantry/lab/MIC-573.md |
 | MIC-572 | Gantry | done | 2026-11-27 | Gantry UI: make the left navigation sidebar slimmer/narrower | gantry/lab/MIC-572.md |
 | MIC-571 | bigMike | done | 2026-11-27 | bigMike: centralizzazione DefaultAgentSettings nel bundle condiviso con autofit e sizing | bigmike/lab/MIC-571.md |
@@ -48,7 +48,7 @@ Every task of the Lab across applications, with the path of its file (relative t
 | MIC-543 | Gantry | todo | 2026-11-27 | Gantry: own its model picker - a copy inside the Gantry repo, never an import of bigMike's source | gantry/lab/MIC-543.md |
 | MIC-542 | health | done | 2026-11-27 | Health portal and Live camera: replace the hand-written engine selectors with the shared picker | bigmike/lab/no-project/MIC-542.md |
 | MIC-541 | second-brain-app | done | 2026-11-27 | Memory: centralize AI engine settings across apps (shared control with provider keys, full models ch… | bigmike/lab/no-project/MIC-541.md |
-| MIC-540 | bigMike | todo | 2026-11-27 | bigMike: shared model picker — restore selecting the default model and the ordered fallback chain (f… | bigmike/lab/MIC-540.md |
+| MIC-540 | bigMike | done | 2026-11-27 | bigMike: shared model picker — restore selecting the default model and the ordered fallback chain (f… | bigmike/lab/MIC-540.md |
 | MIC-539 | bigMike | done | 2026-11-27 | Second Brain: prove the split warehouse and the weekly job end to end, and record the decisions | bigmike/lab/MIC-539.md |
 | MIC-538 | second-brain-app | done | 2026-11-27 | Warehouse job: weekly sync on Friday at 03:00 instead of nightly | bigmike/lab/no-project/MIC-538.md |
 | MIC-537 | second-brain-app | done | 2026-11-27 | Warehouse: split the one database into per-application files with a compatibility layer | bigmike/lab/no-project/MIC-537.md |
