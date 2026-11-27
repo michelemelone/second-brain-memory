@@ -23,6 +23,7 @@ About 3,300 moves; accounts Yuh and Revolut. Pages: Dashboard, Cards, Transactio
 - Multi-currency conversions use daily ECB rates in `fx_rates.json`.
 
 ## Recent work (no Lab keys yet; from the wiki)
+- 2026-11-27 MIC-568: Settings in Gantry's grouped two-column layout (Account, AI & Models, Imports & Data), resizable navigation, shared bigMike model picker relayed through `/api/bm`.
 - 2026-11-27 MIC-546: Multi-currency transaction schema (CHF, EUR, USD) and historical rate backfill.
 - 2026-11-14 Account tabs, chart filter toggles, value labels.
 - 2026-11-13 Ledger overhaul, Settings, AI document import, public domain.
