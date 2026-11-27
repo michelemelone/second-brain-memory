@@ -4,10 +4,14 @@ Every task of the Lab across applications, with the path of its file (relative t
 
 | Key | Project | Status | Updated | Title | File |
 |---|---|---|---|---|---|
-| MIC-535 | Finance app | in_progress | 2026-11-27 | Finance: responsive layout for foldable/mobile, touch & pointer column resizing, resizable AI drawer… | finance/lab/MIC-535.md |
-| MIC-534 | bigMike | todo | 2026-11-27 | Second Brain end-to-end proof: four real questions in chat across applications | bigmike/lab/MIC-534.md |
-| MIC-533 | second-brain-app | todo | 2026-11-27 | Second Brain panel: one row per application with connection, refresh, jobs and data browser | bigmike/lab/no-project/MIC-533.md |
-| MIC-532 | second-brain-app | todo | 2026-11-27 | Warehouse: automatic discovery of every workspace folder, generic adapter, Gantry chats and requirem… | bigmike/lab/no-project/MIC-532.md |
+| MIC-539 | bigMike | todo | 2026-11-27 | Second Brain: prove the split warehouse and the weekly job end to end, and record the decisions | bigmike/lab/MIC-539.md |
+| MIC-538 | second-brain-app | todo | 2026-11-27 | Warehouse job: weekly sync on Friday at 03:00 instead of nightly | bigmike/lab/no-project/MIC-538.md |
+| MIC-537 | second-brain-app | done | 2026-11-27 | Warehouse: split the one database into per-application files with a compatibility layer | bigmike/lab/no-project/MIC-537.md |
+| MIC-536 | bigMike | done | 2026-11-27 | Sidebar embed: nascondere Space General e isolare la visualizzazione al solo progetto | bigmike/lab/MIC-536.md |
+| MIC-535 | Finance app | done | 2026-11-27 | Finance: responsive layout for foldable/mobile, touch & pointer column resizing, resizable AI drawer… | finance/lab/MIC-535.md |
+| MIC-534 | bigMike | done | 2026-11-27 | Second Brain end-to-end proof: four real questions in chat across applications | bigmike/lab/MIC-534.md |
+| MIC-533 | second-brain-app | done | 2026-11-27 | Second Brain panel: one row per application with connection, refresh, jobs and data browser | bigmike/lab/no-project/MIC-533.md |
+| MIC-532 | second-brain-app | done | 2026-11-27 | Warehouse: automatic discovery of every workspace folder, generic adapter, Gantry chats and requirem… | bigmike/lab/no-project/MIC-532.md |
 | MIC-531 | second-brain-app | done | 2026-11-27 | Warehouse: fix the Mail adapter (all 21,100 messages with real columns plus labels, classifications,… | bigmike/lab/no-project/MIC-531.md |
 | MIC-530 | second-brain-app | done | 2026-11-27 | Fix citation link navigation (:line jump and 404 fix) and expand Memory Operations view | bigmike/lab/no-project/MIC-530.md |
 | MIC-529 | bigMike | done | 2026-11-27 | bigMike answers data questions from the warehouse: read-only query tool, central rule, cross-applica… | bigmike/lab/MIC-529.md |
@@ -18,7 +22,7 @@ Every task of the Lab across applications, with the path of its file (relative t
 | MIC-524 | second-brain-app | done | 2026-11-27 | Warehouse: one central database for the atomic data of ALL applications, with sync framework, schema… | bigmike/lab/no-project/MIC-524.md |
 | MIC-523 | bigMike | done | 2026-11-27 | bigMike: supporto tema scuro e styling dedicato per embed Personal Finance | bigmike/lab/MIC-523.md |
 | MIC-522 | mail-live | done | 2026-11-27 | Mail: Deletable grouped by sender and category, with a link to Gmail filtered on the sender | bigmike/lab/no-project/MIC-522.md |
-| MIC-521 | mail-live | in_progress | 2026-11-27 | Mail: make "Create draft" work with compose only (no modify) | bigmike/lab/no-project/MIC-521.md |
+| MIC-521 | mail-live | done | 2026-11-27 | Mail: make "Create draft" work with compose only (no modify) | bigmike/lab/no-project/MIC-521.md |
 | MIC-520 | mail-live | done | 2026-11-27 | Mail: fix "Open in Gmail" opening a blank error page | bigmike/lab/no-project/MIC-520.md |
 | MIC-519 | Finance app | done | 2026-11-27 | Finance: sidebar ridimensionabile con drag handle, collapse in alto e tasto Auto-fit columns | finance/lab/MIC-519.md |
 | MIC-518 | Finance app | done | 2026-11-27 | Finance: pannello laterale destro con istanza embedded di bigMike per Personal Finance | finance/lab/MIC-518.md |

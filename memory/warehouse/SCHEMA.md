@@ -1,6 +1,6 @@
 # Warehouse Schema Manifest
 
-Generated: 2026-11-27T12:38:23.953Z
+Generated: 2026-11-27T12:55:15.441Z
 Location: `/home/beedme/data/workspace/second-brain/memory/warehouse`
 
 ## Database Files Map
@@ -90,12 +90,12 @@ Agents should query the warehouse via `programs/bin/bigmike-data` (read-only) fo
 | `mail_messages` | mail | 42500 | 2026-11-27T12:36:50.329Z | Every email message with real source columns (from_addr, from_email, to_addrs JSON, subject, snippet, received_at ISO, unread, label_ids JSON, size, thread_id, ai_checked); no bodies. |
 | `mail_sync_log` | mail | 13 | 2026-11-27T12:36:50.329Z | History of the mail app's own Gmail sync runs (trigger, kind, fetched, removed, classified, status, detail). |
 | `mail_sync_state` | mail | 1 | 2026-11-27T12:36:50.329Z | Per-mailbox sync progress (history id, full sync done, last sync time, status, error); page tokens are not copied. |
-| `sync_log` | warehouse | 114 | 2026-11-27T12:38:23.953Z | Audit log of every warehouse sync run (app, timestamps, row counts, errors, status). |
-| `warehouse_apps` | warehouse | 22 | 2026-11-27T12:38:23.953Z | Registry of every workspace folder: adapter, status (ok, no_structured_data, error, ignored), source paths, last sync, rows, last error and the scan proof. |
-| `warehouse_coverage` | warehouse | 0 | 2026-11-27T12:38:23.953Z | Coverage check result of the last sync: workspace folders without a warehouse_apps entry or with status error (empty = full coverage). |
-| `warehouse_generic_tables` | warehouse | 0 | 2026-11-27T12:38:23.953Z | Tables created by the generic adapter: folder, source file, kind and row count. |
-| `warehouse_jobs` | warehouse | 2 | 2026-11-27T12:38:23.953Z | Scheduled warehouse sync jobs: app (empty = all), cron, enabled flag and last run result. |
-| `warehouse_tables` | warehouse | 75 | 2026-11-27T12:38:23.953Z | Registry of warehouse tables with owning app and one-line meaning. |
+| `sync_log` | warehouse | 114 | 2026-11-27T12:55:15.441Z | Audit log of every warehouse sync run (app, timestamps, row counts, errors, status). |
+| `warehouse_apps` | warehouse | 22 | 2026-11-27T12:55:15.441Z | Registry of every workspace folder: adapter, status (ok, no_structured_data, error, ignored), source paths, last sync, rows, last error and the scan proof. |
+| `warehouse_coverage` | warehouse | 0 | 2026-11-27T12:55:15.441Z | Coverage check result of the last sync: workspace folders without a warehouse_apps entry or with status error (empty = full coverage). |
+| `warehouse_generic_tables` | warehouse | 0 | 2026-11-27T12:55:15.441Z | Tables created by the generic adapter: folder, source file, kind and row count. |
+| `warehouse_jobs` | warehouse | 1 | 2026-11-27T12:55:15.441Z | Scheduled warehouse sync jobs (default: weekly, Friday 03:00): app (empty = all), cron, enabled flag and last run result. |
+| `warehouse_tables` | warehouse | 75 | 2026-11-27T12:55:15.441Z | Registry of warehouse tables with owning app and one-line meaning. |
 
 ## Column Definitions
 
@@ -1365,7 +1365,7 @@ Tables created by the generic adapter: folder, source file, kind and row count.
 
 ### `warehouse_jobs`
 
-Scheduled warehouse sync jobs: app (empty = all), cron, enabled flag and last run result.
+Scheduled warehouse sync jobs (default: weekly, Friday 03:00): app (empty = all), cron, enabled flag and last run result.
 
 | Column | Type | Not Null | PK | Default |
 |---|---|---|---|---|
