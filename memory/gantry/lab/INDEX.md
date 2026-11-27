@@ -4,7 +4,7 @@ One file per task of the Lab for this application. Search it with Grep before yo
 
 | Key | Project | Status | Updated | Title | File |
 |---|---|---|---|---|---|
-| MIC-548 | Gantry | todo | 2026-11-27 | Demo video: intro Shuttle 3D v3.7, nuovo outro shuttle e registrazione portale ServiceNow | MIC-548.md |
+| MIC-548 | Gantry | done | 2026-11-27 | Demo video: intro Shuttle 3D v3.7, nuovo outro shuttle e registrazione portale ServiceNow | MIC-548.md |
 | MIC-547 | Gantry | done | 2026-11-27 | Paws & Co: restyling portale stile Employee Center e scheda adozione con foto cane | MIC-547.md |
 | MIC-543 | Gantry | done | 2026-11-27 | Gantry: use the shared engine/model picker instead of its own ModelPicker | MIC-543.md |
 | MIC-500 | Gantry | done | 2026-11-26 | Demo video: preview copies (WebM Opus and MP4 Opus) so the video plays with sound in the VS Code pre… | MIC-500.md |

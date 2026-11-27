@@ -5,7 +5,7 @@ Every task of the Lab across applications, with the path of its file (relative t
 | Key | Project | Status | Updated | Title | File |
 |---|---|---|---|---|---|
 | MIC-549 | bigMike | done | 2026-11-27 | Ottimizzazione caricamento e performance Dashboard Lab | bigmike/lab/MIC-549.md |
-| MIC-548 | Gantry | todo | 2026-11-27 | Demo video: intro Shuttle 3D v3.7, nuovo outro shuttle e registrazione portale ServiceNow | gantry/lab/MIC-548.md |
+| MIC-548 | Gantry | done | 2026-11-27 | Demo video: intro Shuttle 3D v3.7, nuovo outro shuttle e registrazione portale ServiceNow | gantry/lab/MIC-548.md |
 | MIC-547 | Gantry | done | 2026-11-27 | Paws & Co: restyling portale stile Employee Center e scheda adozione con foto cane | gantry/lab/MIC-547.md |
 | MIC-546 | Finance app | done | 2026-11-27 | Finance: schema transazioni multivaluta (CHF, EUR, USD) e ricalcolo tassi storici nel database | finance/lab/MIC-546.md |
 | MIC-545 | bigMike | done | 2026-11-27 | Engine analysis: usage, speed, errors and fallbacks per engine and model | bigmike/lab/MIC-545.md |
