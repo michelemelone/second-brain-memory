@@ -22,7 +22,7 @@ AI engine (MIC-510 follow-up, 2026-11-27): the `gemini` CLI Google retired is go
 - The AI engine is bigMike's engine API, never a local CLI (gemini is retired by Google; a CLI would ignore the owner's pick).
 - Mutations need `X-Requested-With: mail`; `/api/health` is the only open route; the others need Cloudflare Access.
 - A new provider is one file implementing `MailProvider`.
-- Appearance lives only in Settings > Preferences > Appearance, never in the topbar; per browser (localStorage), applied on `document.documentElement` (`data-theme`, `data-layout`, `--app-font`, `--fs-scale`); the font list mirrors bigMike's `appearance.ts`.
+- Appearance lives only in Settings > Preferences > Appearance; per browser (localStorage), applied on `document.documentElement` (`data-theme`, `data-layout`, `--app-font`, `--fs-scale`); the font list mirrors bigMike's `appearance.ts`.
 
 ## Recent work
 - MIC-576: topbar keeps only Unread, Sync now, Autofit, Ask bigMike and the account switcher. Autofit toggles compact (196px sidebar + 300px drawer) / default (272/340) widths. Settings > Preferences > Appearance: Theme, Layout (Classic/Compact/Comfortable), Font family and size in pt, saved per browser (`mail-theme`, `mail-layout`, `mail-font`, `mail-font-size`), applied on `document.documentElement`.
