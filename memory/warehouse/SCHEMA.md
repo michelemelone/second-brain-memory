@@ -1,6 +1,6 @@
 # Warehouse Schema Manifest
 
-Generated: 2026-11-27T16:44:56.637Z
+Generated: 2026-11-27T17:26:25.281Z
 Location: `/home/beedme/data/workspace/second-brain/memory/warehouse`
 
 ## Database Files Map
@@ -89,21 +89,21 @@ Agents should query the warehouse via `programs/bin/bigmike-data` (read-only) fo
 | `health_xiaomi_body` | health | 75 | 2026-11-27T16:44:18.444Z | Xiaomi scale body measurements. |
 | `health_xiaomi_daily` | health | 1327 | 2026-11-27T16:44:18.444Z | Xiaomi daily indicators (steps, sleep, heart rate). |
 | `health_xiaomi_heartrate_manual` | health | 80 | 2026-11-27T16:44:18.444Z | Heart-rate readings taken manually on the Xiaomi band. |
-| `mail_accounts` | mail | 1 | 2026-11-27T16:44:56.300Z | Connected mailboxes (provider, address, status, access level); OAuth tokens are never copied. |
-| `mail_actions_log` | mail | 4 | 2026-11-27T16:44:56.300Z | Log of actions proposed or applied on messages (action, detail JSON, actor, status, undo time). |
-| `mail_classifications` | mail | 77759 | 2026-11-27T16:44:56.300Z | AI/rule classification of messages: category, confidence, source, reason and time. |
-| `mail_drafts` | mail | 1 | 2026-11-27T16:44:56.300Z | Reply drafts prepared for messages (recipient, subject, body, tone, status). |
-| `mail_labels` | mail | 29 | 2026-11-27T16:44:56.300Z | Labels of each mailbox (provider label id, name, system or user kind). |
-| `mail_message_labels` | mail | 0 | 2026-11-27T16:44:56.300Z | Link table message to label (id = message_id:label_id); the source link table is empty, so see mail_messages.label_ids. |
-| `mail_messages` | mail | 77760 | 2026-11-27T16:44:56.300Z | Every email message with real source columns (from_addr, from_email, to_addrs JSON, subject, snippet, received_at ISO, unread, label_ids JSON, size, thread_id, ai_checked); no bodies. |
-| `mail_sync_log` | mail | 22 | 2026-11-27T16:44:56.300Z | History of the mail app's own Gmail sync runs (trigger, kind, fetched, removed, classified, status, detail). |
-| `mail_sync_state` | mail | 1 | 2026-11-27T16:44:56.300Z | Per-mailbox sync progress (history id, full sync done, last sync time, status, error); page tokens are not copied. |
-| `sync_log` | warehouse | 151 | 2026-11-27T16:44:56.637Z | Audit log of every warehouse sync run (app, timestamps, row counts, errors, status). |
-| `warehouse_apps` | warehouse | 22 | 2026-11-27T16:44:56.637Z | Registry of every workspace folder: adapter, status (ok, no_structured_data, error, ignored), source paths, last sync, rows, last error and the scan proof. |
-| `warehouse_coverage` | warehouse | 0 | 2026-11-27T16:44:56.637Z | Coverage check result of the last sync: workspace folders without a warehouse_apps entry or with status error (empty = full coverage). |
-| `warehouse_generic_tables` | warehouse | 0 | 2026-11-27T16:44:56.637Z | Tables created by the generic adapter: folder, source file, kind and row count. |
-| `warehouse_jobs` | warehouse | 1 | 2026-11-27T16:44:56.637Z | Scheduled warehouse sync jobs (default: weekly, Friday 03:00): app (empty = all), cron, enabled flag and last run result. |
-| `warehouse_tables` | warehouse | 75 | 2026-11-27T16:44:56.637Z | Registry of warehouse tables with owning app and one-line meaning. |
+| `mail_accounts` | mail | 1 | 2026-11-27T17:26:25.061Z | Connected mailboxes (provider, address, status, access level); OAuth tokens are never copied. |
+| `mail_actions_log` | mail | 5 | 2026-11-27T17:26:25.061Z | Log of actions proposed or applied on messages (action, detail JSON, actor, status, undo time). |
+| `mail_classifications` | mail | 77761 | 2026-11-27T17:26:25.061Z | AI/rule classification of messages: category, confidence, source, reason and time. |
+| `mail_drafts` | mail | 1 | 2026-11-27T17:26:25.061Z | Reply drafts prepared for messages (recipient, subject, body, tone, status). |
+| `mail_labels` | mail | 29 | 2026-11-27T17:26:25.061Z | Labels of each mailbox (provider label id, name, system or user kind). |
+| `mail_message_labels` | mail | 0 | 2026-11-27T17:26:25.061Z | Link table message to label (id = message_id:label_id); the source link table is empty, so see mail_messages.label_ids. |
+| `mail_messages` | mail | 77761 | 2026-11-27T17:26:25.061Z | Every email message with real source columns (from_addr, from_email, to_addrs JSON, subject, snippet, received_at ISO, unread, label_ids JSON, size, thread_id, ai_checked); no bodies. |
+| `mail_sync_log` | mail | 24 | 2026-11-27T17:26:25.061Z | History of the mail app's own Gmail sync runs (trigger, kind, fetched, removed, classified, status, detail). |
+| `mail_sync_state` | mail | 1 | 2026-11-27T17:26:25.061Z | Per-mailbox sync progress (history id, full sync done, last sync time, status, error); page tokens are not copied. |
+| `sync_log` | warehouse | 154 | 2026-11-27T17:26:25.281Z | Audit log of every warehouse sync run (app, timestamps, row counts, errors, status). |
+| `warehouse_apps` | warehouse | 22 | 2026-11-27T17:26:25.281Z | Registry of every workspace folder: adapter, status (ok, no_structured_data, error, ignored), source paths, last sync, rows, last error and the scan proof. |
+| `warehouse_coverage` | warehouse | 0 | 2026-11-27T17:26:25.281Z | Coverage check result of the last sync: workspace folders without a warehouse_apps entry or with status error (empty = full coverage). |
+| `warehouse_generic_tables` | warehouse | 0 | 2026-11-27T17:26:25.281Z | Tables created by the generic adapter: folder, source file, kind and row count. |
+| `warehouse_jobs` | warehouse | 1 | 2026-11-27T17:26:25.281Z | Scheduled warehouse sync jobs (default: weekly, Friday 03:00): app (empty = all), cron, enabled flag and last run result. |
+| `warehouse_tables` | warehouse | 75 | 2026-11-27T17:26:25.281Z | Registry of warehouse tables with owning app and one-line meaning. |
 
 ## Column Definitions
 
