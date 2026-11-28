@@ -4,6 +4,7 @@ Every task of the Lab across applications, with the path of its file (relative t
 
 | Key | Project | Status | Updated | Title | File |
 |---|---|---|---|---|---|
+| MIC-593 | bigMike | done | 2026-11-28 | Lab progress: a task that is delivered/Done always shows 100%; fix stale progress on done tasks | bigmike/lab/MIC-593.md |
 | MIC-592 | bigMike | done | 2026-11-28 | Cockpit: wire real summary metrics and authentication for Finance, Health, Second Brain and Mail | bigmike/lab/MIC-592.md |
 | MIC-591 | bigMike | done | 2026-11-28 | bigMike Home: move composer and recent chats directly below the logo, with Cockpit below | bigmike/lab/MIC-591.md |
 | MIC-590 | bigMike | done | 2026-11-28 | bigMike Home: prompt and recent chats right under the logo, and working Cockpit summary indicators | bigmike/lab/MIC-590.md |
@@ -14,7 +15,7 @@ Every task of the Lab across applications, with the path of its file (relative t
 | MIC-585 | bigMike | done | 2026-11-28 | Lab: percentage progress on every task (plan steps, current step, stall warning) | bigmike/lab/MIC-585.md |
 | MIC-584 | mail | done | 2026-11-27 | Mail: the shared picker where the AI writes - choose the engine and model of a draft and see which m… | bigmike/lab/no-project/MIC-584.md |
 | MIC-583 | mail | done | 2026-11-27 | Mail: AI Engine settings like the other apps - engine selection, default model and the ordered fallb… | bigmike/lab/no-project/MIC-583.md |
-| MIC-582 | bigMike | done | 2026-11-28 | bigMike: shared model picker — restore the old picker's clear layout and modernize only its look, wi… | bigmike/lab/MIC-582.md |
+| MIC-582 | bigMike | todo | 2026-11-28 | bigMike: shared model picker — restore the old picker's clear layout and modernize only its look, wi… | bigmike/lab/MIC-582.md |
 | MIC-581 | bigMike | done | 2026-11-27 | bigMike: a chat whose messages are still waiting in the queue stays visible in the sidebar (stuck An… | bigmike/lab/MIC-581.md |
 | MIC-580 | bigMike | done | 2026-11-27 | bigMike: a chat is held only when every fallback is blocked — the queue drains through the model tha… | bigmike/lab/MIC-580.md |
 | MIC-579 | bigMike | done | 2026-11-27 | bigMike: an agent chat falls back only inside its own engine and that agent's providers (never Antig… | bigmike/lab/MIC-579.md |
