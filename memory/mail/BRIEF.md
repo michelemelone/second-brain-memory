@@ -12,7 +12,7 @@ Repo `/home/beedme/data/workspace/mail`: Node 24 + TypeScript + Express (`server
 SQLite `~/data/mail/mail.sqlite` (metadata only, no bodies). Secrets `~/.config/mail/` (`master.key`, `tokens.enc`, `google-client.json`), never read or copied. Counts for the Second Brain: `memory/mail/summary.md` (nightly, no AI, numbered accounts, no personal content).
 
 ## Current state
-Gmail read-only sync, classification, dashboard, Trash clean-up, drafts, labels, mail ops, search/rules and the contextual assistant are built and tested (MIC-506..611). Mail runs on 192.168.12.200:4001 (mail.service, from `/home/beedme/data/workspace/mail`); `bigmike-restart mail` works. One real Gmail account is connected (michimel@gmail.com, compose granted) and syncs.
+Gmail read-only sync, classification, dashboard, Trash clean-up, drafts, labels, mail ops, search/rules, the contextual assistant and the new compose modal are built and tested (MIC-506..612). Mail runs on 192.168.12.200:4001 (mail.service, from `/home/beedme/data/workspace/mail`); `bigmike-restart mail` works. One real Gmail account is connected (michimel@gmail.com, compose granted) and syncs.
 AI engine (MIC-510 follow-up): drafts, AI classification and the assistant go through bigMike's engine API `POST /api/memory/generate` (`MAIL_ENGINE_URL`, default http://192.168.12.200:3738/api/memory/generate, bigMike picks the engine/model the shared picker shows). `POST /api/ai/classify` (background, limit default 100) clears the ambiguous backlog in slices of `ai_batch`.
 
 ## Decisions that constrain changes
@@ -25,6 +25,7 @@ AI engine (MIC-510 follow-up): drafts, AI classification and the assistant go th
 - Appearance lives only in Settings > Preferences > Appearance; per browser (localStorage), applied on `document.documentElement`; the font list mirrors bigMike's `appearance.ts`.
 
 ## Recent work
+- MIC-612: compose modal with recipient autocomplete from the local DB (senders + stored `to_addrs`, no new scope), To/Cc/Bcc chips with remove X, a large editable body, a Gmail-style "Describe your message" bar (`POST /api/compose/body`, text only) and a discard confirmation. `POST /api/drafts/compose` takes `{body, cc, bcc}`: when the body is present it is sent exactly as seen (no AI call, no signature). Evidence: `scripts/verify-compose.mjs` -> `docs/screenshots/MIC-612-*.png`; tests `server/tests/compose.test.ts`, `web/tests/compose.test.tsx`.
 - MIC-611: contextual assistant in the Ask bigMike drawer: open mail + thread as context, quick actions (Summarise, Extract, Draft reply tone/instructions -> Gmail draft only, Ask), NL search with clickable results, label suggestions applied only on click, exclusions never reach AI. Evidence: `scripts/verify-assistant.mjs` -> `docs/screenshots/MIC-611-*.png`.
 - MIC-576: topbar keeps only Unread, Sync now, Autofit, Ask bigMike and the account switcher. Autofit toggles compact (196px sidebar + 300px drawer) / default (272/340) widths. Settings > Preferences > Appearance: Theme, Layout, Font family and size in pt, saved per browser, applied on `document.documentElement`.
 - MIC-510 follow-up: bigMike engine API for drafts + classification, `/api/ai/classify` backfill, one real Gmail draft created.
