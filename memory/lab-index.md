@@ -7,28 +7,28 @@ Every task of the Lab across applications, with the path of its file (relative t
 | MIC-629 | bigMike | todo | 2026-11-28 | bigMike Hub 6/6: Lab Brief — describe what you want, get the plan, tasks created only after my ok | bigmike/lab/MIC-629.md |
 | MIC-628 | bigMike | todo | 2026-11-28 | bigMike Hub 5/6: multi-step action jobs with approval — search, collect contacts, draft, then send o… | bigmike/lab/MIC-628.md |
 | MIC-627 | bigMike | todo | 2026-11-28 | bigMike Hub 4/6: monitors with their own state — flights, recipes and macros, sourdough, gym — notif… | bigmike/lab/MIC-627.md |
-| MIC-626 | bigMike | todo | 2026-11-28 | bigMike Hub 3/6: runtime tiles and quick capture — 'ricordami di…' becomes a tile with urgency and a… | bigmike/lab/MIC-626.md |
-| MIC-625 | bigMike | todo | 2026-11-28 | bigMike Hub 2/6: Oggi daily briefing — the continuous assistant that reads every app's data and says… | bigmike/lab/MIC-625.md |
-| MIC-624 | bigMike | todo | 2026-11-28 | bigMike Hub 1/6: Oggi / Chat / Lab switcher with Oggi as the landing page | bigmike/lab/MIC-624.md |
-| MIC-623 | bigMike | done | 2026-11-28 | bigMike Hub: Oggi, Chat and Lab in one place — runtime tiles, reminders, monitors and multi-step act… | bigmike/lab/MIC-623.md |
+| MIC-626 | bigMike | done | 2026-11-28 | bigMike Hub 3/6: runtime tiles and quick capture — 'ricordami di…' becomes a tile with urgency and a… | bigmike/lab/MIC-626.md |
+| MIC-625 | bigMike | done | 2026-11-28 | bigMike Hub 2/6: Hub daily briefing — the continuous assistant that reads every app's data and says… | bigmike/lab/MIC-625.md |
+| MIC-624 | bigMike | done | 2026-11-28 | bigMike Hub 1/6: Hub / Chat / Lab switcher with Hub as the landing page | bigmike/lab/MIC-624.md |
+| MIC-623 | bigMike | todo | 2026-11-28 | bigMike Hub: three surfaces (Hub, Chat, Lab) in one place — runtime tiles, reminders, monitors and m… | bigmike/lab/MIC-623.md |
 | MIC-622 | mail | todo | 2026-11-28 | bigMail 4/4: quick action buttons on mail rows | bigmike/lab/no-project/MIC-622.md |
 | MIC-621 | mail | todo | 2026-11-28 | bigMail 3/4: dashboard landing page with widgets | bigmike/lab/no-project/MIC-621.md |
 | MIC-620 | mail | todo | 2026-11-28 | bigMail 2/4: compact Gmail-style Inbox list | bigmike/lab/no-project/MIC-620.md |
-| MIC-619 | mail | todo | 2026-11-28 | bigMail 1/4: rename to bigMail and new logo | bigmike/lab/no-project/MIC-619.md |
+| MIC-619 | mail | done | 2026-11-28 | bigMail 1/4: rename to bigMail and new logo | bigmike/lab/no-project/MIC-619.md |
 | MIC-618 | mail | todo | 2026-11-28 | bigMail: rename, dashboard landing page, compact Inbox, quick actions | bigmike/lab/no-project/MIC-618.md |
-| MIC-617 | mail | todo | 2026-11-28 | Mail senders 4/4: Send with explicit confirmation | bigmike/lab/no-project/MIC-617.md |
-| MIC-616 | mail | todo | 2026-11-28 | Mail senders 3/4: unsubscribe suggestions | bigmike/lab/no-project/MIC-616.md |
-| MIC-615 | mail | todo | 2026-11-28 | Mail senders 2/4: one-click Trash with live progress, Trash view and Restore | bigmike/lab/no-project/MIC-615.md |
-| MIC-614 | mail | todo | 2026-11-28 | Mail senders 1/4: import and show Spam | bigmike/lab/no-project/MIC-614.md |
-| MIC-613 | mail | todo | 2026-11-28 | Mail: senders screen with one-click Trash, unsubscribe suggestions, Spam import and Send | bigmike/lab/no-project/MIC-613.md |
-| MIC-612 | mail | todo | 2026-11-28 | Mail compose: recipient autocomplete and editable AI body | bigmike/lab/no-project/MIC-612.md |
+| MIC-617 | mail | done | 2026-11-28 | Mail senders 4/4: Send with explicit confirmation | bigmike/lab/no-project/MIC-617.md |
+| MIC-616 | mail | done | 2026-11-28 | Mail senders 3/4: unsubscribe suggestions | bigmike/lab/no-project/MIC-616.md |
+| MIC-615 | mail | done | 2026-11-28 | Mail senders 2/4: one-click Trash with live progress, Trash view and Restore | bigmike/lab/no-project/MIC-615.md |
+| MIC-614 | mail | done | 2026-11-28 | Mail senders 1/4: import and show Spam | bigmike/lab/no-project/MIC-614.md |
+| MIC-613 | mail | done | 2026-11-28 | Mail: senders screen with one-click Trash, unsubscribe suggestions, Spam import and Send | bigmike/lab/no-project/MIC-613.md |
+| MIC-612 | mail | done | 2026-11-28 | Mail compose: recipient autocomplete and editable AI body | bigmike/lab/no-project/MIC-612.md |
 | MIC-611 | mail | done | 2026-11-28 | Mail assistant 6/6: contextual bigMike assistant inside the open email | bigmike/lab/no-project/MIC-611.md |
 | MIC-610 | mail | done | 2026-11-28 | Mail features 5/6: search with filters and automatic rules | bigmike/lab/no-project/MIC-610.md |
 | MIC-609 | mail | done | 2026-11-28 | Mail features 4/6: read/unread, star, archive, snooze, unsubscribe | bigmike/lab/no-project/MIC-609.md |
 | MIC-608 | mail | done | 2026-11-28 | Mail labels 3/6: apply and remove labels on mails | bigmike/lab/no-project/MIC-608.md |
 | MIC-607 | mail | done | 2026-11-28 | Mail labels 2/6: create, rename, recolour, delete labels (Google re-authorisation) | bigmike/lab/no-project/MIC-607.md |
 | MIC-606 | mail | done | 2026-11-28 | Mail labels 1/6: clean the sidebar | bigmike/lab/no-project/MIC-606.md |
-| MIC-605 | mail | in_progress | 2026-11-28 | Mail: labels and Gmail features, AI assistant inside the open email | bigmike/lab/no-project/MIC-605.md |
+| MIC-605 | mail | done | 2026-11-28 | Mail: labels and Gmail features, AI assistant inside the open email | bigmike/lab/no-project/MIC-605.md |
 | MIC-604 | mail | done | 2026-11-28 | Mail security 5/5: dependency audit, token revoke and security notes | bigmike/lab/no-project/MIC-604.md |
 | MIC-603 | mail | done | 2026-11-28 | Mail security 4/5: protect secrets and data files at rest | bigmike/lab/no-project/MIC-603.md |
 | MIC-602 | mail | done | 2026-11-28 | Mail security 3/5: security headers and API hardening | bigmike/lab/no-project/MIC-602.md |
