@@ -4,6 +4,14 @@ Every task of the Lab across applications, with the path of its file (relative t
 
 | Key | Project | Status | Updated | Title | File |
 |---|---|---|---|---|---|
+| MIC-592 | bigMike | todo | 2026-11-28 | Cockpit: wire real summary metrics and authentication for Finance, Health, Second Brain and Mail | bigmike/lab/MIC-592.md |
+| MIC-591 | bigMike | todo | 2026-11-28 | bigMike Home: move composer and recent chats directly below the logo, with Cockpit below | bigmike/lab/MIC-591.md |
+| MIC-590 | bigMike | todo | 2026-11-28 | bigMike Home: prompt and recent chats right under the logo, and working Cockpit summary indicators | bigmike/lab/MIC-590.md |
+| MIC-589 | bigMike | todo | 2026-11-28 | Opening a chat from a completed-answer notification must show the final message at once, with no Thi… | bigmike/lab/MIC-589.md |
+| MIC-588 | bigMike | done | 2026-11-28 | Lab progress C: show percentage bar, current step and stall warning in the Lab UI | bigmike/lab/MIC-588.md |
+| MIC-587 | bigMike | done | 2026-11-28 | Lab progress B: central rule making agents publish a step plan and update progress | bigmike/lab/MIC-587.md |
+| MIC-586 | bigMike | done | 2026-11-28 | Lab progress A: progress record on tasks + 'bigmike-lab task progress' command | bigmike/lab/MIC-586.md |
+| MIC-585 | bigMike | done | 2026-11-28 | Lab: percentage progress on every task (plan steps, current step, stall warning) | bigmike/lab/MIC-585.md |
 | MIC-584 | mail | done | 2026-11-27 | Mail: the shared picker where the AI writes - choose the engine and model of a draft and see which m… | bigmike/lab/no-project/MIC-584.md |
 | MIC-583 | mail | done | 2026-11-27 | Mail: AI Engine settings like the other apps - engine selection, default model and the ordered fallb… | bigmike/lab/no-project/MIC-583.md |
 | MIC-582 | bigMike | done | 2026-11-28 | bigMike: shared model picker — restore the old picker's clear layout and modernize only its look, wi… | bigmike/lab/MIC-582.md |
@@ -14,7 +22,7 @@ Every task of the Lab across applications, with the path of its file (relative t
 | MIC-577 | bigMike | done | 2026-11-27 | bigMike: add 'memory' (Second Brain) embed theme and hide robot face logo in embed=memory empty stat… | bigmike/lab/MIC-577.md |
 | MIC-576 | mail | done | 2026-11-27 | Mail: topbar cleanup, Autofit for sidebar + bigMike, and Appearance settings (Theme, Layout, Font) | bigmike/lab/no-project/MIC-576.md |
 | MIC-575 | mail | done | 2026-11-27 | Mail: fix Open in Gmail links (avoid 404) | bigmike/lab/no-project/MIC-575.md |
-| MIC-574 | Gantry | blocked | 2026-11-27 | Demo video (Version 2 - classic v3.7 without Paws & Co): full v3.7 tour with new UI, slimmer sidebar… | gantry/lab/MIC-574.md |
+| MIC-574 | Gantry | done | 2026-11-28 | Demo video (Version 2 - classic v3.7 without Paws & Co): full v3.7 tour with new UI, slimmer sidebar… | gantry/lab/MIC-574.md |
 | MIC-573 | Gantry | done | 2026-11-27 | Demo video (Version 1 - Paws & Co only): full v3.7 tour with new UI, slimmer sidebar, and working in… | gantry/lab/MIC-573.md |
 | MIC-572 | Gantry | done | 2026-11-27 | Gantry UI: make the left navigation sidebar slimmer/narrower | gantry/lab/MIC-572.md |
 | MIC-571 | bigMike | done | 2026-11-27 | bigMike: centralizzazione DefaultAgentSettings nel bundle condiviso con autofit e sizing | bigmike/lab/MIC-571.md |
