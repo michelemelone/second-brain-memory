@@ -4,8 +4,39 @@ Every task of the Lab across applications, with the path of its file (relative t
 
 | Key | Project | Status | Updated | Title | File |
 |---|---|---|---|---|---|
-| MIC-598 | bigMike | todo | 2026-11-28 | bigMike Home: recent chats as a collapsible menu so the whole page fits without scrolling | bigmike/lab/MIC-598.md |
-| MIC-597 | mail | todo | 2026-11-28 | Mail: full-width responsive central column and compact email row with actions on first line | bigmike/lab/no-project/MIC-597.md |
+| MIC-629 | bigMike | todo | 2026-11-28 | bigMike Hub 6/6: Lab Brief — describe what you want, get the plan, tasks created only after my ok | bigmike/lab/MIC-629.md |
+| MIC-628 | bigMike | todo | 2026-11-28 | bigMike Hub 5/6: multi-step action jobs with approval — search, collect contacts, draft, then send o… | bigmike/lab/MIC-628.md |
+| MIC-627 | bigMike | todo | 2026-11-28 | bigMike Hub 4/6: monitors with their own state — flights, recipes and macros, sourdough, gym — notif… | bigmike/lab/MIC-627.md |
+| MIC-626 | bigMike | todo | 2026-11-28 | bigMike Hub 3/6: runtime tiles and quick capture — 'ricordami di…' becomes a tile with urgency and a… | bigmike/lab/MIC-626.md |
+| MIC-625 | bigMike | todo | 2026-11-28 | bigMike Hub 2/6: Oggi daily briefing — the continuous assistant that reads every app's data and says… | bigmike/lab/MIC-625.md |
+| MIC-624 | bigMike | todo | 2026-11-28 | bigMike Hub 1/6: Oggi / Chat / Lab switcher with Oggi as the landing page | bigmike/lab/MIC-624.md |
+| MIC-623 | bigMike | done | 2026-11-28 | bigMike Hub: Oggi, Chat and Lab in one place — runtime tiles, reminders, monitors and multi-step act… | bigmike/lab/MIC-623.md |
+| MIC-622 | mail | todo | 2026-11-28 | bigMail 4/4: quick action buttons on mail rows | bigmike/lab/no-project/MIC-622.md |
+| MIC-621 | mail | todo | 2026-11-28 | bigMail 3/4: dashboard landing page with widgets | bigmike/lab/no-project/MIC-621.md |
+| MIC-620 | mail | todo | 2026-11-28 | bigMail 2/4: compact Gmail-style Inbox list | bigmike/lab/no-project/MIC-620.md |
+| MIC-619 | mail | todo | 2026-11-28 | bigMail 1/4: rename to bigMail and new logo | bigmike/lab/no-project/MIC-619.md |
+| MIC-618 | mail | todo | 2026-11-28 | bigMail: rename, dashboard landing page, compact Inbox, quick actions | bigmike/lab/no-project/MIC-618.md |
+| MIC-617 | mail | todo | 2026-11-28 | Mail senders 4/4: Send with explicit confirmation | bigmike/lab/no-project/MIC-617.md |
+| MIC-616 | mail | todo | 2026-11-28 | Mail senders 3/4: unsubscribe suggestions | bigmike/lab/no-project/MIC-616.md |
+| MIC-615 | mail | todo | 2026-11-28 | Mail senders 2/4: one-click Trash with live progress, Trash view and Restore | bigmike/lab/no-project/MIC-615.md |
+| MIC-614 | mail | todo | 2026-11-28 | Mail senders 1/4: import and show Spam | bigmike/lab/no-project/MIC-614.md |
+| MIC-613 | mail | todo | 2026-11-28 | Mail: senders screen with one-click Trash, unsubscribe suggestions, Spam import and Send | bigmike/lab/no-project/MIC-613.md |
+| MIC-612 | mail | todo | 2026-11-28 | Mail compose: recipient autocomplete and editable AI body | bigmike/lab/no-project/MIC-612.md |
+| MIC-611 | mail | done | 2026-11-28 | Mail assistant 6/6: contextual bigMike assistant inside the open email | bigmike/lab/no-project/MIC-611.md |
+| MIC-610 | mail | done | 2026-11-28 | Mail features 5/6: search with filters and automatic rules | bigmike/lab/no-project/MIC-610.md |
+| MIC-609 | mail | done | 2026-11-28 | Mail features 4/6: read/unread, star, archive, snooze, unsubscribe | bigmike/lab/no-project/MIC-609.md |
+| MIC-608 | mail | done | 2026-11-28 | Mail labels 3/6: apply and remove labels on mails | bigmike/lab/no-project/MIC-608.md |
+| MIC-607 | mail | done | 2026-11-28 | Mail labels 2/6: create, rename, recolour, delete labels (Google re-authorisation) | bigmike/lab/no-project/MIC-607.md |
+| MIC-606 | mail | done | 2026-11-28 | Mail labels 1/6: clean the sidebar | bigmike/lab/no-project/MIC-606.md |
+| MIC-605 | mail | in_progress | 2026-11-28 | Mail: labels and Gmail features, AI assistant inside the open email | bigmike/lab/no-project/MIC-605.md |
+| MIC-604 | mail | done | 2026-11-28 | Mail security 5/5: dependency audit, token revoke and security notes | bigmike/lab/no-project/MIC-604.md |
+| MIC-603 | mail | done | 2026-11-28 | Mail security 4/5: protect secrets and data files at rest | bigmike/lab/no-project/MIC-603.md |
+| MIC-602 | mail | done | 2026-11-28 | Mail security 3/5: security headers and API hardening | bigmike/lab/no-project/MIC-602.md |
+| MIC-601 | mail | done | 2026-11-28 | Mail security 2/5: replace the regex HTML sanitizer with a real parser plus CSP | bigmike/lab/no-project/MIC-601.md |
+| MIC-600 | mail | done | 2026-11-28 | Mail security 1/5: stop listening on the LAN | bigmike/lab/no-project/MIC-600.md |
+| MIC-599 | mail | done | 2026-11-28 | Mail security hardening (5 fixes from the security review) | bigmike/lab/no-project/MIC-599.md |
+| MIC-598 | bigMike | done | 2026-11-28 | bigMike Home: recent chats as a collapsible menu so the whole page fits without scrolling | bigmike/lab/MIC-598.md |
+| MIC-597 | mail | done | 2026-11-28 | Mail: full-width responsive central column and compact email row with actions on first line | bigmike/lab/no-project/MIC-597.md |
 | MIC-596 | mail | done | 2026-11-28 | Mail: Open in Gmail link filtered on the sender in Senders screen and in bigMike replies | bigmike/lab/no-project/MIC-596.md |
 | MIC-595 | bigMike | done | 2026-11-28 | Picker loading audit: instant model/agent lists in every app (except Gantry) | bigmike/lab/MIC-595.md |
 | MIC-594 | Gantry | done | 2026-11-28 | Gantry: put MIC-570 (instant Default agents) back in the live build | gantry/lab/MIC-594.md |
@@ -19,8 +50,8 @@ Every task of the Lab across applications, with the path of its file (relative t
 | MIC-586 | bigMike | done | 2026-11-28 | Lab progress A: progress record on tasks + 'bigmike-lab task progress' command | bigmike/lab/MIC-586.md |
 | MIC-585 | bigMike | done | 2026-11-28 | Lab: percentage progress on every task (plan steps, current step, stall warning) | bigmike/lab/MIC-585.md |
 | MIC-584 | mail | done | 2026-11-27 | Mail: the shared picker where the AI writes - choose the engine and model of a draft and see which m… | bigmike/lab/no-project/MIC-584.md |
-| MIC-583 | mail | todo | 2026-11-28 | Mail: AI Engine settings like the other apps - engine selection, default model and the ordered fallb… | bigmike/lab/no-project/MIC-583.md |
-| MIC-582 | bigMike | todo | 2026-11-28 | bigMike: shared model picker — restore the old picker's clear layout and modernize only its look, wi… | bigmike/lab/MIC-582.md |
+| MIC-583 | mail | done | 2026-11-28 | Mail: AI Engine settings like the other apps - engine selection, default model and the ordered fallb… | bigmike/lab/no-project/MIC-583.md |
+| MIC-582 | bigMike | done | 2026-11-28 | bigMike: shared model picker — restore the old picker's clear layout and modernize only its look, wi… | bigmike/lab/MIC-582.md |
 | MIC-581 | bigMike | done | 2026-11-27 | bigMike: a chat whose messages are still waiting in the queue stays visible in the sidebar (stuck An… | bigmike/lab/MIC-581.md |
 | MIC-580 | bigMike | done | 2026-11-27 | bigMike: a chat is held only when every fallback is blocked — the queue drains through the model tha… | bigmike/lab/MIC-580.md |
 | MIC-579 | bigMike | done | 2026-11-27 | bigMike: an agent chat falls back only inside its own engine and that agent's providers (never Antig… | bigmike/lab/MIC-579.md |
@@ -34,7 +65,7 @@ Every task of the Lab across applications, with the path of its file (relative t
 | MIC-571 | bigMike | done | 2026-11-27 | bigMike: centralizzazione DefaultAgentSettings nel bundle condiviso con autofit e sizing | bigmike/lab/MIC-571.md |
 | MIC-570 | Gantry | done | 2026-11-27 | Gantry: velocizzazione caricamento Default Agent, cache locale e persistenza selezioni | gantry/lab/MIC-570.md |
 | MIC-569 | health | done | 2026-11-27 | Health: standardize Settings panel to Gantry grouped layout with resizable columns and auto-fit | bigmike/lab/no-project/MIC-569.md |
-| MIC-568 | personal-finance | todo | 2026-11-28 | Finance: align Settings page to Gantry grouped layout with resizable sidebar and auto-fit | bigmike/lab/no-project/MIC-568.md |
+| MIC-568 | personal-finance | done | 2026-11-28 | Finance: align Settings page to Gantry grouped layout with resizable sidebar and auto-fit | bigmike/lab/no-project/MIC-568.md |
 | MIC-567 | bigMike | done | 2026-11-27 | bigMike Lab: move AI Engines, Analysis, Skills and Connectors under Settings in Gantry grouped layou… | bigmike/lab/MIC-567.md |
 | MIC-566 | bigMike | done | 2026-11-27 | bigMike: render Memory page as an inline tab view inside the main workspace instead of full-screen o… | bigmike/lab/MIC-566.md |
 | MIC-565 | second-brain-app | done | 2026-11-27 | Second Brain: remove empty settings column, adopt Gantry grouped settings layout and auto-fit column… | bigmike/lab/no-project/MIC-565.md |

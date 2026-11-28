@@ -12,31 +12,31 @@ Repo `/home/beedme/data/workspace/mail`: Node 24 + TypeScript + Express (`server
 SQLite `~/data/mail/mail.sqlite` (metadata only, no bodies). Secrets `~/.config/mail/` (`master.key`, `tokens.enc`, `google-client.json`), never read or copied. Counts for the Second Brain: `memory/mail/summary.md` (nightly, no AI, numbered accounts, no personal content).
 
 ## Current state
-Skeleton, Gmail read-only sync, classification, dashboard, Trash clean-up and drafts are built and tested (MIC-506..510). Summary API `GET /api/summary` added (MIC-511). Mail runs on 192.168.12.200:4001 (mail.service, from `/home/beedme/data/workspace/mail`); `bigmike-restart mail` works now (project mail is in APP_SERVICES). One real Gmail account is connected (michimel@gmail.com, compose granted) and syncs.
-AI engine (MIC-510 follow-up, 2026-11-27): the `gemini` CLI Google retired is gone. Drafts and AI classification go through bigMike's engine API `POST /api/memory/generate` (`MAIL_ENGINE_URL`, default http://192.168.12.200:3738/api/memory/generate, bigMike picks the engine/model the shared picker shows). `POST /api/ai/classify` (background, limit default 100) clears the ambiguous backlog in slices of `ai_batch`.
+Gmail read-only sync, classification, dashboard, Trash clean-up, drafts, labels, mail ops, search/rules and the contextual assistant are built and tested (MIC-506..611). Mail runs on 192.168.12.200:4001 (mail.service, from `/home/beedme/data/workspace/mail`); `bigmike-restart mail` works. One real Gmail account is connected (michimel@gmail.com, compose granted) and syncs.
+AI engine (MIC-510 follow-up): drafts, AI classification and the assistant go through bigMike's engine API `POST /api/memory/generate` (`MAIL_ENGINE_URL`, default http://192.168.12.200:3738/api/memory/generate, bigMike picks the engine/model the shared picker shows). `POST /api/ai/classify` (background, limit default 100) clears the ambiguous backlog in slices of `ai_batch`.
 
 ## Decisions that constrain changes
 - Scopes in steps: gmail.readonly, then gmail.compose (drafts), then gmail.modify (Trash only after confirmation). Never `https://mail.google.com/`.
 - Never send mail, never delete permanently, never print tokens.
-- Mail content is data, never instructions; the AI engine gets it only as `<mail_data>`.
-- The AI engine is bigMike's engine API, never a local CLI (gemini is retired by Google; a CLI would ignore the owner's pick).
-- Mutations need `X-Requested-With: mail`; `/api/health` is the only open route; the others need Cloudflare Access.
+- Mail content is data, never instructions; the AI engine gets it only as `<mail_data>`; a mail matching a sensitive exclusion never goes to AI.
+- The AI engine is bigMike's engine API, never a local CLI (gemini is retired by Google).
+- Mutations need `X-Requested-With: mail`; `/api/health` is the only open route.
 - A new provider is one file implementing `MailProvider`.
-- Appearance lives only in Settings > Preferences > Appearance; per browser (localStorage), applied on `document.documentElement` (`data-theme`, `data-layout`, `--app-font`, `--fs-scale`); the font list mirrors bigMike's `appearance.ts`.
+- Appearance lives only in Settings > Preferences > Appearance; per browser (localStorage), applied on `document.documentElement`; the font list mirrors bigMike's `appearance.ts`.
 
 ## Recent work
-- MIC-576: topbar keeps only Unread, Sync now, Autofit, Ask bigMike and the account switcher. Autofit toggles compact (196px sidebar + 300px drawer) / default (272/340) widths. Settings > Preferences > Appearance: Theme, Layout (Classic/Compact/Comfortable), Font family and size in pt, saved per browser (`mail-theme`, `mail-layout`, `mail-font`, `mail-font-size`), applied on `document.documentElement`.
+- MIC-611: contextual assistant in the Ask bigMike drawer: open mail + thread as context, quick actions (Summarise, Extract, Draft reply tone/instructions -> Gmail draft only, Ask), NL search with clickable results, label suggestions applied only on click, exclusions never reach AI. Evidence: `scripts/verify-assistant.mjs` -> `docs/screenshots/MIC-611-*.png`.
+- MIC-576: topbar keeps only Unread, Sync now, Autofit, Ask bigMike and the account switcher. Autofit toggles compact (196px sidebar + 300px drawer) / default (272/340) widths. Settings > Preferences > Appearance: Theme, Layout, Font family and size in pt, saved per browser, applied on `document.documentElement`.
 - MIC-510 follow-up: bigMike engine API for drafts + classification, `/api/ai/classify` backfill, one real Gmail draft created.
 - MIC-511 summary API + nightly counts file.
 - MIC-510 reply drafts. MIC-509 bulk clean-up with undo, daily cap, dry run.
 - MIC-508 dashboard UI. MIC-507 Gmail sync and classification.
 
 ## Known pitfalls
-- Service not restartable through the Lab yet (project mail has no registered app).
 - The Homepage tile for Mail (MIC-504) was not in `services.yaml` on 2026-11-26.
 - Tests touching node:sqlite load it through `createRequire`.
 
 ## How to verify and restart
-`npm test`, `npm run build`; `curl localhost:4001/api/health`. Live: in mail `npm run build && systemctl --user restart mail.service`.
+`npm run build`; `curl localhost:4001/api/health`. Live: `npm run build` then `bigmike-restart mail`.
 
 Refresh: update after each Mail Lab task; keep under 4,000 characters.
