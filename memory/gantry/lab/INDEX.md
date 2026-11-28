@@ -4,6 +4,7 @@ One file per task of the Lab for this application. Search it with Grep before yo
 
 | Key | Project | Status | Updated | Title | File |
 |---|---|---|---|---|---|
+| MIC-594 | Gantry | done | 2026-11-28 | Gantry: put MIC-570 (instant Default agents) back in the live build | MIC-594.md |
 | MIC-574 | Gantry | done | 2026-11-28 | Demo video (Version 2 - classic v3.7 without Paws & Co): full v3.7 tour with new UI, slimmer sidebar… | MIC-574.md |
 | MIC-573 | Gantry | done | 2026-11-27 | Demo video (Version 1 - Paws & Co only): full v3.7 tour with new UI, slimmer sidebar, and working in… | MIC-573.md |
 | MIC-572 | Gantry | done | 2026-11-27 | Gantry UI: make the left navigation sidebar slimmer/narrower | MIC-572.md |

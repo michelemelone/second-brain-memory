@@ -4,6 +4,10 @@ Every task of the Lab across applications, with the path of its file (relative t
 
 | Key | Project | Status | Updated | Title | File |
 |---|---|---|---|---|---|
+| MIC-597 | mail | todo | 2026-11-28 | Mail: full-width responsive central column and compact email row with actions on first line | bigmike/lab/no-project/MIC-597.md |
+| MIC-596 | mail | in_progress | 2026-11-28 | Mail: Open in Gmail link filtered on the sender in Senders screen and in bigMike replies | bigmike/lab/no-project/MIC-596.md |
+| MIC-595 | bigMike | done | 2026-11-28 | Picker loading audit: instant model/agent lists in every app (except Gantry) | bigmike/lab/MIC-595.md |
+| MIC-594 | Gantry | done | 2026-11-28 | Gantry: put MIC-570 (instant Default agents) back in the live build | gantry/lab/MIC-594.md |
 | MIC-593 | bigMike | done | 2026-11-28 | Lab progress: a task that is delivered/Done always shows 100%; fix stale progress on done tasks | bigmike/lab/MIC-593.md |
 | MIC-592 | bigMike | done | 2026-11-28 | Cockpit: wire real summary metrics and authentication for Finance, Health, Second Brain and Mail | bigmike/lab/MIC-592.md |
 | MIC-591 | bigMike | done | 2026-11-28 | bigMike Home: move composer and recent chats directly below the logo, with Cockpit below | bigmike/lab/MIC-591.md |
@@ -14,7 +18,7 @@ Every task of the Lab across applications, with the path of its file (relative t
 | MIC-586 | bigMike | done | 2026-11-28 | Lab progress A: progress record on tasks + 'bigmike-lab task progress' command | bigmike/lab/MIC-586.md |
 | MIC-585 | bigMike | done | 2026-11-28 | Lab: percentage progress on every task (plan steps, current step, stall warning) | bigmike/lab/MIC-585.md |
 | MIC-584 | mail | done | 2026-11-27 | Mail: the shared picker where the AI writes - choose the engine and model of a draft and see which m… | bigmike/lab/no-project/MIC-584.md |
-| MIC-583 | mail | done | 2026-11-27 | Mail: AI Engine settings like the other apps - engine selection, default model and the ordered fallb… | bigmike/lab/no-project/MIC-583.md |
+| MIC-583 | mail | todo | 2026-11-28 | Mail: AI Engine settings like the other apps - engine selection, default model and the ordered fallb… | bigmike/lab/no-project/MIC-583.md |
 | MIC-582 | bigMike | todo | 2026-11-28 | bigMike: shared model picker — restore the old picker's clear layout and modernize only its look, wi… | bigmike/lab/MIC-582.md |
 | MIC-581 | bigMike | done | 2026-11-27 | bigMike: a chat whose messages are still waiting in the queue stays visible in the sidebar (stuck An… | bigmike/lab/MIC-581.md |
 | MIC-580 | bigMike | done | 2026-11-27 | bigMike: a chat is held only when every fallback is blocked — the queue drains through the model tha… | bigmike/lab/MIC-580.md |
@@ -29,7 +33,7 @@ Every task of the Lab across applications, with the path of its file (relative t
 | MIC-571 | bigMike | done | 2026-11-27 | bigMike: centralizzazione DefaultAgentSettings nel bundle condiviso con autofit e sizing | bigmike/lab/MIC-571.md |
 | MIC-570 | Gantry | done | 2026-11-27 | Gantry: velocizzazione caricamento Default Agent, cache locale e persistenza selezioni | gantry/lab/MIC-570.md |
 | MIC-569 | health | done | 2026-11-27 | Health: standardize Settings panel to Gantry grouped layout with resizable columns and auto-fit | bigmike/lab/no-project/MIC-569.md |
-| MIC-568 | personal-finance | done | 2026-11-27 | Finance: align Settings page to Gantry grouped layout with resizable sidebar and auto-fit | bigmike/lab/no-project/MIC-568.md |
+| MIC-568 | personal-finance | todo | 2026-11-28 | Finance: align Settings page to Gantry grouped layout with resizable sidebar and auto-fit | bigmike/lab/no-project/MIC-568.md |
 | MIC-567 | bigMike | done | 2026-11-27 | bigMike Lab: move AI Engines, Analysis, Skills and Connectors under Settings in Gantry grouped layou… | bigmike/lab/MIC-567.md |
 | MIC-566 | bigMike | done | 2026-11-27 | bigMike: render Memory page as an inline tab view inside the main workspace instead of full-screen o… | bigmike/lab/MIC-566.md |
 | MIC-565 | second-brain-app | done | 2026-11-27 | Second Brain: remove empty settings column, adopt Gantry grouped settings layout and auto-fit column… | bigmike/lab/no-project/MIC-565.md |
