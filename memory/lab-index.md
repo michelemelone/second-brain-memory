@@ -4,8 +4,9 @@ Every task of the Lab across applications, with the path of its file (relative t
 
 | Key | Project | Status | Updated | Title | File |
 |---|---|---|---|---|---|
+| MIC-598 | bigMike | todo | 2026-11-28 | bigMike Home: recent chats as a collapsible menu so the whole page fits without scrolling | bigmike/lab/MIC-598.md |
 | MIC-597 | mail | todo | 2026-11-28 | Mail: full-width responsive central column and compact email row with actions on first line | bigmike/lab/no-project/MIC-597.md |
-| MIC-596 | mail | in_progress | 2026-11-28 | Mail: Open in Gmail link filtered on the sender in Senders screen and in bigMike replies | bigmike/lab/no-project/MIC-596.md |
+| MIC-596 | mail | done | 2026-11-28 | Mail: Open in Gmail link filtered on the sender in Senders screen and in bigMike replies | bigmike/lab/no-project/MIC-596.md |
 | MIC-595 | bigMike | done | 2026-11-28 | Picker loading audit: instant model/agent lists in every app (except Gantry) | bigmike/lab/MIC-595.md |
 | MIC-594 | Gantry | done | 2026-11-28 | Gantry: put MIC-570 (instant Default agents) back in the live build | gantry/lab/MIC-594.md |
 | MIC-593 | bigMike | done | 2026-11-28 | Lab progress: a task that is delivered/Done always shows 100%; fix stale progress on done tasks | bigmike/lab/MIC-593.md |
